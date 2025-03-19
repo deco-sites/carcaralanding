@@ -1,0 +1,96 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Frontend Guidelines for Carcará Landing Page
+
+## Component Architecture
+- Follow atomic design principles strictly:
+  @components/ui/ - Atoms (buttons, inputs, icons, typography)
+  @components/molecules/ - Molecules (feature cards, testimonial cards, form groups)
+  @components/organisms/ - Organisms (contact forms, feature grids, testimonial sliders)
+  @sections/ - Complete page sections for Carcará's landing page
+
+## Component Best Practices
+- Create self-contained components with explicit TypeScript props interfaces
+- Design components with theming and reusability in mind
+- Use JSDoc comments to document component purpose, props, and usage examples
+- Create variant patterns through props (e.g., `variant="primary" | "secondary"`)
+- Implement responsive breakpoints consistently (mobile, tablet, desktop, wide)
+- Avoid prop drilling beyond 2 levels - use context or signals for deeper state
+
+## AI-specific UI Components
+- Design components that clearly communicate AI capabilities
+- Create visual indicators for AI processing states (loading, thinking, generating)
+- Implement proper error handling for AI-related operations
+- Design components that showcase AI use cases (demos, simulations, results)
+- Build UI elements that explain complex AI concepts simply
+
+## Styling System
+- Use Tailwind CSS exclusively for styling with consistent class ordering
+- Follow color guidelines from the theme system for brand consistency
+- Implement dark/light mode support using theme variables
+- Maintain proper spacing using the defined spacing scale
+- Create responsive components using mobile-first approach
+- Use CSS variables for theme values to enable runtime customization
+- Minimize custom CSS - use Tailwind when possible
+
+## Typography
+- Use the defined type scale consistently across all components
+- Maintain proper text hierarchy (h1, h2, h3, etc.)
+- Ensure readable line lengths (65-75 characters)
+- Optimize font loading for performance
+- Implement proper text overflow handling
+- Use semantic text elements (headings, paragraphs, lists)
+
+## State Management
+- Use Preact Signals for reactive state management
+- Keep state as local as possible to reduce complexity
+- Document state dependencies and data flow
+- Implement loading, error, and empty states for all dynamic components
+- Create clear patterns for form state handling
+- Use consistent state naming conventions
+
+## Performance Optimization
+- Lazy load below-the-fold content and heavy components
+- Optimize and properly size all images
+- Implement proper code splitting
+- Minimize JavaScript bundle size
+- Use efficient rendering techniques (memoization when needed)
+- Avoid layout shifts (reserve space for dynamic content)
+- Implement resource hints (preload, prefetch) for critical resources
+
+## Animation Guidelines
+- Use CSS transitions for simple animations
+- Keep animations subtle and purposeful
+- Ensure animations respect user preferences (reduced motion)
+- Use consistent timing functions and durations
+- Implement performant animations (transform/opacity)
+- Consider mobile performance for all animations
+
+## Accessibility (A11Y)
+- Follow WCAG 2.1 AA standards as minimum
+- Use semantic HTML elements appropriately
+- Implement proper focus management
+- Ensure keyboard navigation works for all interactive elements
+- Maintain color contrast ratios of at least 4.5:1 for text
+- Add aria attributes where appropriate
+- Include alt text for all images
+- Test with screen readers regularly
+- Support text scaling up to 200%
+
+## UI Testing Strategy
+- Implement component visual regression tests
+- Test responsive behavior across breakpoints
+- Verify all component variants render correctly
+- Test loading/error states for dynamic components
+- Validate accessibility compliance
+
+## SEO Considerations
+- Use semantic HTML structure
+- Implement proper heading hierarchy
+- Include meta descriptions and title tags
+- Use structured data where appropriate
+- Ensure content is indexable
+- Optimize for Core Web Vitals

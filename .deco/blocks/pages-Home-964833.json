@@ -1,0 +1,174 @@
+{
+  "name": "Home",
+  "path": "/",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HeroSection.tsx",
+        "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
+        "backgroundElement1": {
+          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+        },
+        "backgroundElement2": {
+          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Logos.tsx",
+        "logos": [
+          {
+            "src": "https://assets.decocache.com/carcaralanding/6ba87d40-56a6-4589-bad6-7b0869880436/ZeeDog.svg",
+            "altText": "zeedog"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/d44b9be7-10c8-49fd-b06d-cdce137996dc/torra.svg",
+            "altText": "torra"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/0d36379f-7590-4753-ac22-66bf8329b9d2/osklen.svg",
+            "altText": "osklen"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/3fb9d2ef-d917-4d97-b3dd-ade75045a9b0/Miess.svg",
+            "altText": "miess"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/513af902-b6a2-446c-b345-b6e28c728f11/luccasnetologo.svg",
+            "altText": "luccasneto"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/530726bc-5006-4b94-af5d-f3db308e88a5/livemode.png",
+            "altText": "livemode"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/2394b6ef-0530-4cf8-aa2b-7967c23b6217/leroylogo.svg",
+            "altText": "leroymerlin"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/3c644eff-1b32-4022-bf61-85412298d045/CVLB.svg",
+            "altText": "cvl"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
+            "altText": "baw"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ResultsSection.tsx",
+        "animateNumbers": true,
+        "statistics": [
+          {
+            "value": "300",
+            "description": "AI Agents operando",
+            "accentColor": "vermelho",
+            "prefix": "+"
+          },
+          {
+            "value": "20",
+            "suffix": "x",
+            "accentColor": "verde",
+            "description": "Do que processos anteriores"
+          },
+          {
+            "prefix": "+",
+            "value": "80%",
+            "description": "De economia imediata",
+            "accentColor": "azul"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/FeaturedBlogPost.tsx",
+        "post": {},
+        "posts": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 1
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ServicesSection.tsx",
+        "services": [
+          {
+            "buttonText": "\"Saiba mais\"",
+            "title": "CMS Generativo",
+            "subtitle": "Conteúdo inteligente e escalável",
+            "description": "Transforme sua criação de conteúdo com um sistema que gera, gerencia e otimiza textos automaticamente, mantendo sua identidade de marca e aumentando significativamente sua produtividade.",
+            "image": "https://assets.decocache.com/carcaralanding/a1cebfc9-405a-483e-9f13-679065cbb7b1/Image-1264x1520.png"
+          },
+          {
+            "buttonText": "\"Saiba mais\"",
+            "title": "Agentes de SEO",
+            "subtitle": "Visibilidade estratégica",
+            "description": "Nossos agentes de SEO analisam continuamente seu mercado, otimizam seu conteúdo e implementam estratégias que aumentam sua visibilidade orgânica, trazendo o público certo para seu negócio.",
+            "image": "https://assets.decocache.com/carcaralanding/32dd595d-dd86-4967-a2b3-2b5189e35286/Figma-Image-1200x600.png"
+          },
+          {
+            "buttonText": "\"Saiba mais\"",
+            "title": "AI Creative Suite",
+            "subtitle": "Criatividade sem limites",
+            "description": "Gere imagens, textos e designs alinhados com sua marca em segundos. Nossa suite criativa elimina gargalos de produção e permite que você escale sua comunicação visual com consistência e qualidade.",
+            "image": "https://assets.decocache.com/carcaralanding/95e32233-b090-47e3-a2df-7c4b8aeac784/Figma-Image-742x556.png"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/BlogPostList.tsx",
+        "posts": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MethodologySection.tsx",
+        "discoveryBox": {}
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/FAQSection.tsx",
+        "items": [
+          {
+            "question": "What makes your AI app development different from other solutions?",
+            "answer": "here"
+          },
+          {
+            "question": "Do I need technical expertise to use your solutions?",
+            "answer": "No. While our solutions are technically sophisticated, we handle all the complex development work. Our collaborative approach ensures that your team can easily integrate and use the final product without requiring deep technical knowledge."
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/CTASection.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

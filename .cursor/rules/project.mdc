@@ -1,0 +1,124 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Carcará AI Landing Page Project Guidelines
+
+## Project Overview
+This project is a landing page for Carcará, an AI adoption accelerator that helps businesses build AI Apps and agents. The platform has successfully built 400+ AI Apps across various industries and use cases. The landing page will showcase Carcará's capabilities, services, and success stories.
+
+## Component Reuse (IMPORTANT)
+- Before creating any new component or section, check existing components
+- Always check if an existing component can be reused with different props
+- Extend existing components rather than creating duplicate ones with slight variations
+- Use component composition to build new sections from existing components
+- Document when and how components can be reused across different sections
+- Maintain a component inventory to track available reusable components
+- If customization is needed, use props or variant patterns instead of new components
+
+## File Organization
+@routes/ - Page routes and API endpoints
+@components/ - Reusable UI components following atomic design
+  @components/ui/ - Atomic components (buttons, inputs, typography)
+  @components/molecules/ - Molecular components (cards, feature blocks)
+  @components/organisms/ - Organism components (forms, complex modules)
+@sections/ - Page sections for the Carcará landing page
+@sections/Theme/ - Theming and styling configuration
+@static/ - Static assets, images, and media files
+@sdk/ - SDK and utility functions
+@apps/ - Application-specific code
+
+## Component Architecture
+- Follow strict atomic design principles
+- Ensure components are self-contained and reusable
+- Document component APIs and usage examples
+- Favor composition over inheritance
+- Keep stateful logic minimal and contained
+
+## Naming Conventions
+- Components: PascalCase (Button.tsx, HeroSection.tsx)
+- Utilities: camelCase (formatCurrency.ts)
+- Files: descriptive and purpose-based (LoginForm.tsx, UserProfile.tsx)
+- CSS classes: lowercase with hyphens (button-primary, hero-title)
+- Type definitions: PascalCase with Type suffix (UserType.ts)
+
+## Code Style and Standards
+- Use TypeScript for all new files
+- Maintain proper type definitions
+- Follow consistent formatting (enforced by Deno formatter)
+- Write JSDoc comments for public APIs
+- Keep functions small and focused
+- Use async/await for asynchronous operations
+- Avoid direct DOM manipulation
+- Prevent excessive re-renders
+
+## Styling Guidelines
+- Use Tailwind CSS exclusively
+- Follow mobile-first responsive design
+- Maintain consistent spacing and sizing
+- Use the theme system for colors and typography
+- Implement dark/light mode support where appropriate
+- Keep specificity low and maintainable
+
+## AI Feature Representation Guidelines
+- Clearly explain AI capabilities in simple terms
+- Visualize complex AI concepts when possible
+- Show real-world applications rather than abstract concepts
+- Highlight metrics and success stories
+- Create interactive demonstrations where feasible
+- Ensure proper error handling for AI components
+- Optimize loading states for AI operations
+
+## Performance Requirements
+- Aim for 90+ Performance score in Lighthouse
+- Optimize Largest Contentful Paint (LCP) < 2.5s
+- First Input Delay (FID) < 100ms
+- Cumulative Layout Shift (CLS) < 0.1
+- Implement code splitting for large components
+- Optimize and lazy-load images
+- Minimize JavaScript bundle size
+
+## Accessibility Standards
+- Follow WCAG 2.1 AA standards
+- Support keyboard navigation
+- Maintain proper focus management
+- Use semantic HTML elements
+- Include proper ARIA attributes when needed
+- Ensure 4.5:1 minimum contrast ratio for text
+- Support screen readers
+- Make all interactive elements accessible
+
+## Content Management
+- Use deco.cx CMS for content
+- Create structured content models
+- Define content relationships
+- Establish content validation rules
+- Document content update procedures
+- Optimize media assets
+- Apply SEO best practices to content
+
+## Branching and Version Control
+- main: Production code
+- develop: Integration branch
+- feature/*: Feature development
+- fix/*: Bug fixes
+- release/*: Release preparation
+- Use meaningful commit messages
+- Create focused pull requests
+- Document significant changes
+
+## Development Tools
+- VSCode with Deno extension
+- Deno formatter and linter
+- TailwindCSS IntelliSense
+- Git for version control
+- deco.cx for CMS and deployment
+
+## Project Specific Notes
+- The primary goal is to effectively communicate Carcará's AI capabilities
+- Focus on clear explanations of complex AI concepts
+- Highlight the 400+ AI Apps built with the platform
+- Showcase top use cases and industry applications
+- Create a user path that leads to meaningful conversions
+- Ensure all claims are backed by demonstrable evidence

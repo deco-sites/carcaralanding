@@ -1,0 +1,164 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Development Flow for Carcará AI Landing Page
+
+## Project Initialization
+1. **Environment Setup**
+   - Install Deno runtime
+   - Clone repository from version control
+   - Set up environment variables
+   - Install recommended VSCode extensions
+
+2. **Local Development**
+   - Run `deno task dev` to start development server
+   - Verify hot module reloading functionality
+   - Configure local environment variables
+
+## Development Cycle
+
+### 1. Planning Phase
+- **Define Section Requirements**
+  - Identify purpose and key messages for each section
+  - Determine AI features to showcase
+  - Create acceptance criteria
+  - Define content requirements
+
+- **Component Architecture Planning**
+  - Map the component hierarchy
+  - Identify reusable components
+  - Plan state management needs
+  - Document API integrations
+
+- **Design Collaboration**
+  - Review design mockups/prototypes
+  - Identify animation requirements
+  - Plan responsive behavior
+  - Document accessibility considerations
+
+### 2. Implementation Phase
+- **Theme Implementation**
+  - Configure color palette based on Carcará branding
+  - Set up typography system
+  - Configure spacing scales
+  - Implement dark/light mode support
+
+- **Atomic Component Development**
+  - Build UI atoms first (buttons, inputs, typography)
+  - Create molecules from atoms (cards, feature blocks)
+  - Develop organisms from molecules (forms, sliders)
+  - Document props and usage examples
+  - Test components in isolation
+
+- **Section Development**
+  - Implement each landing page section
+  - Connect to CMS data sources
+  - Implement responsive behavior
+  - Add animations and transitions
+  - Optimize for performance
+
+- **AI Feature Integration**
+  - Implement API connections to Carcará AI platform
+  - Create demonstration components
+  - Implement error handling for AI operations
+  - Optimize loading states for AI responses
+  - Add visual explanations of AI concepts
+
+### 3. Review and Quality Assurance
+- **Code Review Process**
+  - Peer code reviews before merging
+  - Verify component reusability
+  - Check adherence to naming conventions
+  - Validate TypeScript type correctness
+  - Performance review
+
+- **Testing Procedure**
+  - Component unit testing
+  - Integration testing for page sections
+  - Cross-browser compatibility testing
+  - Mobile responsiveness testing
+  - Accessibility testing (a11y)
+  - Performance benchmarking
+
+- **Iteration Cycle**
+  - Collect feedback from stakeholders
+  - Prioritize changes and improvements
+  - Implement revisions in small batches
+  - Document decisions and rationale
+
+### 4. Content Management
+- **CMS Structure Setup**
+  - Create content models in deco.cx
+  - Set up content relationships
+  - Design content editing experience
+  - Configure content validation rules
+
+- **Content Creation**
+  - Develop copy that highlights AI capabilities
+  - Create visuals that explain complex AI concepts
+  - Optimize media assets for performance
+  - Apply SEO best practices to content
+
+- **Content Governance**
+  - Establish publishing workflow
+  - Define roles and permissions
+  - Document content update procedures
+  - Set up content versioning
+
+### 5. Deployment Process
+- **Staging Deployment**
+  - Deploy to staging environment
+  - Perform QA testing in staging
+  - Validate all integrations
+  - Check analytics implementation
+
+- **Production Deployment**
+  - Use deco.cx deployment pipeline
+  - Implement feature flags if needed
+  - Configure CDN and caching
+  - Set up monitoring and alerting
+
+- **Post-Deployment Verification**
+  - Verify functionality in production
+  - Check performance metrics
+  - Monitor error rates
+  - Validate tracking and analytics
+
+## Collaboration Framework
+- **Daily Check-ins**
+  - Brief status updates
+  - Blockers and challenges
+  - Goals for the day
+
+- **Weekly Sprint Reviews**
+  - Demo completed features
+  - Review metrics and KPIs
+  - Plan next week's priorities
+  - Technical debt assessment
+
+- **Bi-weekly Stakeholder Reviews**
+  - Present progress to business stakeholders
+  - Collect feedback on AI feature showcases
+  - Align on priorities
+  - Review analytics and performance
+
+## Continuous Improvement
+- **Performance Monitoring**
+  - Track Core Web Vitals
+  - Monitor conversion metrics
+  - Analyze user engagement with AI features
+  - Identify optimization opportunities
+
+- **User Feedback Loop**
+  - Collect user feedback on AI demonstrations
+  - Analyze heat maps and session recordings
+  - Identify usability issues
+  - Prioritize improvements
+
+- **Documentation Updates**
+  - Maintain component documentation
+  - Update content management guides
+  - Document technical decisions
+  - Create onboarding materials for new team members

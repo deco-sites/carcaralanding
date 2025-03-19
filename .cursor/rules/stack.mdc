@@ -1,0 +1,101 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Technology Stack for Carcará AI Landing Page
+
+## Core Technologies
+
+### Frontend Framework
+@Deno - Modern, secure runtime for JavaScript and TypeScript
+- Secure by default with permissions system
+- Native TypeScript support without configuration
+- Modern JavaScript features without transpilation
+
+@Fresh - Zero-runtime overhead web framework for Deno
+- Island architecture for selective hydration
+- File-based routing for simplicity
+- Server-side rendering for SEO and performance
+- No build step required
+
+@Preact - Lightweight React alternative (3KB)
+- Compatible with React's API
+- Fast alternative to React with smaller bundle size
+- Virtual DOM for efficient updates
+
+### UI and Styling
+@Tailwind CSS - Utility-first CSS framework
+- Rapid UI development with utility classes
+- Built-in responsive design system
+- Performance optimization with PurgeCSS
+
+### State Management
+@Preact Signals - Fine-grained reactivity system
+- More efficient than traditional state management
+- Automatic dependency tracking
+- Minimizes unnecessary re-renders
+
+### Content Management
+@deco.cx - Integrated CMS platform
+- Headless CMS capabilities
+- Content modeling and management
+- API-first approach for content delivery
+- Built-in deployment pipeline
+
+## AI Integration Capabilities
+- API integration with Carcará's AI platform
+- Demonstration components for AI capabilities
+- Interactive AI feature showcases
+- Performance optimized AI response handling
+- Streaming capabilities for real-time AI interactions
+
+## Development Environment
+@VSCode - Primary IDE with extensions:
+- Deno extension for runtime integration
+- Tailwind CSS IntelliSense for styling
+- ESLint for code quality
+- Prettier for code formatting
+
+@Deno CLI Tools
+- Task runner for development workflows
+- Testing framework for unit/integration tests
+- Bundle optimizer for production builds
+
+## Performance Optimization
+- Server-side rendering for fast initial load
+- Optimized asset loading with proper caching
+- Code splitting for route-based chunking
+- Lazy loading for below-the-fold content
+- Image optimization pipeline
+
+## Security Features
+- Deno's permission-based security
+- Content Security Policy implementation
+- XSS protection through proper output escaping
+- CSRF protection for form submissions
+- Secure cookie handling
+
+## Deployment and Infrastructure
+@deco.cx deployment platform
+- Automated CI/CD pipeline
+- Edge caching for global performance
+- Serverless functions for API endpoints
+- CDN integration for static assets
+- Environment variable management
+
+## Analytics and Monitoring
+- Integration with web analytics
+- Performance monitoring
+- Error tracking and reporting
+- User behavior analytics
+- A/B testing capabilities
+
+## Benefits of Our Stack for Carcará AI
+1. **Performance:** Zero-runtime overhead with Fresh, minimal JS shipped to client for faster loading
+2. **Developer Experience:** TypeScript support, hot module reloading, and integrated tooling
+3. **Security:** Deno's permissions system for enhanced protection of user data
+4. **Scalability:** Server-side rendering and edge deployment for handling traffic spikes
+5. **SEO Optimization:** Server-rendered content for better search engine visibility
+6. **Content Management:** Flexible CMS for easy updates to AI service offerings
+7. **AI Showcase:** Optimized components for demonstrating AI capabilities effectively

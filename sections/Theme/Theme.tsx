@@ -4,9 +4,65 @@
  * License: MIT (https://github.com/saadeghi/daisyui/blob/37bca23444bc9e4d304362c14b7088f9a08f1c74/LICENSE)
  * https://github.com/saadeghi/daisyui/blob/37bca23444bc9e4d304362c14b7088f9a08f1c74/src/docs/src/routes/theme-generator.svelte
  */
-import SiteTheme, { Font } from "apps/website/components/Theme.tsx";
+import SiteTheme, { Font as SiteFont } from "apps/website/components/Theme.tsx";
 import Color from "npm:colorjs.io";
 import type { ComponentChildren } from "preact";
+
+// Extended Font interface for typography
+export interface CarcaraFont extends SiteFont {
+  /**
+   * @title Font family
+   * @description Font family for all text in the site
+   */
+  fontFamily?: string;
+  /** @title Inter font URL */
+  interUrl?: string;
+  /** @title Instrument Serif font URL */
+  instrumentSerifUrl?: string;
+}
+
+export interface Typography {
+  /**
+   * @title Hero Title
+   * @description Serif, 72px, 100% line height, -1% letter spacing
+   */
+  heroTitle?: string;
+  /**
+   * @title Body
+   * @description Sans, 16px, 150% line height, -2% letter spacing
+   */
+  body?: string;
+  /**
+   * @title Body Large
+   * @description Sans, 20px, 150% line height, -2% letter spacing
+   */
+  bodyLarge?: string;
+  /**
+   * @title H1
+   * @description Serif, 56px, 100% line-height, no letter spacing
+   */
+  h1?: string;
+  /**
+   * @title H2
+   * @description Sans, 32px, 100% line-height, -4% letter spacing
+   */
+  h2?: string;
+  /**
+   * @title H3 Serif
+   * @description Serif, 32px, 100% line-height, no letter spacing
+   */
+  h3Serif?: string;
+  /**
+   * @title H4
+   * @description Sans, 20px, 120% line height, -3% letter spacing, font-medium
+   */
+  h4?: string;
+  /**
+   * @title Eyebrow
+   * @description Sans, 14px, 120% line-height, 0 letter spacing
+   */
+  eyebrow?: string;
+}
 
 export interface ThemeColors {
   /**
@@ -32,6 +88,38 @@ export interface ThemeColors {
   "error"?: string;
   /** @format color-input */
   "info"?: string;
+
+  // Carcará brand colors
+  /** @format color-input */
+  "ca-50"?: string;
+  /** @format color-input */
+  "ca-100"?: string;
+  /** @format color-input */
+  "ca-200"?: string;
+  /** @format color-input */
+  "ca-300"?: string;
+  /** @format color-input */
+  "ca-400"?: string;
+  /** @format color-input */
+  "ca-500"?: string;
+  /** @format color-input */
+  "ca-600"?: string;
+  /** @format color-input */
+  "ca-700"?: string;
+  /** @format color-input */
+  "ca-800"?: string;
+  /** @format color-input */
+  "ca-900"?: string;
+  /** @format color-input */
+  "amarelo"?: string;
+  /** @format color-input */
+  "vermelho"?: string;
+  /** @format color-input */
+  "verde"?: string;
+  /** @format color-input */
+  "azul"?: string;
+  /** @format color-input */
+  "cinza"?: string;
 }
 
 export interface ComplementaryColors {
@@ -129,7 +217,8 @@ export interface Props {
   complementaryColors?: ComplementaryColors;
   buttonStyle?: Button;
   otherStyles?: Miscellaneous;
-  font?: Font;
+  font?: CarcaraFont;
+  typography?: Typography;
   /**
    * @description This is the admin's color-scheme mode
    */
@@ -210,15 +299,32 @@ const toVariables = (
 };
 
 const defaultTheme = {
-  "primary": "oklch(1 0 0)",
-  "secondary": "oklch(1 0 0)",
-  "tertiary": "oklch(1 0 0)",
-  "neutral": "oklch(1 0 0)",
-  "base-100": "oklch(1 0 0)",
-  "info": "oklch(1 0 0)",
-  "success": "oklch(0.9054 0.1546 194.7689)",
-  "warning": "oklch(1 0 0)",
-  "error": "oklch(1 0 0)",
+  "primary": "#E2E2DA", // ca-50 as primary
+  "secondary": "#3E4042", // ca-700 as secondary
+  "tertiary": "#CC8B43", // amarelo as accent
+  "neutral": "#727472", // ca-500 as neutral
+  "base-100": "#FFFFFF", // white
+  "info": "#4C7780", // azul as info
+  "success": "#B13431", // verde
+  "warning": "#CC8B43", // amarelo as warning
+  "error": "#B13431", // vermelho as error
+
+  // Carcará brand colors
+  "ca-50": "#E2E2DA",
+  "ca-100": "#D9D9D1",
+  "ca-200": "#C7C8C1",
+  "ca-300": "#ADAEA9",
+  "ca-400": "#8B8D8A",
+  "ca-500": "#727472",
+  "ca-600": "#555758",
+  "ca-700": "#3E4042",
+  "ca-800": "#282B2E",
+  "ca-900": "#1B1D1E",
+  "amarelo": "#CC8B43",
+  "vermelho": "#B13431",
+  "verde": "#B13431",
+  "azul": "#4C7780",
+  "cinza": "#607A7E",
 
   "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
   "--rounded-btn": "0.2rem" as const, // border radius rounded-btn utility class, used in buttons and similar element
@@ -246,6 +352,7 @@ function Section({
   buttonStyle,
   otherStyles,
   font,
+  typography,
   colorScheme,
 }: Props) {
   const theme = {
@@ -260,11 +367,113 @@ function Section({
     ...toVariables(theme),
     [
       "--font-family",
-      font?.family ||
+      font?.fontFamily ||
       "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
     ],
   ]
     .map(([name, value]) => ({ name, value }));
+
+  // Add typography variables
+  const typographyVariables = typography
+    ? {
+      "--hero-title": typography.heroTitle ||
+        "font-serif text-[72px] leading-[100%] tracking-[-1%]",
+      "--body": typography.body ||
+        "font-sans text-[16px] leading-[150%] tracking-[-2%]",
+      "--body-large": typography.bodyLarge ||
+        "font-sans text-[20px] leading-[150%] tracking-[-2%]",
+      "--h1": typography.h1 ||
+        "font-serif text-[56px] leading-[100%]",
+      "--h2": typography.h2 ||
+        "font-sans text-[32px] leading-[100%] tracking-[-4%]",
+      "--h3-serif": typography.h3Serif ||
+        "font-serif text-[32px] leading-[100%]",
+      "--h4": typography.h4 ||
+        "font-sans text-[20px] leading-[120%] tracking-[-3%] font-medium",
+      "--eyebrow": typography.eyebrow ||
+        "font-sans text-[14px] leading-[120%]",
+    }
+    : {};
+
+  // Font import
+  const interUrl = font?.interUrl ||
+    "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
+  const instrumentSerifUrl = font?.instrumentSerifUrl ||
+    "https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;700&display=swap";
+
+  // Add styles for typography classes
+  const typographyStyles = `
+    @import url('${interUrl}');
+    @import url('${instrumentSerifUrl}');
+    
+    :root {
+      --font-family: ${
+    font?.fontFamily || "'Inter', 'Instrument Serif', sans-serif"
+  };
+    }
+    
+    .font-sans {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .font-serif {
+      font-family: 'Instrument Serif', serif;
+    }
+    
+    .hero-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: 72px;
+      line-height: 100%;
+      letter-spacing: -1%;
+    }
+    
+    .body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -2%;
+    }
+    
+    .body-large {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: -2%;
+    }
+    
+    .h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 56px;
+      line-height: 100%;
+    }
+    
+    .h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: -4%;
+    }
+    
+    .h3-serif {
+      font-family: 'Instrument Serif', serif;
+      font-size: 32px;
+      line-height: 100%;
+    }
+    
+    .h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: -3%;
+      font-weight: 500;
+    }
+    
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 120%;
+    }
+  `;
 
   return (
     <SiteTheme
@@ -404,9 +613,9 @@ export function Preview(props: Props) {
           </PreviewContainer>
         </div>
       </div>
-      {props.font?.family && (
+      {props.font?.fontFamily && (
         <div className="text-center py-2">
-          Font: {props.font.family}
+          Font: {props.font.fontFamily}
         </div>
       )}
     </>
