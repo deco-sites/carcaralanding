@@ -8,11 +8,10 @@
         "__resolveType": "site/sections/HeroSection.tsx",
         "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
         "backgroundElement1": {
-          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
-        },
-        "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
-        }
+        },
+        "showBackgroundElements": true,
+        "title": "<p>Aceleramos a</p><p>adoção de AI</p><p>na sua empresa</p>"
       }
     },
     {
@@ -73,7 +72,7 @@
           },
           {
             "value": "20",
-            "suffix": "x",
+            "suffix": "x Rápido",
             "accentColor": "verde",
             "description": "Do que processos anteriores"
           },
@@ -157,7 +156,8 @@
             "question": "Do I need technical expertise to use your solutions?",
             "answer": "No. While our solutions are technically sophisticated, we handle all the complex development work. Our collaborative approach ensures that your team can easily integrate and use the final product without requiring deep technical knowledge."
           }
-        ]
+        ],
+        "title": "Tudo que você precisa saber sobre AI Agents"
       }
     },
     {
