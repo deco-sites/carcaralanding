@@ -161,7 +161,7 @@ export default function MethodologySection({
           </div>
 
           {/* Bento Grid */}
-          <div className="w-full px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-1">
+          <div className="w-full px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-1">
             {/* First Column (3 spans) */}
             <div className="lg:col-span-3 grid grid-cols-1 gap-1">
               {/* Top Row (2 columns) */}

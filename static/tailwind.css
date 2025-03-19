@@ -3924,6 +3924,10 @@ input[type="number"] {
 .p-8{
   padding: 2rem;
 }
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
 .px-16{
   padding-left: 4rem;
   padding-right: 4rem;
