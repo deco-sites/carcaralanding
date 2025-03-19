@@ -58,7 +58,7 @@ export interface FAQSectionProps {
   items?: FAQItem[];
 
   /**
-   * @title Additional CSS classes
+   * @title Additional CSS classes 
    */
   class?: string;
 }
@@ -110,7 +110,7 @@ function FAQItem({ question, answer }: FAQItem) {
           {question}
         </h3>
         <div className="w-6 h-6 relative overflow-hidden shrink-0">
-          <div className="w-3.5 h-3.5 absolute left-[5px] top-[5px] bg-ca-600 group-open:bg-verde" />
+          <div className="w-3.5 h-3.5 absolute left-[3px] top-[5px] bg-ca-600 group-open:bg-verde" />
         </div>
       </summary>
       <div className="px-6 py-5">
@@ -123,7 +123,7 @@ function FAQItem({ question, answer }: FAQItem) {
 }
 
 export default function FAQSection({
-  badgeText = "FAQ",
+  badgeText = "FAQ ",
   title = "Estamos aqui para esclarecer todas as suas dúvidas.",
   contactText = "Se não encontrar o que procura, entre em contato conosco.",
   contactLinkText = "entre em contato conosco",
