@@ -11,7 +11,10 @@
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         },
         "showBackgroundElements": true,
-        "title": "<p>Aceleramos a</p><p>adoção de AI</p><p>na sua empresa</p>"
+        "title": "<p>Aceleramos a</p><p>adoção de AI</p><p>na sua empresa</p>",
+        "backgroundElement2": {
+          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+        }
       }
     },
     {
