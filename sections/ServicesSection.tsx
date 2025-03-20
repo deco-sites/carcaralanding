@@ -128,13 +128,37 @@ function ServicesSection({
   const activeIndex = useSignal<number>(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const intervalRef = useRef<number | null>(null);
+  const progressBarRef = useRef<HTMLDivElement | null>(null);
 
   const startAutoRotate = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
+
+    // Reset and start progress bar animation
+    if (progressBarRef.current) {
+      progressBarRef.current.style.transition = "none";
+      progressBarRef.current.style.width = "0%";
+      // Force reflow
+      progressBarRef.current.offsetHeight;
+      progressBarRef.current.style.transition =
+        `width ${autoRotateInterval}ms linear`;
+      progressBarRef.current.style.width = "100%";
+    }
+
     intervalRef.current = globalThis.setInterval(() => {
       activeIndex.value = (activeIndex.value + 1) % (services?.length || 1);
+
+      // Reset and restart progress bar animation
+      if (progressBarRef.current) {
+        progressBarRef.current.style.transition = "none";
+        progressBarRef.current.style.width = "0%";
+        // Force reflow
+        progressBarRef.current.offsetHeight;
+        progressBarRef.current.style.transition =
+          `width ${autoRotateInterval}ms linear`;
+        progressBarRef.current.style.width = "100%";
+      }
     }, autoRotateInterval);
   };
 
@@ -142,6 +166,11 @@ function ServicesSection({
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
+    }
+    // Reset progress bar
+    if (progressBarRef.current) {
+      progressBarRef.current.style.transition = "none";
+      progressBarRef.current.style.width = "0%";
     }
   };
 
@@ -223,34 +252,47 @@ function ServicesSection({
                   </h4>
                 </button>
 
-                {activeIndex.value === index && (
-                  <div className="py-4 flex flex-col justify-start items-start gap-10 animate-fadeIn">
-                    <div className="self-stretch flex flex-col justify-start items-start gap-6">
-                      <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                        <p className="self-stretch text-ca-400 text-3xl font-serif leading-loose">
-                          {service.subtitle}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    activeIndex.value === index
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="py-4 flex flex-col justify-start items-start gap-10">
+                      <div className="self-stretch flex flex-col justify-start items-start gap-6">
+                        <div className="self-stretch flex flex-col justify-start items-start gap-2">
+                          <p className="self-stretch text-ca-400 text-3xl font-serif leading-loose">
+                            {service.subtitle}
+                          </p>
+                        </div>
+                        <p className="self-stretch text-ca-300 text-base leading-normal">
+                          {service.description}
                         </p>
                       </div>
-                      <p className="self-stretch text-ca-300 text-base leading-normal">
-                        {service.description}
-                      </p>
-                    </div>
 
-                    {service.buttonLink && (
-                      <Button
-                        href={service.buttonLink}
-                        variant="primary"
-                        size="md"
-                      >
-                        {service.buttonText || "Saiba mais"}
-                      </Button>
-                    )}
+                      {service.buttonLink && (
+                        <Button
+                          href={service.buttonLink}
+                          variant="primary"
+                          size="md"
+                        >
+                          {service.buttonText || "Saiba mais"}
+                        </Button>
+                      )}
 
-                    <div className="h-[1px] w-full bg-ca-600">
-                      <div className="h-[1px] bg-ca-primary animate-progress" />
+                      <div className="h-[1px] w-full bg-ca-600">
+                        <div
+                          ref={activeIndex.value === index
+                            ? progressBarRef
+                            : null}
+                          className="h-[1px] bg-ca-primary w-0"
+                        />
+                      </div>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
@@ -258,17 +300,23 @@ function ServicesSection({
           {/* Right Column - Image */}
           <div className="flex-1 h-[760px]">
             {services.map((service, index) => (
-              activeIndex.value === index && (
-                <div key={index} className="w-full h-full animate-fadeIn">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={748}
-                    height={760}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )
+              <div
+                key={index}
+                className={`w-full h-full transition-opacity duration-300 absolute ${
+                  activeIndex.value === index ? "opacity-100" : "opacity-0"
+                }`}
+                style={{
+                  display: activeIndex.value === index ? "block" : "none",
+                }}
+              >
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={748}
+                  height={760}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             ))}
           </div>
         </div>

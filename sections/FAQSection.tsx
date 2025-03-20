@@ -1,4 +1,5 @@
 /** @jsxImportSource preact */
+import { useSignal } from "@preact/signals";
 import { ContentContainer } from "../components/Layout.tsx";
 import Badge from "../components/ui/Badge.tsx";
 import Icon from "../components/ui/Icon.tsx";
@@ -58,7 +59,7 @@ export interface FAQSectionProps {
   items?: FAQItem[];
 
   /**
-   * @title Additional CSS classes 
+   * @title Additional CSS classes
    */
   class?: string;
 }
@@ -103,22 +104,41 @@ const defaultFAQs: FAQItem[] = [
 ];
 
 function FAQItem({ question, answer }: FAQItem) {
+  const isOpen = useSignal(false);
+
   return (
-    <details className="w-full group">
-      <summary className="w-full px-6 py-5 border-b border-ca-700 flex justify-between items-center cursor-pointer list-none group-open:border-verde">
-        <h3 className="text-ca-50 text-lg font-normal leading-7">
+    <div className="w-full border-b border-ca-700 last:border-b-0">
+      <button
+        onClick={() => isOpen.value = !isOpen.value}
+        className="w-full px-6 py-5 flex justify-between items-center cursor-pointer"
+      >
+        <h3 className="text-ca-50 text-lg font-normal leading-7 text-left">
           {question}
         </h3>
         <div className="w-6 h-6 relative overflow-hidden shrink-0">
-          <div className="w-3.5 h-3.5 absolute left-[3px] top-[5px] bg-ca-600 group-open:bg-verde" />
+          <div
+            className={`w-3.5 h-3.5 absolute left-[3px] top-[5px] transition-all duration-300 ${
+              isOpen.value ? "bg-verde" : "bg-ca-600"
+            }`}
+          />
         </div>
-      </summary>
-      <div className="px-6 py-5">
-        <p className="text-ca-300 text-sm leading-tight">
-          {answer}
-        </p>
+      </button>
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen.value
+            ? "grid-rows-[1fr] opacity-100"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="px-6 py-5">
+            <p className="text-ca-300 text-sm leading-tight">
+              {answer}
+            </p>
+          </div>
+        </div>
       </div>
-    </details>
+    </div>
   );
 }
 

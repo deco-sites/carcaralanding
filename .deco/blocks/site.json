@@ -1,14 +1,14 @@
 {
   "seo": {
     "type": "website",
-    "title": "Landing",
+    "title": "Carcará",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "Improve your page performance with deco.cx",
-    "titleTemplate": "Landing | deco.cx",
-    "descriptionTemplate": "%s | Deco.cx",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/0fba8a8c-ee79-47e1-8f9d-863658d056cc",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/1350f37f-88ab-4cf1-bcf6-c386bcf8b238"
+    "description": "Nossos projetos fazem a ponte entre o desafio de negócio e um AI Agent que dá resultado.",
+    "titleTemplate": "Carcará | Aceleramos a adoção de AI na sua empresa",
+    "descriptionTemplate": "%s | Nossos projetos fazem a ponte entre o desafio de negócio e um AI Agent que dá resultado.",
+    "favicon": "https://assets.decocache.com/carcaralanding/8948f588-bdb2-4bd6-afe7-e68d8cad49c9/faviconcarcara.svg",
+    "image": "https://assets.decocache.com/carcaralanding/059baa65-18d1-4b8d-80bb-0f20d698418f/seocarcara.png"
   },
   "global": [
     {
