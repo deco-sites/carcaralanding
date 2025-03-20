@@ -23,7 +23,7 @@ export default async function BlogPostListLoader(
 ): Promise<BlogPostListProps> {
   // Import the blog loader
   const { default: blogLoader } = await import(
-    "/apps/blog/loaders/BlogpostList.ts"
+    "apps/blog/loaders/BlogpostList.ts"
   );
 
   const posts = await blogLoader({
@@ -33,6 +33,6 @@ export default async function BlogPostListLoader(
 
   return {
     ...props,
-    posts: Array.isArray(posts) ? posts.slice(1) : [], // Skip the first post since it's shown in FeaturedBlogPost
+    posts: Array.isArray(posts) ? posts : [],
   };
 }

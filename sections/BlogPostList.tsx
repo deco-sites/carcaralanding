@@ -1,200 +1,170 @@
-/** @jsxImportSource preact */
-import { useSignal } from "@preact/signals";
-import { useEffect } from "preact/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Image from "apps/website/components/Image.tsx";
+import { BlogPost } from "apps/blog/types.ts";
+import { Body, Eyebrow, H2 } from "../components/ui/Typography.tsx";
 import Badge from "../components/ui/Badge.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
+import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
-import { BlogPost } from "apps/blog/types.ts";
+import Button from "../components/ui/Button.tsx";
 
 export interface BlogPostListProps {
   /**
-   * @title Badge Text
-   * @description Text displayed in the badge above the title
+   * Badge text displayed at the top of the section
    * @default "Nossas soluções"
    */
   badgeText?: string;
 
   /**
-   * @title Section Title
-   * @description Main title of the section
+   * Section title
    * @default "Transformações reais com AI"
    */
   title?: string;
 
   /**
-   * @title Blog Posts
-   * @description List of blog posts to display. Configure in CMS with:
-   * {
-   *   "__resolveType": "blog/loaders/BlogpostList.ts",
-   *   "sortBy": "date_desc",
-   *   "count": 10
-   * }
+   * Blog posts array to display
+   * Will show up to 6 posts
    */
   posts?: BlogPost[] | null;
 
   /**
-   * @title Fallback Image
-   * @description Image to show when a post doesn't have one
+   * Additional CSS classes for the container
    */
-  fallbackImage?: ImageWidget;
+  class?: string;
 }
 
-function BlogPostList({
-  badgeText = "Nossas soluções",
-  title = "Transformações reais com AI",
-  posts = [],
-  fallbackImage = "https://placehold.co/384x683",
-}: BlogPostListProps) {
-  const startIndex = useSignal(0);
-  const postsPerPage = 4;
+function BlogPostCard({ post }: { post: BlogPost }) {
+  // Extract logoBrand from extraProps
+  const logoBrand = post.extraProps?.find((prop) => prop.key === "logoBrand")
+    ?.value;
 
-  const handlePrevious = () => {
-    if (startIndex.value > 0) {
-      startIndex.value -= 1;
-    }
-  };
-
-  const handleNext = () => {
-    if (startIndex.value < (posts?.length ?? 0) - postsPerPage) {
-      startIndex.value += 1;
-    }
-  };
-
-  // If posts is null or undefined, use empty array
-  const validPosts = posts || [];
-  const visiblePosts = validPosts.slice(
-    startIndex.value,
-    startIndex.value + postsPerPage,
-  );
-
-  // If there are no posts, don't render anything
-  if (validPosts.length === 0) {
-    return null;
-  }
+  // Debug log for individual post
+  console.log("Rendering post:", {
+    title: post.title,
+    image: post.image,
+    excerpt: post.excerpt,
+    logoBrand,
+    extraProps: post.extraProps,
+  });
 
   return (
-    <div className="w-full max-w-[1440px] px-16 pt-20 relative flex flex-col justify-start items-start gap-24 overflow-hidden">
-      {/* Header */}
-      <div className="self-stretch flex justify-between items-end">
-        <div className="w-[883px] flex flex-col justify-start items-start gap-6">
-          <Badge
-            variant="outline"
-            color="secondary"
-            withDot
-            dotColor="primary"
-          >
-            {badgeText}
-          </Badge>
-          <h2 className="text-ca-50 text-6xl font-normal font-serif leading-[56px]">
-            {title}
-          </h2>
+    <div className="relative w-full md:w-[384px] h-[683px] group">
+      {/* Background Image with Gradient Overlay */}
+      <Image
+        src={post.image || ""}
+        alt={post.title || ""}
+        width={384}
+        height={683}
+        class="w-full h-full object-cover absolute inset-0"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/0 to-ca-900" />
+
+      {/* Logo Brand */}
+      {logoBrand && (
+        <div className="absolute top-0 left-0 h-12 p-5 bg-ca-900">
+          <Image
+            src={logoBrand}
+            alt={`${post.title} logo`}
+            width={96}
+            height={24}
+            class="h-full w-auto object-contain"
+          />
         </div>
+      )}
 
-        {/* Navigation Arrows */}
-        <div className="flex justify-start items-center gap-2">
-          <button
-            onClick={handlePrevious}
-            disabled={startIndex.value === 0}
-            className={`w-10 h-10 px-4 py-2 rounded-md outline outline-1 outline-offset-[-1px] outline-ca-700 flex justify-center items-center gap-2 ${
-              startIndex.value === 0
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:bg-ca-800"
-            }`}
-          >
-            <Icon
-              id="ChevronLeft"
-              size={16}
-              strokeWidth="medium"
-              className="text-ca-200"
-            />
-          </button>
-          <button
-            onClick={handleNext}
-            disabled={startIndex.value >= validPosts.length - postsPerPage}
-            className={`w-10 h-10 px-4 py-2 rounded-md outline outline-1 outline-offset-[-1px] outline-ca-700 flex justify-center items-center gap-2 ${
-              startIndex.value >= validPosts.length - postsPerPage
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:bg-ca-800"
-            }`}
-          >
-            <Icon
-              id="ChevronRight"
-              size={16}
-              strokeWidth="medium"
-              className="text-ca-200"
-            />
-          </button>
-        </div>
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-3">
+        <h3 className="text-ca-50 text-xl font-medium font-['Inter'] leading-7">
+          {post.title}
+        </h3>
+        <p className="text-ca-300 text-base font-normal font-['Inter'] leading-normal">
+          {post.excerpt}
+        </p>
       </div>
-
-      {/* Posts Grid */}
-      <div className="w-full h-[683px] flex justify-start items-start gap-1 overflow-hidden">
-        {visiblePosts.map((post) => {
-          const postImage = post.image || fallbackImage;
-          const postUrl = `/blog/${
-            post.slug || post.title?.toLowerCase().replace(/\s+/g, "-")
-          }`;
-
-          return (
-            <a
-              key={post.slug || post.title}
-              href={postUrl}
-              className="w-96 h-full relative group cursor-pointer"
-            >
-              {/* Post Image */}
-              <div className="absolute inset-0">
-                <Image
-                  src={postImage}
-                  alt={post.title || "Blog post"}
-                  width={384}
-                  height={683}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/0 to-ca-900" />
-
-              {/* Post Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-start items-start gap-3">
-                <h3 className="text-ca-50 text-xl font-medium leading-7">
-                  {post.title}
-                </h3>
-                <p className="text-ca-300 text-base leading-normal">
-                  {post.excerpt}
-                </p>
-              </div>
-            </a>
-          );
-        })}
-      </div>
-
-      {/* Horizontal Line */}
-      <div className="w-[calc(100%+60px)] h-0 -left-[30px] top-[220px] absolute outline outline-1 outline-offset-[-0.50px] outline-ca-700" />
     </div>
   );
 }
 
-/**
- * @title Blog Post List Section
- * @description A section that displays a list of blog posts with navigation arrows
- *
- * To configure this component in the CMS:
- * 1. Select this component in the CMS
- * 2. Configure the "posts" prop with:
- *    {
- *      "__resolveType": "blog/loaders/BlogpostList.ts",
- *      "sortBy": "date_desc",
- *      "count": 10
- *    }
- * 3. The component will automatically display the latest blog posts
- */
-export default function BlogPostListSection(props: BlogPostListProps) {
+export default function BlogPostList({
+  badgeText = "Nossas soluções",
+  title = "Transformações reais com AI",
+  posts,
+  class: className = "",
+}: BlogPostListProps) {
+  // Debug log for posts array
+  console.log("BlogPostList received posts:", posts);
+
+  // Take only the first 6 posts
+  const displayPosts = posts?.slice(0, 6) || [];
+
+  // Debug log for display posts
+  console.log("Display posts:", displayPosts);
+
   return (
-    <div data-island>
-      <BlogPostList {...props} />
+    <div className={`w-full py-20 relative ${className}`}>
+      <ContentContainer>
+        <div className="flex flex-col gap-24">
+          {/* Header */}
+          <div className="flex justify-between items-end flex-wrap gap-8">
+            <div className="flex flex-col gap-6 max-w-[883px]">
+              <Badge
+                variant="outline"
+                color="secondary"
+                withDot
+                dotColor="primary"
+              >
+                {badgeText}
+              </Badge>
+              <h2 className="text-center text-ca-50 text-6xl font-normal font-serif leading-[56px]">
+                {title}
+              </h2>
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex justify-start items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                aria-label="Previous posts"
+              >
+                <Icon id="ChevronLeft" size={16} />
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                aria-label="Next posts"
+              >
+                <Icon id="ChevronRight" size={16} />
+              </Button>
+            </div>
+          </div>
+
+          {/* Posts Grid */}
+          <div className="relative">
+            {/* Horizontal Line */}
+            <div className="absolute left-[-30px] right-[-30px] top-[220px] h-[1px] bg-ca-700" />
+
+            {/* Posts Container */}
+            <div className="flex gap-1 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4 md:-mx-8 md:px-8 lg:mx-0 lg:px-0">
+              {displayPosts.length > 0
+                ? (
+                  displayPosts.map((post, index) => (
+                    <div
+                      key={post.slug || index}
+                      className="snap-start flex-none first:pl-0 last:pr-0"
+                    >
+                      <BlogPostCard post={post} />
+                    </div>
+                  ))
+                )
+                : (
+                  <div className="w-full text-center text-ca-300 py-8">
+                    No posts available
+                  </div>
+                )}
+            </div>
+          </div>
+        </div>
+      </ContentContainer>
     </div>
   );
 }

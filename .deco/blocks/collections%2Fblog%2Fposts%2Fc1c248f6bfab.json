@@ -1,0 +1,20 @@
+{
+  "name": "collections/blog/posts/c1c248f6bfab",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [],
+    "extraProps": [
+      {
+        "key": "logoBrand",
+        "value": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg"
+      }
+    ],
+    "title": "Baw goes headless with deco.cx",
+    "excerpt": "Create custom, AI-powered storefronts that convert visitors into customers.",
+    "slug": "baw-clothing",
+    "content": "<p><span>Create custom, AI-powered storefronts that convert visitors into customers.</span></p>",
+    "date": "2025-03-20",
+    "image": "https://assets.decocache.com/carcaralanding/32dd595d-dd86-4967-a2b3-2b5189e35286/Figma-Image-1200x600.png"
+  }
+}

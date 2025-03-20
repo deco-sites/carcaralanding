@@ -74,7 +74,8 @@ export default function Badge({
   ...props
 }: BadgeProps) {
   // Base classes for all badge variants
-  const baseClasses = "inline-flex items-center justify-center rounded-full";
+  const baseClasses =
+    "inline-flex w-fit items-center justify-center rounded-full";
 
   // Size classes
   const sizeClasses = {
