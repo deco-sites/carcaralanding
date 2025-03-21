@@ -9,6 +9,7 @@ import Button from "../components/ui/Button.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
 import { animate } from "npm:@motionone/dom@10.18.0";
 import ServicesAccordion from "../islands/ServicesAccordion.tsx";
+import { H1 } from "site/components/ui/Typography.tsx";
 
 interface Service {
   /**
@@ -70,8 +71,8 @@ function ServicesSection({
   if (!services.length) return null;
 
   return (
-    <div className="w-full py-20 bg-ca-900">
-      <ContentContainer className="flex flex-col justify-start items-center gap-24">
+    <div id="services" className="w-full py-20 bg-ca-900">
+      <ContentContainer className="flex px-4 md:px-16 flex-col justify-start items-center gap-24">
         {/* Header */}
         <div className="w-full max-w-[883px] flex flex-col justify-start items-center gap-6">
           <Badge
@@ -82,9 +83,9 @@ function ServicesSection({
           >
             {badgeText}
           </Badge>
-          <h2 className="text-center text-ca-50 text-6xl font-normal font-serif leading-[56px]">
+          <H1 className="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif">
             {title}
-          </h2>
+          </H1>
         </div>
 
         {/* Content */}

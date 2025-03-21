@@ -6,6 +6,8 @@ import { ContentContainer } from "../components/Layout.tsx";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
 import Button from "../components/ui/Button.tsx";
+import { useId } from "preact/hooks";
+import SliderControllerJS from "../islands/SliderJS.tsx";
 
 export interface BlogPostListProps {
   /**
@@ -33,22 +35,11 @@ export interface BlogPostListProps {
 }
 
 function BlogPostCard({ post }: { post: BlogPost }) {
-  // Extract logoBrand from extraProps
   const logoBrand = post.extraProps?.find((prop) => prop.key === "logoBrand")
     ?.value;
 
-  // Debug log for individual post
-  console.log("Rendering post:", {
-    title: post.title,
-    image: post.image,
-    excerpt: post.excerpt,
-    logoBrand,
-    extraProps: post.extraProps,
-  });
-
   return (
-    <div className="relative w-full md:w-[384px] h-[683px] group">
-      {/* Background Image with Gradient Overlay */}
+    <div className="relative w-[384px] h-[600px] group flex-shrink-0">
       <Image
         src={post.image || ""}
         alt={post.title || ""}
@@ -58,7 +49,6 @@ function BlogPostCard({ post }: { post: BlogPost }) {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/0 to-ca-900" />
 
-      {/* Logo Brand */}
       {logoBrand && (
         <div className="absolute top-0 left-0 h-12 p-5 bg-ca-900">
           <Image
@@ -71,7 +61,6 @@ function BlogPostCard({ post }: { post: BlogPost }) {
         </div>
       )}
 
-      {/* Content */}
       <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-3">
         <h3 className="text-ca-50 text-xl font-medium font-['Inter'] leading-7">
           {post.title}
@@ -90,19 +79,13 @@ export default function BlogPostList({
   posts,
   class: className = "",
 }: BlogPostListProps) {
-  // Debug log for posts array
-  console.log("BlogPostList received posts:", posts);
-
-  // Take only the first 6 posts
+  const id = useId();
   const displayPosts = posts?.slice(0, 6) || [];
 
-  // Debug log for display posts
-  console.log("Display posts:", displayPosts);
-
   return (
-    <div className={`w-full py-20 relative ${className}`}>
+    <section id="cases" className={`w-full py-20 ${className}`} id={id}>
       <ContentContainer>
-        <div className="flex flex-col gap-24">
+        <div className="flex px-4 sm:px-16 flex-col gap-16">
           {/* Header */}
           <div className="flex justify-between items-end flex-wrap gap-8">
             <div className="flex flex-col gap-6 max-w-[883px]">
@@ -114,48 +97,65 @@ export default function BlogPostList({
               >
                 {badgeText}
               </Badge>
-              <h2 className="text-center text-ca-50 text-6xl font-normal font-serif leading-[56px]">
+              <h2 className="text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif leading-[56px]">
                 {title}
               </h2>
             </div>
 
             {/* Navigation Buttons */}
             <div className="flex justify-start items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
+              <button
+                type="button"
+                className="p-2 border border-ca-700 rounded-full hover:border-ca-500 transition-colors"
+                data-slide="prev"
                 aria-label="Previous posts"
               >
-                <Icon id="ChevronLeft" size={16} />
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
+                <Icon
+                  id="ChevronLeft"
+                  size={16}
+                  strokeWidth={2}
+                  className="text-ca-50"
+                />
+              </button>
+              <button
+                type="button"
+                className="p-2 border border-ca-700 rounded-full hover:border-ca-500 transition-colors"
+                data-slide="next"
                 aria-label="Next posts"
               >
-                <Icon id="ChevronRight" size={16} />
-              </Button>
+                <Icon
+                  id="ChevronRight"
+                  size={16}
+                  strokeWidth={2}
+                  className="text-ca-50"
+                />
+              </button>
             </div>
           </div>
+          <div className="w-full h-px bg-ca-700" />
 
-          {/* Posts Grid */}
+          {/* Posts Container */}
           <div className="relative">
-            {/* Horizontal Line */}
-            <div className="absolute left-[-30px] right-[-30px] top-[220px] h-[1px] bg-ca-700" />
-
-            {/* Posts Container */}
-            <div className="flex gap-1 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4 md:-mx-8 md:px-8 lg:mx-0 lg:px-0">
+            {/* Scrollable Container */}
+            <div
+              data-slider
+              className="flex gap-3 overflow-x-auto snap-x snap-mandatory"
+              style={{
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                WebkitOverflowScrolling: "touch",
+              }}
+            >
               {displayPosts.length > 0
-                ? (
-                  displayPosts.map((post, index) => (
-                    <div
-                      key={post.slug || index}
-                      className="snap-start flex-none first:pl-0 last:pr-0"
-                    >
-                      <BlogPostCard post={post} />
-                    </div>
-                  ))
-                )
+                ? displayPosts.map((post, index) => (
+                  <div
+                    key={post.slug || index}
+                    data-slider-item={index}
+                    className="shrink-0 snap-center"
+                  >
+                    <BlogPostCard post={post} />
+                  </div>
+                ))
                 : (
                   <div className="w-full text-center text-ca-300 py-8">
                     No posts available
@@ -165,6 +165,7 @@ export default function BlogPostList({
           </div>
         </div>
       </ContentContainer>
-    </div>
+      <SliderControllerJS rootId={id} infinite scroll="smooth" />
+    </section>
   );
 }

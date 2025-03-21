@@ -58,7 +58,7 @@ export function H1(
 ) {
   return (
     <h1
-      class={`h1 font-serif text-6xl leading-[1.1] ${className}`}
+      class={`h1 font-serif leading-[1.1] ${className}`}
       {...props}
     >
       {children}

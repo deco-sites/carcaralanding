@@ -1,6 +1,6 @@
 import { defineRoute } from "$fresh/server.ts";
 import Header from "../sections/Header.tsx";
-import Footer from "../sections/Footer.tsx";
+import FooterSection from "../sections/FooterSection.tsx";
 import ThemeProvider from "../components/ui/ThemeProvider.tsx";
 import Layout from "../components/Layout.tsx";
 import HeroSection from "../sections/HeroSection.tsx";
@@ -19,7 +19,7 @@ export default defineRoute(async (req, ctx) => {
         />
         {/* Add other sections here */}
       </Layout>
-      <Footer />
+      <FooterSection />
     </ThemeProvider>
   );
 });

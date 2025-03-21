@@ -94,24 +94,24 @@ function StatisticBlock({
   accentColor = "amarelo",
 }: StatisticItem) {
   return (
-    <div className="flex-1 self-stretch p-5 md:p-10 lg:p-20 flex flex-col justify-center items-start gap-2">
+    <div className="flex-1 self-stretch p-4 sm:p-6 md:p-10 lg:p-20 flex flex-col justify-center items-start gap-2">
       <div className="self-stretch">
         {prefix && (
           <span
-            className={`text-${accentColor} text-4xl md:text-5xl lg:text-6xl font-serif leading-tight`}
+            className={`text-${accentColor} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight`}
           >
             {prefix}
           </span>
         )}
         <span
-          className="text-ca-50 text-4xl md:text-5xl lg:text-6xl font-serif leading-tight"
+          className="text-ca-50 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight"
           data-value={value}
         >
           {value}
         </span>
         {suffix && (
           <span
-            className={`text-${accentColor} text-4xl md:text-5xl lg:text-6xl font-serif leading-tight`}
+            className={`text-${accentColor} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight`}
           >
             {suffix}
           </span>
@@ -119,7 +119,7 @@ function StatisticBlock({
       </div>
       <div className="self-stretch h-px bg-ca-700" />
       <div className="self-stretch">
-        <Eyebrow class="text-ca-50 text-base md:text-lg font-normal leading-7">
+        <Eyebrow class="text-ca-50 text-sm sm:text-base md:text-lg font-normal leading-6 sm:leading-7">
           {description}
         </Eyebrow>
       </div>
@@ -217,11 +217,11 @@ export default function ResultsSection({
 
   return (
     <div
-      className={`w-full bg-ca-900 py-10 md:py-16 lg:pt-20 overflow-hidden ${className}`}
+      className={`w-full bg-ca-900 py-8 sm:py-10 md:py-16 lg:pt-20 overflow-hidden ${className}`}
     >
       <ContentContainer>
-        <div className="flex flex-col justify-center items-center gap-6 md:gap-8 lg:gap-10">
-          <div className="w-full max-w-4xl flex flex-col justify-start items-center gap-4 md:gap-6">
+        <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+          <div className="w-full max-w-4xl flex flex-col justify-start items-center gap-3 sm:gap-4 md:gap-6">
             <Badge
               variant="outline"
               color="secondary"
@@ -231,11 +231,11 @@ export default function ResultsSection({
               {badgeText}
             </Badge>
 
-            <H1 class="text-center text-ca-50 text-3xl md:text-5xl lg:text-6xl font-normal">
+            <H1 class="text-center text-ca-50 text-3xl sm:text-5xl lg:text-6xl font-normal">
               {title}
             </H1>
 
-            <Body class="text-center max-w-md text-ca-300">
+            <Body class="text-center max-w-[280px] sm:max-w-sm md:max-w-md text-ca-300 px-4 sm:px-0">
               {subtitle}
             </Body>
           </div>
@@ -244,14 +244,14 @@ export default function ResultsSection({
 
       <div
         ref={statsRef}
-        className="w-full border-t border-ca-700 mt-10"
+        className="w-full border-t border-ca-700 mt-6 sm:mt-8 md:mt-10"
       >
-        <ContentContainer className="flex flex-col lg:flex-row">
+        <ContentContainer className="flex flex-col md:flex-row">
           {statistics.map((stat, index) => (
             <>
               <StatisticBlock key={`stat-${index}`} {...stat} />
               {index < statistics.length - 1 && (
-                <div className="hidden lg:block w-px self-stretch border-r border-ca-700">
+                <div className="hidden md:block w-px self-stretch border-r border-ca-700">
                 </div>
               )}
             </>

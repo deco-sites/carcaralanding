@@ -26,12 +26,15 @@ export default function Logos({
     <div class="flex items-center gap-20">
       {logos?.map((logo) => {
         return (
-          <Image
-            src={logo.src || ""}
-            alt={logo.altText || ""}
-            width={110}
-            height={25}
-          />
+          <div class="flex items-center justify-center w-[110px] h-[50px]">
+            <Image
+              src={logo.src || ""}
+              alt={logo.altText || ""}
+              width={110}
+              height={50}
+              class="max-w-[110px] max-h-[50px] w-auto h-auto object-contain"
+            />
+          </div>
         );
       })}
     </div>
@@ -39,8 +42,8 @@ export default function Logos({
   return (
     <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 py-6 lg:py-14">
       <div class="flex flex-col gap-12">
-        <div class="relative w-full overflow-hidden h-11">
-          <div class="animate-sliding absolute top-0 left-0 flex flex-nowrap h-11">
+        <div class="relative w-full overflow-hidden h-[50px]">
+          <div class="animate-sliding absolute top-0 left-0 flex flex-nowrap h-[50px]">
             {slideContent}
           </div>
         </div>

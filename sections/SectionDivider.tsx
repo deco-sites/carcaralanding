@@ -41,6 +41,13 @@ export interface SectionDividerProps {
   opacity?: number;
 
   /**
+   * @title Full Height
+   * @description Whether the divider should take the full viewport height
+   * @default false
+   */
+  fullHeight?: boolean;
+
+  /**
    * @title Additional Classes
    * @description Extra CSS classes to apply
    * @default ""
@@ -58,21 +65,24 @@ export default function SectionDivider({
   color = "ca-700",
   width = "1px",
   opacity = 20,
+  fullHeight = false,
   className = "",
 }: SectionDividerProps) {
   return (
     <div
-      className={`w-full ${className}`}
+      className={`w-full ${fullHeight ? "h-screen" : ""} ${className}`}
       style={{
         paddingTop,
         paddingBottom,
       }}
     >
-      <ContentContainer>
+      <ContentContainer
+        className={`${fullHeight ? "h-full flex items-center" : ""}`}
+      >
         <div
           className="w-full"
           style={{
-            height: width,
+            height: fullHeight ? "100%" : width,
             backgroundColor: `var(--${color})`,
             opacity: opacity / 100,
           }}

@@ -1,168 +1,162 @@
-import type { ComponentChildren, JSX } from "preact";
-import { useScript } from "@deco/deco/hooks";
-export interface Props {
-    rootId: string;
-    scroll?: "smooth" | "auto";
-    interval?: number;
-    infinite?: boolean;
+import { Signal, signal } from "@preact/signals";
+import { ComponentChildren, JSX } from "preact";
+import { useEffect } from "preact/hooks";
+
+interface Props {
+  class?: string;
+  rootId: string;
+  children?: ComponentChildren;
+  interval?: number;
+  infinite?: boolean;
 }
-const setup = ({ rootId, scroll, interval, infinite }: Props) => {
-    const ATTRIBUTES = {
-        "data-slider": "data-slider",
-        "data-slider-item": "data-slider-item",
-        'data-slide="prev"': 'data-slide="prev"',
-        'data-slide="next"': 'data-slide="next"',
-        "data-dot": "data-dot",
-    };
-    // Percentage of the item that has to be inside the container
-    // for it it be considered as inside the container
-    const THRESHOLD = 0.6;
-    const intersectionX = (element: DOMRect, container: DOMRect): number => {
-        const delta = container.width / 1000;
-        if (element.right < container.left - delta) {
-            return 0.0;
-        }
-        if (element.left > container.right + delta) {
-            return 0.0;
-        }
-        if (element.left < container.left - delta) {
-            return element.right - container.left + delta;
-        }
-        if (element.right > container.right + delta) {
-            return container.right - element.left + delta;
-        }
-        return element.width;
-    };
-    // as any are ok in typeguard functions
-    const isHTMLElement = (x: Element): x is HTMLElement => 
-    // deno-lint-ignore no-explicit-any
-    typeof (x as any).offsetLeft === "number";
-    const root = document.getElementById(rootId);
-    const slider = root?.querySelector(`[${ATTRIBUTES["data-slider"]}]`);
-    const items = root?.querySelectorAll(`[${ATTRIBUTES["data-slider-item"]}]`);
-    const prev = root?.querySelector(`[${ATTRIBUTES['data-slide="prev"']}]`);
-    const next = root?.querySelector(`[${ATTRIBUTES['data-slide="next"']}]`);
-    const dots = root?.querySelectorAll(`[${ATTRIBUTES["data-dot"]}]`);
-    if (!root || !slider || !items || items.length === 0) {
-        console.warn("Missing necessary slider attributes. It will not work as intended. Necessary elements:", { root, slider, items, rootId });
-        return;
-    }
-    const getElementsInsideContainer = () => {
-        const indices: number[] = [];
-        const sliderRect = slider.getBoundingClientRect();
-        for (let index = 0; index < items.length; index++) {
-            const item = items.item(index);
-            const rect = item.getBoundingClientRect();
-            const ratio = intersectionX(rect, sliderRect) / rect.width;
-            if (ratio > THRESHOLD) {
-                indices.push(index);
-            }
-        }
-        return indices;
-    };
-    const goToItem = (index: number) => {
-        const item = items.item(index);
-        if (!isHTMLElement(item)) {
-            console.warn(`Element at index ${index} is not an html element. Skipping carousel`);
-            return;
-        }
-        slider.scrollTo({
-            top: 0,
-            behavior: scroll,
-            left: item.offsetLeft - root.offsetLeft,
-        });
-    };
-    const onClickPrev = () => {
-        const indices = getElementsInsideContainer();
-        // Wow! items per page is how many elements are being displayed inside the container!!
-        const itemsPerPage = indices.length;
-        const isShowingFirst = indices[0] === 0;
-        const pageIndex = Math.floor(indices[indices.length - 1] / itemsPerPage);
-        goToItem(isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage);
-    };
-    const onClickNext = () => {
-        const indices = getElementsInsideContainer();
-        // Wow! items per page is how many elements are being displayed inside the container!!
-        const itemsPerPage = indices.length;
-        const isShowingLast = indices[indices.length - 1] === items.length - 1;
-        const pageIndex = Math.floor(indices[0] / itemsPerPage);
-        goToItem(isShowingLast ? 0 : (pageIndex + 1) * itemsPerPage);
-    };
-    const observer = new IntersectionObserver((elements) => elements.forEach((item) => {
-        const index = Number(item.target.getAttribute("data-slider-item")) || 0;
-        const dot = dots?.item(index);
-        if (item.isIntersecting) {
-            dot?.setAttribute("disabled", "");
-        }
-        else {
-            dot?.removeAttribute("disabled");
-        }
-        if (!infinite) {
-            if (index === 0) {
-                if (item.isIntersecting) {
-                    prev?.setAttribute("disabled", "");
-                }
-                else {
-                    prev?.removeAttribute("disabled");
-                }
-            }
-            if (index === items.length - 1) {
-                if (item.isIntersecting) {
-                    next?.setAttribute("disabled", "");
-                }
-                else {
-                    next?.removeAttribute("disabled");
-                }
-            }
-        }
-    }), { threshold: THRESHOLD, root: slider });
-    items.forEach((item) => observer.observe(item));
-    for (let it = 0; it < (dots?.length ?? 0); it++) {
-        dots?.item(it).addEventListener("click", () => goToItem(it));
-    }
-    prev?.addEventListener("click", onClickPrev);
-    next?.addEventListener("click", onClickNext);
-    const timeout = interval && setInterval(onClickNext, interval);
-    // Unregister callbacks
-    return () => {
-        for (let it = 0; it < (dots?.length ?? 0); it++) {
-            dots?.item(it).removeEventListener("click", () => goToItem(it));
-        }
-        prev?.removeEventListener("click", onClickPrev);
-        next?.removeEventListener("click", onClickNext);
-        observer.disconnect();
-        clearInterval(timeout);
-    };
-};
-function Slider({ rootId, scroll = "smooth", interval, infinite = false, ...props }: JSX.IntrinsicElements["ul"] & Props) {
-    return (<>
-      <ul data-slider {...props}/>
-      <script type="module" dangerouslySetInnerHTML={{
-            __html: useScript(setup, { rootId, scroll, interval, infinite }),
-        }}/>
-    </>);
+
+interface ItemProps {
+  index: number;
+  class?: string;
+  children?: ComponentChildren;
 }
-function Dot({ index, children }: {
-    index: number;
-    children: ComponentChildren;
-}) {
-    return (<button data-dot={index} aria-label={`go to slider item ${index}`} class="focus:outline-none group">
+
+interface DotProps {
+  index: number;
+  children?: ComponentChildren;
+}
+
+interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
+  children?: ComponentChildren;
+}
+
+// Shared state for the current slide index
+const currentIndex: Signal<number> = signal(0);
+const timer = signal<number | null>(null);
+
+function Slider(
+  { class: _class = "", rootId, children, interval, infinite }: Props,
+) {
+  const id = rootId;
+  const items = Array.isArray(children) ? children : [children];
+  const len = items.filter(Boolean).length;
+
+  // Reset index when switching between carousels
+  useEffect(() => {
+    currentIndex.value = 0;
+  }, [id]);
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (interval && len > 0) {
+      const intervalId = setInterval(() => {
+        if (infinite || currentIndex.value < len - 1) {
+          currentIndex.value = (currentIndex.value + 1) % len;
+        }
+      }, interval);
+
+      timer.value = intervalId;
+
+      return () => {
+        clearInterval(intervalId);
+        timer.value = null;
+      };
+    }
+  }, [interval, len, infinite]);
+
+  return (
+    <div
+      id={id}
+      class={_class}
+      aria-label="carousel"
+    >
       {children}
-    </button>);
+    </div>
+  );
 }
-function Item({ index, ...props }: JSX.IntrinsicElements["li"] & {
-    index: number;
-}) {
-    return <li data-slider-item={index} {...props}/>;
+
+function Item({ index, class: _class = "", children }: ItemProps) {
+  const selected = currentIndex.value === index;
+
+  return (
+    <div
+      class={_class}
+      data-slider-item={index}
+      aria-hidden={!selected}
+      role="tabpanel"
+      style={{
+        transform: `translateX(${(index - currentIndex.value) * 100}%)`,
+        transition: "transform 400ms ease-in-out",
+      }}
+    >
+      {children}
+    </div>
+  );
 }
-function NextButton(props: JSX.IntrinsicElements["button"]) {
-    return <button data-slide="next" aria-label="Next item" {...props}/>;
+
+function Dot({ children, index }: DotProps) {
+  const isSelected = index === currentIndex.value;
+
+  return (
+    <button
+      class={`group ${isSelected ? "disabled" : ""}`}
+      role="tab"
+      aria-label={`go to slide ${index + 1}`}
+      aria-selected={isSelected}
+      disabled={isSelected}
+      onClick={() => {
+        if (timer.value) {
+          clearInterval(timer.value);
+          timer.value = null;
+        }
+        currentIndex.value = index;
+      }}
+    >
+      {children}
+    </button>
+  );
 }
-function PrevButton(props: JSX.IntrinsicElements["button"]) {
-    return <button data-slide="prev" aria-label="Previous item" {...props}/>;
+
+function PrevButton({ children, class: _class = "", ...props }: ButtonProps) {
+  return (
+    <button
+      {...props}
+      class={_class}
+      onClick={(e) => {
+        if (timer.value) {
+          clearInterval(timer.value);
+          timer.value = null;
+        }
+        currentIndex.value = currentIndex.value === 0
+          ? 0
+          : currentIndex.value - 1;
+        props.onClick?.(e);
+      }}
+      aria-label="Previous slide"
+    >
+      {children}
+    </button>
+  );
 }
-Slider.Dot = Dot;
+
+function NextButton({ children, class: _class = "", ...props }: ButtonProps) {
+  return (
+    <button
+      {...props}
+      class={_class}
+      onClick={(e) => {
+        if (timer.value) {
+          clearInterval(timer.value);
+          timer.value = null;
+        }
+        currentIndex.value = currentIndex.value + 1;
+        props.onClick?.(e);
+      }}
+      aria-label="Next slide"
+    >
+      {children}
+    </button>
+  );
+}
+
 Slider.Item = Item;
-Slider.NextButton = NextButton;
+Slider.Dot = Dot;
 Slider.PrevButton = PrevButton;
+Slider.NextButton = NextButton;
+
 export default Slider;

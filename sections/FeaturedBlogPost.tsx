@@ -76,13 +76,13 @@ export default function FeaturedBlogPost({
   if (!post) {
     return (
       <div
-        className={`w-full bg-ca-900 py-10 md:py-16 lg:py-20 overflow-hidden ${className}`}
+        className={`w-full bg-ca-900 py-8 sm:py-10 md:py-16 lg:py-20 overflow-hidden ${className}`}
       >
         <ContentContainer>
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10">
             {/* Content Column */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-6 md:gap-10 px-4 md:px-8 lg:px-14">
-              <div className="w-full flex flex-col justify-start items-start gap-4 md:gap-6">
+            <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-4 sm:gap-6 md:gap-10 px-4 sm:px-6 md:px-8 lg:px-14">
+              <div className="w-full flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-6">
                 <Badge
                   variant="outline"
                   color="secondary"
@@ -92,11 +92,11 @@ export default function FeaturedBlogPost({
                   {badgeText}
                 </Badge>
 
-                <H1 class="text-ca-50 text-3xl md:text-5xl lg:text-6xl font-normal leading-tight">
+                <H1 class="text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight">
                   {fallbackTitle}
                 </H1>
 
-                <Body class="text-ca-300">
+                <Body class="text-ca-300 text-sm sm:text-base">
                   {fallbackExcerpt}
                 </Body>
               </div>
@@ -137,13 +137,13 @@ export default function FeaturedBlogPost({
 
   return (
     <div
-      className={`w-full bg-ca-900 py-10 md:py-16 lg:py-20 overflow-hidden ${className}`}
+      className={`w-full bg-ca-900 py-8 sm:py-10 md:py-16 lg:py-20 overflow-hidden ${className}`}
     >
       <ContentContainer>
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10">
           {/* Content Column */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-6 md:gap-10 px-4 md:px-8 lg:px-14">
-            <div className="w-full flex flex-col justify-start items-start gap-4 md:gap-6">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-4 sm:gap-6 md:gap-10 px-4 sm:px-6 md:px-8 lg:px-14">
+            <div className="w-full flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-6">
               <Badge
                 variant="outline"
                 color="secondary"
@@ -153,11 +153,11 @@ export default function FeaturedBlogPost({
                 {badgeText}
               </Badge>
 
-              <H1 class="text-ca-50 text-3xl md:text-5xl lg:text-6xl font-normal leading-tight">
+              <H1 class="text-ca-50 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-normal leading-tight">
                 {title}
               </H1>
 
-              <Body class="text-ca-300">
+              <Body class="text-ca-300 text-sm sm:text-base">
                 {excerpt}
               </Body>
             </div>
@@ -166,13 +166,14 @@ export default function FeaturedBlogPost({
               href={postUrl}
               variant="primary"
               size="md"
+              class="w-full sm:w-auto"
             >
               {buttonText}
             </Button>
           </div>
 
           {/* Image Column */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 mt-6 lg:mt-0">
             <Image
               src={image}
               alt={title}

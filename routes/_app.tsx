@@ -53,8 +53,6 @@ export default defineApp(async (_req, ctx) => {
                 margin-left: auto !important;
                 margin-right: auto !important;
                 width: 100% !important;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
                 box-sizing: border-box !important;
               }
             `,

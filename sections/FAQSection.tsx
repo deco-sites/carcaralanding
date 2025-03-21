@@ -2,7 +2,6 @@
 import { useSignal } from "@preact/signals";
 import { ContentContainer } from "../components/Layout.tsx";
 import Badge from "../components/ui/Badge.tsx";
-import Icon from "../components/ui/Icon.tsx";
 
 interface FAQItem {
   /**
@@ -105,36 +104,68 @@ const defaultFAQs: FAQItem[] = [
 
 function FAQItem({ question, answer }: FAQItem) {
   const isOpen = useSignal(false);
+  const isAnimating = useSignal(false);
+
+  const handleClick = () => {
+    // Disable animation before state change
+    isAnimating.value = false;
+    isOpen.value = !isOpen.value;
+    // Force a reflow then enable animation
+    setTimeout(() => {
+      isAnimating.value = true;
+    }, 0);
+  };
 
   return (
     <div className="w-full border-b border-ca-700 last:border-b-0">
       <button
-        onClick={() => isOpen.value = !isOpen.value}
-        className="w-full px-6 py-5 flex justify-between items-center cursor-pointer"
+        onClick={handleClick}
+        className="w-full px-6 py-5 flex justify-between items-center cursor-pointer group"
       >
-        <h3 className="text-ca-50 text-lg font-normal leading-7 text-left">
+        <h3
+          className={`text-lg font-normal leading-7 text-left transition-colors duration-700 ${
+            isOpen.value ? "text-ca-50" : "text-ca-300 group-hover:text-ca-200"
+          }`}
+        >
           {question}
         </h3>
-        <div className="w-6 h-6 relative overflow-hidden shrink-0">
+        <div className="relative w-6 h-6 shrink-0">
           <div
-            className={`w-3.5 h-3.5 absolute left-[3px] top-[5px] transition-all duration-300 ${
-              isOpen.value ? "bg-verde" : "bg-ca-600"
+            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-current transition-all duration-700 ${
+              isOpen.value
+                ? "rotate-180 bg-verde"
+                : "bg-ca-600 group-hover:bg-ca-500"
+            }`}
+          />
+          <div
+            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0.5 h-4 bg-current transition-all duration-700 ${
+              isOpen.value
+                ? "rotate-180 opacity-0 bg-verde"
+                : "bg-ca-600 group-hover:bg-ca-500"
             }`}
           />
         </div>
       </button>
       <div
-        className={`grid transition-all duration-300 ease-in-out ${
+        className={`grid overflow-hidden transition-all duration-700 ease-in-out ${
           isOpen.value
             ? "grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
         <div className="overflow-hidden">
-          <div className="px-6 py-5">
-            <p className="text-ca-300 text-sm leading-tight">
-              {answer}
-            </p>
+          <div className="flex flex-col">
+            <div className="px-6 pb-5">
+              <p
+                className={`text-ca-300 text-sm leading-tight transform transition-all duration-700 ease-out ${
+                  isOpen.value && isAnimating.value
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-full opacity-0"
+                }`}
+              >
+                {answer}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -156,9 +187,10 @@ export default function FAQSection({
 
   return (
     <section
+      id="faq"
       className={`relative w-full bg-ca-900 overflow-hidden ${className}`}
     >
-      <ContentContainer className="py-20">
+      <ContentContainer className="py-20 px-4 sm:px-16">
         <div className="flex flex-col justify-start items-center gap-10">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Left Column - Header */}
@@ -172,7 +204,7 @@ export default function FAQSection({
                 {badgeText}
               </Badge>
 
-              <h2 className="text-ca-50 text-6xl font-normal font-serif leading-[56px]">
+              <h2 className="text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif leading-[56px]">
                 {title}
               </h2>
 

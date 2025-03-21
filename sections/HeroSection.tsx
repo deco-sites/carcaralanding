@@ -134,12 +134,12 @@ export default function HeroSection({
     .replace("AI", "<span class='text-vermelho'>AI</span>");
 
   return (
-    <section className="relative w-full bg-ca-900 overflow-hidden">
+    <section className="relative w-full pt-8 bg-ca-900 overflow-hidden">
       {/* Decorative background elements - positioned with proper z-index */}
       {showBackgroundElements && (
         <>
           <div
-            className="absolute w-[200rem] -rotate-[8deg] -right-[44rem] z-0"
+            className="absolute w-[100rem] sm:w-[200rem] -rotate-[8deg] top-80 sm:top-0 -right-96 sm:-right-[44rem] z-0"
             style={{
               left: backgroundElement1?.position?.left,
             }}
@@ -155,7 +155,7 @@ export default function HeroSection({
             )}
           </div>
           <div
-            className="absolute -top-[90rem] w-[200rem] -rotate-[8deg] -left-[44rem] z-0"
+            className="absolute -top-[50rem] sm:-top-[90rem] sm:w-[200rem] w-[100rem] -rotate-[8deg] -left-96 sm:-left-[44rem] z-0"
             style={{
               right: backgroundElement2?.position?.right,
             }}
@@ -174,9 +174,9 @@ export default function HeroSection({
       )}
 
       {/* Content container - with higher z-index to appear above background elements */}
-      <ContentContainer className="py-16 md:py-20 lg:py-24 relative z-10">
-        <div className="flex flex-col justify-center items-center gap-8 md:gap-12 lg:gap-20">
-          <div className="flex flex-col justify-start items-center gap-6 md:gap-8 lg:gap-12">
+      <ContentContainer className="py-8 sm:py-12 md:py-16 lg:py-24 relative z-10">
+        <div className="flex flex-col justify-center items-center gap-6 sm:gap-8">
+          <div className="flex flex-col justify-start items-center gap-4 sm:gap-6 px-4 sm:px-6 md:px-8">
             {/* Badge */}
             <Badge
               variant="outline"
@@ -189,20 +189,20 @@ export default function HeroSection({
             </Badge>
 
             {/* Title */}
-            <div className="text-center">
+            <div className="text-center w-full">
               <h1
-                className="hero-title font-serif text-5xl md:text-6xl lg:text-8xl text-ca-50 leading-tight md:leading-[1.1] tracking-[-0.01em]"
+                className="hero-title font-serif text-6xl lg:text-8xl text-ca-50 leading-tight md:leading-[1.1] tracking-[-0.01em]"
                 dangerouslySetInnerHTML={{ __html: processedTitle }}
               />
             </div>
 
             {/* Description */}
-            <Body class="max-w-xs md:max-w-md text-center text-ca-300">
+            <Body class="max-w-[280px] sm:max-w-xs md:max-w-md text-center text-ca-300">
               {description}
             </Body>
 
             {/* CTA Button */}
-            <div className="mt-2 md:mt-4">
+            <div className="mt-2 sm:mt-3 md:mt-4">
               <Button
                 href={ctaHref}
                 variant="primary"

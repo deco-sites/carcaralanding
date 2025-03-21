@@ -134,10 +134,10 @@ export default function MethodologySection({
     <section
       className={`relative w-full bg-ca-900 overflow-hidden ${className}`}
     >
-      <ContentContainer className="py-20">
-        <div className="flex flex-col justify-start items-center gap-24">
+      <ContentContainer className="py-8 px-4 sm:px-16 sm:py-12 md:py-16 lg:py-20">
+        <div className="flex flex-col justify-start items-center gap-8 sm:gap-12 md:gap-16 lg:gap-24">
           {/* Header Section */}
-          <div className="w-full max-w-[632px] mx-auto flex flex-col justify-start items-center gap-6">
+          <div className="w-full max-w-[632px] mx-auto flex flex-col justify-start items-center gap-4 sm:gap-5 md:gap-6 px-4 sm:px-6 md:px-0">
             <Badge
               variant="outline"
               color="secondary"
@@ -147,7 +147,7 @@ export default function MethodologySection({
               {badgeText}
             </Badge>
 
-            <h2 className="text-center text-ca-50 text-6xl font-normal font-serif leading-[56px]">
+            <h2 className="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif leading-tight">
               {title}
             </h2>
 
@@ -155,46 +155,47 @@ export default function MethodologySection({
               href={ctaUrl}
               variant="primary"
               size="md"
+              class="w-full sm:w-auto"
             >
               {ctaText}
             </Button>
           </div>
 
           {/* Bento Grid */}
-          <div className="w-full px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-1">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4 sm:gap-6">
             {/* First Column (3 spans) */}
-            <div className="lg:col-span-3 grid grid-cols-1 gap-1">
+            <div className="lg:col-span-4 grid grid-cols-1 gap-4 sm:gap-6 ">
               {/* Top Row (2 columns) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div
-                  className={`p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-4 min-h-[380px]`}
+                  className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[280px] sm:min-h-[320px] md:min-h-[380px]`}
                 >
-                  <h3 className="text-ca-50 text-3xl font-normal leading-loose">
+                  <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                     {discoveryBox.title}
                   </h3>
-                  <p className="text-ca-100 text-base leading-normal">
+                  <p className="text-ca-100 text-sm sm:text-base leading-normal">
                     {discoveryBox.description}
                   </p>
                 </div>
                 <div
-                  className={`p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-4 min-h-[380px]`}
+                  className={`p-4 sm:p-5 md:p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[280px] sm:min-h-[320px] md:min-h-[380px]`}
                 >
-                  <h3 className="text-ca-50 text-3xl font-normal leading-loose">
+                  <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                     {prototypingBox.title}
                   </h3>
-                  <p className="text-ca-100 text-base leading-normal">
+                  <p className="text-ca-100 text-sm sm:text-base leading-normal">
                     {prototypingBox.description}
                   </p>
                 </div>
               </div>
               {/* Bottom Row */}
               <div
-                className={`p-6 ${analysisBox.bgColor} flex flex-col justify-end items-start gap-4 min-h-[256px]`}
+                className={`p-4 sm:p-5 md:p-6 ${analysisBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[200px] sm:min-h-[220px] md:min-h-[256px]`}
               >
-                <h3 className="text-ca-50 text-3xl font-normal leading-loose">
+                <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                   {analysisBox.title}
                 </h3>
-                <p className="text-ca-100 text-base leading-normal">
+                <p className="text-ca-100 text-sm sm:text-base leading-normal">
                   {analysisBox.description}
                 </p>
               </div>
@@ -202,12 +203,12 @@ export default function MethodologySection({
 
             {/* Second Column (4 spans - tall yellow box) */}
             <div
-              className={`lg:col-span-4 p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-4 min-h-[760px] md:min-h-[637px] lg:min-h-[760px]`}
+              className={`lg:col-span-3 p-4 sm:p-5 md:p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[280px] sm:min-h-[320px] md:min-h-[637px] lg:min-h-[760px]`}
             >
-              <h3 className="text-ca-50 text-3xl font-normal leading-loose">
+              <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                 {implementationBox.title}
               </h3>
-              <p className="text-ca-100 text-base leading-normal">
+              <p className="text-ca-100 text-sm sm:text-base leading-normal">
                 {implementationBox.description}
               </p>
             </div>

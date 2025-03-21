@@ -1,0 +1,15 @@
+{
+  "name": "collections/blog/posts/20b19a742159",
+  "__resolveType": "blog/loaders/Blogpost.ts",
+  "post": {
+    "authors": [],
+    "categories": [],
+    "extraProps": [],
+    "excerpt": "How Lojas Torra doubled its conversion rate by migrating its ecommerce's frontend to deco.cx",
+    "title": "The new phase of Lojas Torra with deco.cx",
+    "image": "https://assets.decocache.com/carcaralanding/a8f32a90-c54e-474f-bd9f-68a89034c852/Lojas-Torra-Tapete.webp",
+    "slug": "/torras",
+    "date": "2025-03-21",
+    "content": "<p>How Lojas Torra doubled its conversion rate by migrating its ecommerce's frontend to <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://deco.cx\">deco.cx</a></p>"
+  }
+}

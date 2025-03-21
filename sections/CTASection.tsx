@@ -1,6 +1,8 @@
 /** @jsxImportSource preact */
 import { ContentContainer } from "../components/Layout.tsx";
 import Button from "../components/ui/Button.tsx";
+import type { ImageWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 
 export interface CTASectionProps {
   /**
@@ -32,6 +34,19 @@ export interface CTASectionProps {
   buttonUrl?: string;
 
   /**
+   * @title Background Image
+   * @description Decorative background image
+   */
+  backgroundImage?: ImageWidget;
+
+  /**
+   * @title Show Background Elements
+   * @description Whether to show background decorative elements
+   * @default true
+   */
+  showBackgroundElements?: boolean;
+
+  /**
    * @title Additional CSS classes
    */
   class?: string;
@@ -42,6 +57,8 @@ export default function CTASection({
   subtitle = "Agende uma reunião de 30min com nosso time",
   buttonText = "Agendar reunião",
   buttonUrl = "/contato",
+  backgroundImage = "https://placehold.co/3505x2270/B13431/B13431",
+  showBackgroundElements = true,
   class: className = "",
 }: CTASectionProps) {
   return (
@@ -51,11 +68,19 @@ export default function CTASection({
       >
         <div className="w-full px-8 lg:px-20 py-20 lg:py-40 relative bg-vermelho outline outline-1 outline-offset-[-1px] outline-ca-700 flex flex-col justify-center items-start gap-10 overflow-hidden">
           {/* Background decorative elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="w-[120%] h-[120%] absolute -right-[20%] top-[50%] bg-zinc-800/10 rotate-12 transform-gpu" />
-            <div className="w-[140%] h-[140%] absolute -right-[40%] top-[60%] bg-zinc-800/10 rotate-12 transform-gpu" />
-            <div className="w-[160%] h-[160%] absolute -right-[60%] top-[70%] bg-zinc-800/10 rotate-12 transform-gpu" />
-          </div>
+          {showBackgroundElements && backgroundImage && (
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute w-[100rem] z-0">
+                <Image
+                  src={backgroundImage}
+                  alt="Background decoration"
+                  width={3505}
+                  height={2270}
+                  class="w-full h-auto"
+                />
+              </div>
+            </div>
+          )}
 
           {/* Content */}
           <div className="flex flex-col justify-start items-start gap-6 relative z-10">

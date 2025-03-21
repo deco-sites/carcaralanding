@@ -5,6 +5,7 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $ServicesAccordion from "./islands/ServicesAccordion.tsx";
+import * as $SliderJS from "./islands/SliderJS.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -14,6 +15,7 @@ const manifest = {
   },
   islands: {
     "./islands/ServicesAccordion.tsx": $ServicesAccordion,
+    "./islands/SliderJS.tsx": $SliderJS,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
