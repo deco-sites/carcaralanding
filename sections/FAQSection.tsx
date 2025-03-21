@@ -1,5 +1,4 @@
 /** @jsxImportSource preact */
-import { useSignal } from "@preact/signals";
 import { ContentContainer } from "../components/Layout.tsx";
 import Badge from "../components/ui/Badge.tsx";
 
@@ -103,73 +102,23 @@ const defaultFAQs: FAQItem[] = [
 ];
 
 function FAQItem({ question, answer }: FAQItem) {
-  const isOpen = useSignal(false);
-  const isAnimating = useSignal(false);
-
-  const handleClick = () => {
-    // Disable animation before state change
-    isAnimating.value = false;
-    isOpen.value = !isOpen.value;
-    // Force a reflow then enable animation
-    setTimeout(() => {
-      isAnimating.value = true;
-    }, 0);
-  };
-
   return (
-    <div className="w-full border-b border-ca-700 last:border-b-0">
-      <button
-        onClick={handleClick}
-        className="w-full px-6 py-5 flex justify-between items-center cursor-pointer group"
-      >
-        <h3
-          className={`text-lg font-normal leading-7 text-left transition-colors duration-700 ${
-            isOpen.value ? "text-ca-50" : "text-ca-300 group-hover:text-ca-200"
-          }`}
-        >
+    <details className="w-full border-b border-ca-700 last:border-b-0 group">
+      <summary className="w-full px-6 py-5 flex justify-between items-center cursor-pointer">
+        <h3 className="text-lg font-normal leading-7 text-left text-ca-300 group-hover:text-ca-200 group-open:text-ca-50">
           {question}
         </h3>
         <div className="relative w-6 h-6 shrink-0">
-          <div
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-current transition-all duration-700 ${
-              isOpen.value
-                ? "rotate-180 bg-verde"
-                : "bg-ca-600 group-hover:bg-ca-500"
-            }`}
-          />
-          <div
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0.5 h-4 bg-current transition-all duration-700 ${
-              isOpen.value
-                ? "rotate-180 opacity-0 bg-verde"
-                : "bg-ca-600 group-hover:bg-ca-500"
-            }`}
-          />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-ca-600 group-hover:bg-ca-500 group-open:bg-verde group-open:rotate-180 transition-all duration-700" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0.5 h-4 bg-ca-600 group-hover:bg-ca-500 group-open:bg-verde group-open:opacity-0 group-open:rotate-180 transition-all duration-700" />
         </div>
-      </button>
-      <div
-        className={`grid overflow-hidden transition-all duration-700 ease-in-out ${
-          isOpen.value
-            ? "grid-rows-[1fr] opacity-100"
-            : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <div className="flex flex-col">
-            <div className="px-6 pb-5">
-              <p
-                className={`text-ca-300 text-sm leading-tight transform transition-all duration-700 ease-out ${
-                  isOpen.value && isAnimating.value
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-full opacity-0"
-                }`}
-              >
-                {answer}
-              </p>
-            </div>
-          </div>
-        </div>
+      </summary>
+      <div className="px-6 pb-5">
+        <p className="text-ca-300 text-sm leading-tight">
+          {answer}
+        </p>
       </div>
-    </div>
+    </details>
   );
 }
 

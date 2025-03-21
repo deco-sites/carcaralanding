@@ -134,12 +134,12 @@ export default function HeroSection({
     .replace("AI", "<span class='text-vermelho'>AI</span>");
 
   return (
-    <section className="relative w-full pt-8 bg-ca-900 overflow-hidden">
+    <section className="relative w-full bg-ca-900 overflow-hidden">
       {/* Decorative background elements - positioned with proper z-index */}
       {showBackgroundElements && (
         <>
           <div
-            className="absolute w-[100rem] sm:w-[200rem] -rotate-[8deg] top-80 sm:top-0 -right-96 sm:-right-[44rem] z-0"
+            className="absolute w-[100rem] sm:w-[200rem] -rotate-[8deg] top-80 sm:top-0 -right-96 md:-right-[60rem] z-0"
             style={{
               left: backgroundElement1?.position?.left,
             }}
@@ -174,7 +174,7 @@ export default function HeroSection({
       )}
 
       {/* Content container - with higher z-index to appear above background elements */}
-      <ContentContainer className="py-8 sm:py-12 md:py-16 lg:py-24 relative z-10">
+      <ContentContainer className="py-8 sm:py-12 md:py-16 lg:py-24 pt-32 lg:pt-40 relative z-10">
         <div className="flex flex-col justify-center items-center gap-6 sm:gap-8">
           <div className="flex flex-col justify-start items-center gap-4 sm:gap-6 px-4 sm:px-6 md:px-8">
             {/* Badge */}

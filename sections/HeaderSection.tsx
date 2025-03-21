@@ -80,7 +80,7 @@ export default function HeaderSection({
   const mobileLogo = logo?.mobile ?? defaultLogo.mobile;
 
   return (
-    <header className="z-50 ">
+    <header className="z-50 absolute w-full ">
       <div className="max-w-[1440px] mx-auto px-5 md:px-8 lg:px-20 py-6 flex justify-between items-center">
         <div className="flex-1 flex justify-between items-center">
           {/* Left side with logo and navigation */}

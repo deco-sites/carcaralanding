@@ -109,11 +109,11 @@ function ServicesAccordion({ services }: ServicesAccordionProps) {
 
   return (
     <div
-      className="self-stretch min-h-[760px] flex justify-start items-stretch gap-16"
+      className="self-stretch min-h-[760px] flex flex-col md:flex-row justify-start items-stretch gap-8 md:gap-16"
       ref={containerRef}
     >
-      {/* Left Column - Service List */}
-      <div className="flex-1 max-w-[500px] flex flex-col">
+      {/* Service List Column */}
+      <div className="flex-1 max-w-full md:max-w-[500px] flex flex-col">
         {services.map((service, index) => {
           const isActive = itemVisible.value === index;
           return (
@@ -204,6 +204,23 @@ function ServicesAccordion({ services }: ServicesAccordionProps) {
                         </Button>
                       </div>
                     </div>
+
+                    {/* Mobile Image - only shown on mobile */}
+                    <div className="mt-8 block md:hidden overflow-hidden">
+                      <div
+                        className={`transform transition-opacity duration-700 delay-300 ease-out ${
+                          isActive ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          width={500}
+                          height={300}
+                          className="w-full object-cover"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -212,8 +229,8 @@ function ServicesAccordion({ services }: ServicesAccordionProps) {
         })}
       </div>
 
-      {/* Right Column - Image */}
-      <div className="flex-1 sticky top-0 h-[760px]">
+      {/* Desktop Image Column - only shown on desktop */}
+      <div className="hidden md:block flex-1 sticky top-0 h-[760px]">
         {services.map((service, index) => (
           <div
             key={index}

@@ -181,7 +181,7 @@ export default function Footer({
   rightDecoration = "https://placehold.co/409x641",
 }: FooterProps) {
   return (
-    <div class="w-full bg-amarelo">
+    <div class="w-full bg-amarelo flex">
       <div class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 pt-12 lg:pt-20 pb-16 lg:pb-32 relative inline-flex flex-col justify-start items-start gap-8 overflow-hidden">
         <div class="absolute -right-16 top-0 w-[409px] h-[641px] hidden lg:block">
           <Image

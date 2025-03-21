@@ -217,7 +217,7 @@ export default function ResultsSection({
 
   return (
     <div
-      className={`w-full bg-ca-900 py-8 sm:py-10 md:py-16 lg:pt-20 overflow-hidden ${className}`}
+      className={`w-full bg-ca-900 !pb-0 py-8 sm:py-10 md:py-16 lg:pt-20 overflow-hidden ${className}`}
     >
       <ContentContainer>
         <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
@@ -231,7 +231,7 @@ export default function ResultsSection({
               {badgeText}
             </Badge>
 
-            <H1 class="text-center text-ca-50 text-3xl sm:text-5xl lg:text-6xl font-normal">
+            <H1 class="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal">
               {title}
             </H1>
 

@@ -80,10 +80,11 @@ export default function BlogPostList({
   class: className = "",
 }: BlogPostListProps) {
   const id = useId();
-  const displayPosts = posts?.slice(0, 6) || [];
+  const displayPosts =
+    posts?.filter((post) => post && post.image)?.slice(0, 6) || [];
 
   return (
-    <section id="cases" className={`w-full py-20 ${className}`} id={id}>
+    <section className={`w-full py-20 ${className}`} id={id}>
       <ContentContainer>
         <div className="flex px-4 sm:px-16 flex-col gap-16">
           {/* Header */}

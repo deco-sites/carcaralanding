@@ -162,11 +162,11 @@ export default function MethodologySection({
           </div>
 
           {/* Bento Grid */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4 sm:gap-6">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-2">
             {/* First Column (3 spans) */}
-            <div className="lg:col-span-4 grid grid-cols-1 gap-4 sm:gap-6 ">
+            <div className="lg:col-span-4 grid grid-cols-1 gap-2">
               {/* Top Row (2 columns) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div
                   className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[280px] sm:min-h-[320px] md:min-h-[380px]`}
                 >
