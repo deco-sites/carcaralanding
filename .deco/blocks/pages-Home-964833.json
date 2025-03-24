@@ -205,7 +205,9 @@
             "description": "Um assistente que entende o contexto das conversas, resolve problemas complexos e se comunica naturalmente com seus clientes, proporcionando atendimento personalizado em escala.",
             "image": "https://assets.decocache.com/carcaralanding/a7f6857b-b8b9-4d99-bd39-7ae2f5d41519/whatsapp.png"
           }
-        ]
+        ],
+        "badgeText": "Quem você quer contratar hoje?",
+        "title": "AI Agents em harmonia com seu time"
       }
     },
     {
