@@ -49,7 +49,7 @@
           "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "showBackgroundElements": true,
-        "title": "<p>Aceleramos a</p><p>adoção de AI</p><p>na sua empresa</p>",
+        "title": "<h1>Aceleramos a</h1><h1>adoção de AI</h1><h1>na sua empresa</h1>",
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         }
@@ -188,7 +188,6 @@
             "image": "https://assets.decocache.com/carcaralanding/25a88b43-b9e7-4749-825a-f9f849d02bd0/creative.png"
           },
           {
-            "buttonText": "\"Saiba mais\"",
             "title": "AI Video Content Intelligence",
             "subtitle": "Vídeos que convertem",
             "description": "Transforme como você produz, analisa e otimiza conteúdo em vídeo. Nossa tecnologia identifica padrões de engajamento, extrai insights valiosos e sugere melhorias que aumentam conversões.",
@@ -248,6 +247,12 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/TheFuture.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/FAQSection.tsx",
         "items": [
           {
@@ -279,7 +284,18 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/FooterSection.tsx",
-        "rightDecoration": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg"
+        "rightDecoration": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
+        "transformationStoriesColumn": {
+          "posts": {
+            "__resolveType": "blog/loaders/BlogpostList.ts",
+            "sortBy": "date_desc",
+            "count": 5
+          },
+          "show": true
+        },
+        "industriesColumn": {
+          "show": false
+        }
       }
     }
   ],

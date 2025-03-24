@@ -1,6 +1,19 @@
 import { ComponentChildren } from "preact";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import { BlogPost } from "apps/blog/types.ts";
+
+// Define a simpler interface for blog posts to avoid type conflicts
+export interface SimpleBlogPost {
+  slug?: string;
+  title?: string;
+  excerpt?: string;
+  image?: string;
+  extraProps?: Array<{
+    key: string;
+    value: string;
+  }>;
+}
 
 interface FooterLinkProps {
   children: ComponentChildren;
@@ -34,11 +47,15 @@ const FooterColumn = ({ title, links }: FooterColumnProps) => (
       {title}
     </div>
     <div class="self-stretch flex flex-col justify-start items-start">
-      {links.map((link) => (
-        <FooterLink key={link.label} href={link.href}>
-          {link.label}
-        </FooterLink>
-      ))}
+      {links && links.length > 0
+        ? (
+          links.map((link) => (
+            <FooterLink key={link.label} href={link.href}>
+              {link.label}
+            </FooterLink>
+          ))
+        )
+        : <div class="text-ca-900 text-sm">No links available</div>}
     </div>
   </div>
 );
@@ -49,21 +66,47 @@ interface SocialIcon {
   ariaLabel: string;
 }
 
+interface ColumnConfig {
+  title: string;
+  show?: boolean;
+}
+
+/**
+ * Footer section component that displays navigation links, blog posts, and social media icons.
+ *
+ * To configure the blog posts in the CMS, use the following configuration for the transformationStoriesColumn:
+ * ```json
+ * {
+ *   "transformationStoriesColumn": {
+ *     "title": "Histórias de Transformação",
+ *     "show": true,
+ *     "posts": {
+ *       "__resolveType": "blog/loaders/BlogpostList.ts",
+ *       "sortBy": "date_desc",
+ *       "count": 6
+ *     }
+ *   }
+ * }
+ * ```
+ */
 export interface FooterProps {
   /**
    * Use cases column configuration
    */
   useCasesColumn?: {
     title: string;
+    show?: boolean;
     links: Link[];
   };
 
   /**
-   * Transformation stories column configuration
+   * Transformation stories column configuration.
+   * Configure with blog/loaders/BlogpostList.ts in the CMS to show latest blog posts
    */
   transformationStoriesColumn?: {
     title: string;
-    links: Link[];
+    show?: boolean;
+    posts?: BlogPost[] | null;
   };
 
   /**
@@ -71,6 +114,7 @@ export interface FooterProps {
    */
   industriesColumn?: {
     title: string;
+    show?: boolean;
     links: Link[];
   };
 
@@ -112,6 +156,7 @@ const SocialIcon = ({ type, href, ariaLabel }: SocialIcon) => {
 export default function Footer({
   useCasesColumn = {
     title: "Principais Casos de Uso",
+    show: true,
     links: [
       { label: "CMS Generativo", href: "/use-cases/cms" },
       { label: "Agentes de SEO", href: "/use-cases/seo" },
@@ -123,28 +168,12 @@ export default function Footer({
   },
   transformationStoriesColumn = {
     title: "Histórias de Transformação",
-    links: [
-      { label: "Livemode cria seu próprio Photoshop", href: "/cases/livemode" },
-      {
-        label: "Leroy Merlin substitui 3 ferramentas por 1",
-        href: "/cases/leroy",
-      },
-      {
-        label: "Época Cosméticos gera relatórios 10x mais rápido",
-        href: "/cases/epoca",
-      },
-      {
-        label: "Casa & Video aumenta tráfego orgânico em 20x",
-        href: "/cases/casa-video",
-      },
-      {
-        label: "Miess reduz tempo de criação de campanhas",
-        href: "/cases/miess",
-      },
-    ],
+    show: true,
+    posts: null,
   },
   industriesColumn = {
     title: "Indústrias",
+    show: false, // Default to hidden since you mentioned it's not being used
     links: [
       { label: "Varejo", href: "/industries/retail" },
       { label: "Mídia", href: "/industries/media" },
@@ -180,6 +209,59 @@ export default function Footer({
   ],
   rightDecoration = "https://placehold.co/409x641",
 }: FooterProps) {
+  // Convert blog posts to links with debug logging
+  console.log("Raw posts:", transformationStoriesColumn.posts);
+  console.log("Column title:", transformationStoriesColumn.title);
+
+  const transformationLinks = transformationStoriesColumn.posts
+    ?.filter((post): post is BlogPost => {
+      const isValid = Boolean(post && post.title);
+      if (!isValid) {
+        console.log("Filtered out invalid post:", post);
+      }
+      return isValid;
+    })
+    .slice(0, 6)
+    .map((post) => {
+      const link = {
+        label: post.title || "Untitled Post",
+        href: `/blog/${
+          post.slug || post.title?.toLowerCase().replace(/\s+/g, "-") || "post"
+        }`,
+      };
+      console.log("Created link:", link);
+      return link;
+    }) || [];
+
+  // Get visible columns
+  const visibleColumns = [
+    useCasesColumn.show && (
+      <div key="useCases" class="w-full lg:w-56">
+        <FooterColumn
+          title={useCasesColumn.title}
+          links={useCasesColumn.links}
+        />
+      </div>
+    ),
+    transformationStoriesColumn.show && (
+      <div key="transformationStories" class="w-full lg:w-72">
+        <FooterColumn
+          title={transformationStoriesColumn.title ||
+            "Histórias de Transformação"}
+          links={transformationLinks}
+        />
+      </div>
+    ),
+    industriesColumn.show && (
+      <div key="industries" class="w-full lg:w-44">
+        <FooterColumn
+          title={industriesColumn.title}
+          links={industriesColumn.links}
+        />
+      </div>
+    ),
+  ].filter(Boolean);
+
   return (
     <div class="w-full bg-amarelo flex">
       <div class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 pt-12 lg:pt-20 pb-16 lg:pb-32 relative inline-flex flex-col justify-start items-start gap-8 overflow-hidden">
@@ -193,25 +275,8 @@ export default function Footer({
           />
         </div>
 
-        <div class="w-full max-w-4xl flex flex-col lg:flex-row lg:justify-between items-start gap-8 lg:gap-0 relative z-10">
-          <div class="w-full lg:w-56">
-            <FooterColumn
-              title={useCasesColumn.title}
-              links={useCasesColumn.links}
-            />
-          </div>
-          <div class="w-full lg:w-72">
-            <FooterColumn
-              title={transformationStoriesColumn.title}
-              links={transformationStoriesColumn.links}
-            />
-          </div>
-          <div class="w-full lg:w-44">
-            <FooterColumn
-              title={industriesColumn.title}
-              links={industriesColumn.links}
-            />
-          </div>
+        <div class="w-full max-w-4xl flex flex-col lg:flex-row lg:gap-16 items-start gap-8 relative z-10">
+          {visibleColumns}
         </div>
 
         <div class="w-full max-w-3xl flex flex-col justify-start items-start gap-8 relative z-10">

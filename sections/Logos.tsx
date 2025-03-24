@@ -23,7 +23,7 @@ export default function Logos({
   logos = IMG_PLACEHODLER,
 }: Props) {
   const slideContent = (
-    <div class="flex items-center gap-20">
+    <div class="flex items-center gap-10 md:gap-20">
       {logos?.map((logo) => {
         return (
           <div class="flex items-center justify-center">
@@ -32,7 +32,7 @@ export default function Logos({
               alt={logo.altText || ""}
               width={48}
               height={48}
-              class="w-auto h-auto max-w-[8rem] max-h-[3.5rem] object-contain"
+              class="w-auto h-auto max-w-[5rem] max-h-[1.5rem] md:max-w-[8rem] md:max-h-[3.5rem] object-contain"
             />
           </div>
         );
@@ -40,9 +40,9 @@ export default function Logos({
     </div>
   );
   return (
-    <div class="w-full py-6 lg:py-8 justify-self-center max-w-[1440px]">
+    <div class="w-full py-3 md:py-6 justify-self-center max-w-[1440px]">
       <div class="relative w-full overflow-hidden">
-        <div class="animate-sliding flex gap-20">
+        <div class="animate-sliding flex gap-10 md:gap-20">
           {slideContent}
           {slideContent} {/* Add a duplicate for seamless loop */}
         </div>

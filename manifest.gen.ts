@@ -17,13 +17,13 @@ import * as $$$$$$6 from "./sections/FeaturedBlogPost.tsx";
 import * as $$$$$$7 from "./sections/FooterSection.tsx";
 import * as $$$$$$8 from "./sections/Header.tsx";
 import * as $$$$$$9 from "./sections/HeaderSection.tsx";
-import * as $$$$$$21 from "./sections/hero-1.tsx";
-import * as $$$$$$22 from "./sections/hero-2.tsx";
+import * as $$$$$$22 from "./sections/hero-1.tsx";
+import * as $$$$$$23 from "./sections/hero-2.tsx";
 import * as $$$$$$10 from "./sections/Hero.tsx";
-import * as $$$$$$23 from "./sections/hero2.tsx";
+import * as $$$$$$24 from "./sections/hero2.tsx";
 import * as $$$$$$11 from "./sections/HeroSection.tsx";
 import * as $$$$$$12 from "./sections/ImageWithParagraph.tsx";
-import * as $$$$$$24 from "./sections/loaders/BlogPostList.ts";
+import * as $$$$$$25 from "./sections/loaders/BlogPostList.ts";
 import * as $$$$$$13 from "./sections/Logos.tsx";
 import * as $$$$$$14 from "./sections/MethodologySection.tsx";
 import * as $$$$$$15 from "./sections/Page.tsx";
@@ -31,7 +31,8 @@ import * as $$$$$$16 from "./sections/ResultsSection.tsx";
 import * as $$$$$$17 from "./sections/SectionDivider.tsx";
 import * as $$$$$$18 from "./sections/ServicesSection.tsx";
 import * as $$$$$$19 from "./sections/Testimonials.tsx";
-import * as $$$$$$20 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$20 from "./sections/TheFuture.tsx";
+import * as $$$$$$21 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -45,13 +46,13 @@ const manifest = {
     "site/sections/FooterSection.tsx": $$$$$$7,
     "site/sections/Header.tsx": $$$$$$8,
     "site/sections/HeaderSection.tsx": $$$$$$9,
-    "site/sections/hero-1.tsx": $$$$$$21,
-    "site/sections/hero-2.tsx": $$$$$$22,
+    "site/sections/hero-1.tsx": $$$$$$22,
+    "site/sections/hero-2.tsx": $$$$$$23,
     "site/sections/Hero.tsx": $$$$$$10,
-    "site/sections/hero2.tsx": $$$$$$23,
+    "site/sections/hero2.tsx": $$$$$$24,
     "site/sections/HeroSection.tsx": $$$$$$11,
     "site/sections/ImageWithParagraph.tsx": $$$$$$12,
-    "site/sections/loaders/BlogPostList.ts": $$$$$$24,
+    "site/sections/loaders/BlogPostList.ts": $$$$$$25,
     "site/sections/Logos.tsx": $$$$$$13,
     "site/sections/MethodologySection.tsx": $$$$$$14,
     "site/sections/Page.tsx": $$$$$$15,
@@ -59,7 +60,8 @@ const manifest = {
     "site/sections/SectionDivider.tsx": $$$$$$17,
     "site/sections/ServicesSection.tsx": $$$$$$18,
     "site/sections/Testimonials.tsx": $$$$$$19,
-    "site/sections/Theme/Theme.tsx": $$$$$$20,
+    "site/sections/TheFuture.tsx": $$$$$$20,
+    "site/sections/Theme/Theme.tsx": $$$$$$21,
   },
   "apps": {
     "site/apps/blog/types.ts": $$$$$$$$$$$0,

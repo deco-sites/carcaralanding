@@ -98,20 +98,20 @@ function StatisticBlock({
       <div className="self-stretch">
         {prefix && (
           <span
-            className={`text-${accentColor} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight`}
+            className={`text-${accentColor} text-5xl lg:text-6xl font-serif leading-tight`}
           >
             {prefix}
           </span>
         )}
         <span
-          className="text-ca-50 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight"
+          className="text-ca-50 text-5xl lg:text-6xl font-serif leading-tight"
           data-value={value}
         >
           {value}
         </span>
         {suffix && (
           <span
-            className={`text-${accentColor} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight`}
+            className={`text-${accentColor} text-5xl lg:text-6xl font-serif leading-tight`}
           >
             {suffix}
           </span>
@@ -119,7 +119,7 @@ function StatisticBlock({
       </div>
       <div className="self-stretch h-px bg-ca-700" />
       <div className="self-stretch">
-        <Eyebrow class="text-ca-50 text-sm sm:text-base md:text-lg font-normal leading-6 sm:leading-7">
+        <Eyebrow class="text-ca-50 text-xl font-normal leading-6 sm:leading-7">
           {description}
         </Eyebrow>
       </div>
@@ -217,7 +217,7 @@ export default function ResultsSection({
 
   return (
     <div
-      className={`w-full bg-ca-900 !pb-0 py-8 sm:py-10 md:py-16 lg:pt-20 overflow-hidden ${className}`}
+      className={`w-full bg-ca-900 md:!pb-0 py-8 sm:py-10 md:py-16 lg:pt-20 overflow-hidden ${className}`}
     >
       <ContentContainer>
         <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
@@ -244,9 +244,9 @@ export default function ResultsSection({
 
       <div
         ref={statsRef}
-        className="w-full border-t border-ca-700 mt-6 sm:mt-8 md:mt-10"
+        className="w-full border-0 md:border-t border-ca-700 mt-6 sm:mt-8 md:mt-10"
       >
-        <ContentContainer className="flex flex-col md:flex-row">
+        <ContentContainer className="flex flex-col gap-6 md:gap-0 md:flex-row">
           {statistics.map((stat, index) => (
             <>
               <StatisticBlock key={`stat-${index}`} {...stat} />

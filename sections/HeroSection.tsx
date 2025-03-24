@@ -130,6 +130,9 @@ export default function HeroSection({
 }: HeroProps) {
   // Process title to apply correct styling to specific parts
   const processedTitle = title
+    // First convert any br tags to p tags for consistency
+    .replace(/<br\s*\/?>/g, "</p><p>")
+    // Then apply color styling
     .replace("adoção de", "<span class='text-vermelho'>adoção de</span>")
     .replace("AI", "<span class='text-vermelho'>AI</span>");
 
@@ -189,10 +192,13 @@ export default function HeroSection({
             </Badge>
 
             {/* Title */}
-            <div className="text-center w-full">
+            <div className="text-center w-full sm:max-w-2xl mx-auto">
               <h1
-                className="hero-title font-serif text-6xl lg:text-8xl text-ca-50 leading-tight md:leading-[1.1] tracking-[-0.01em]"
-                dangerouslySetInnerHTML={{ __html: processedTitle }}
+                className="hero-title font-serif text-6xl lg:text-8xl text-ca-50 tracking-[-0.01em]"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    `<div class="space-y-0 leading-[1.1] md:leading-[1.1]">${processedTitle}</div>`,
+                }}
               />
             </div>
 
