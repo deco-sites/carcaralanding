@@ -252,12 +252,24 @@
         "__resolveType": "site/sections/FAQSection.tsx",
         "items": [
           {
-            "question": "What makes your AI app development different from other solutions?",
-            "answer": "here"
+            "question": "Qual é a definição de um AI Agent?",
+            "answer": "Um AI Agent é um software que tem AI como base do seu funcionamento que consegue de maneira autônoma lidar com tarefas criativas e complexas"
           },
           {
-            "question": "Do I need technical expertise to use your solutions?",
-            "answer": "No. While our solutions are technically sophisticated, we handle all the complex development work. Our collaborative approach ensures that your team can easily integrate and use the final product without requiring deep technical knowledge."
+            "question": "Quanto tempo leva, em média, para desenvolver e integrar um AI Agent na minha empresa?",
+            "answer": "Temos visto em média 1 mês entre o fechamento do projeto e a entrada do AI agent na operação do cliente."
+          },
+          {
+            "question": "O que acontece se eu quiser modificar ou expandir o AI Agent depois da implementação inicial?",
+            "answer": "Você tem acesso ao código do seu AI Agent e poderá sempre evoluir ele por conta própria ou contratar nosso time para te ajudar."
+          },
+          {
+            "question": "Como vocês garantem a segurança e conformidade dos dados usados pelos agentes de IA?",
+            "answer": "Na arquitetura de cada AI Agent, nós definimos exatamente o nível de acesso à dados que os modelos fundamentais terão e com quais critérios. Além disso, você tem visibilidade total das atividades do Agent e os logs do que foi gerado."
+          },
+          {
+            "question": "Qual o investimento médio para um projeto de IA e em quanto tempo posso esperar retorno?",
+            "answer": "Depende muito da arquitetura e do escopo do projeto. No entanto, nós precificamos nosso serviço para nossos clientes terem retorno do projeto entre 3-6 meses."
           }
         ],
         "title": "Tudo que você precisa saber sobre AI Agents"
