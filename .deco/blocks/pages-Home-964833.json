@@ -327,10 +327,43 @@
       "section": {
         "__resolveType": "site/sections/PricingSection.tsx",
         "consultingPlan": {
-          "price": "$200/hr"
+          "price": "$200/hr",
+          "title": "Consultoria",
+          "ctaText": "Agende uma reunião",
+          "features": [
+            "Cursos e Workshops",
+            "Análise Estratégica",
+            "Minimização de risco implementação AI",
+            "Futuro de negócios com AI"
+          ],
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
         },
         "developmentPlan": {
-          "price": "$7,500/m"
+          "price": "$7,500/m",
+          "title": "Parceria recorrente",
+          "ctaText": "Agente uma reunião",
+          "features": [
+            "Time ininterrupto alocado na sua operação",
+            "Gestores de Projeto e Desenvolvedores AI",
+            "Escale com o seu ritmo e necessidades",
+            "Insights Estratégicos ilimitados"
+          ],
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        },
+        "badgeText": "Pricing",
+        "title": "Garanta um AI Agent estruturado e seguro com um time validado",
+        "description": "Nosso time de desenvolvedores, analistas de dados e gestores de projeto são especialistas em desenvolvimento de software personalizados, acelerações de empresas com soluções AI-first e criação de AI Agents inovadores. ",
+        "pilotPlan": {
+          "title": "Projeto Personalizado",
+          "price": "Entre em contato",
+          "features": [
+            "Do discovery à implementação",
+            "Integração dentro da sua operação",
+            "30-60 dias de projeto",
+            "Time de especialistas totalmente alocado"
+          ],
+          "ctaText": "Entre em contato",
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
         }
       }
     },
