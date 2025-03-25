@@ -49,7 +49,7 @@
           "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "showBackgroundElements": true,
-        "title": "<h1>Construimos</h1><h1><span style=\"color: #b13431\">AI</span> <span style=\"color: #b13431\">Agents</span></h1><h1>personalizados</h1>",
+        "title": "<h1>Construimos</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents únicos</span></h1><h1>para sua empresa</h1>",
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         },
@@ -181,29 +181,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/TheFuture.tsx",
-        "cards": [],
-        "card2": {
-          "title": "Interface Dinâmica",
-          "description": "Interfaces de usuário serão geradas em tempo real, adaptando-se perfeitamente às necessidades e contexto de cada usuário."
-        },
-        "card1": {
-          "title": "Times de IA",
-          "description": "Empresas terão equipes dedicadas de Agentes de IA trabalhando junto com humanos."
-        },
-        "card3": {
-          "title": "IA como Commodity",
-          "description": "Modelos de IA se tornarão commodities padronizadas, tornando capacidades avançadas acessíveis."
-        },
-        "card4": {
-          "title": "Programação Natural",
-          "description": "A programação evoluirá para interações em linguagem natural."
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/Divider.tsx"
       }
     },
@@ -256,7 +233,10 @@
           },
           {
             "buttonText": "\"Saiba mais\"",
-            "title": "VTEX AI Agent"
+            "title": "AI Agent VTEX",
+            "image": "https://assets.decocache.com/carcaralanding/7ad16470-2907-462e-bc8f-ef42beef0e49/Captura-de-Tela-2025-03-25-as-16.03.58.png",
+            "subtitle": "Gerencie o crescimento da sua operação VTEX",
+            "description": "Tenha um especialista da sua operação VTEX trabalhando ao seu lado. Tenha insights de estoque, analise a performance das suas vendas e ganhe recomendações estratégicas para aumentar receita."
           }
         ],
         "badgeText": "Contrate seu próximo AI Agent hoje",
@@ -273,8 +253,13 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/MethodologySection.tsx",
-        "discoveryBox": {},
-        "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        "discoveryBox": {
+          "title": "1. Descoberta e definição"
+        },
+        "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+        "prototypingBox": {
+          "title": "2. Prototipagem"
+        }
       }
     },
     {
@@ -294,11 +279,11 @@
           },
           {
             "question": "Quanto tempo leva, em média, para desenvolver e integrar um AI Agent na minha empresa?",
-            "answer": "Temos visto em média 1 mês entre o fechamento do projeto e a entrada do AI agent na operação do cliente."
+            "answer": "Em média 1 mês entre o fechamento do projeto e a entrada do AI agent na sua operação."
           },
           {
             "question": "O que acontece se eu quiser modificar ou expandir o AI Agent depois da implementação inicial?",
-            "answer": "Você tem acesso ao código do seu AI Agent e poderá sempre evoluir ele por conta própria ou contratar nosso time para te ajudar."
+            "answer": "Você tem acesso ao código do seu AI Agent e poderá sempre evoluí-lo por conta própria ou contratar nosso time para te ajudar."
           },
           {
             "question": "Como vocês garantem a segurança e conformidade dos dados usados pelos agentes de IA?",
@@ -306,10 +291,10 @@
           },
           {
             "question": "Qual o investimento médio para um projeto de IA e em quanto tempo posso esperar retorno?",
-            "answer": "Depende muito da arquitetura e do escopo do projeto. No entanto, nós precificamos nosso serviço para nossos clientes terem retorno do projeto entre 3-6 meses."
+            "answer": "Depende da arquitetura e do escopo do projeto. No entanto, nós precificamos nosso serviço para nossos clientes terem retorno do projeto entre 3-6 meses."
           }
         ],
-        "title": "Tudo que você precisa saber sobre AI Agents"
+        "title": "Tudo que você precisa saber "
       }
     },
     {
@@ -324,7 +309,7 @@
         "__resolveType": "site/sections/CTASection.tsx",
         "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
         "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
-        "title": "Pronto para evoluir sua empresa com AI?",
+        "title": "Pronto para evoluir sua empresa?",
         "subtitle": "Entre em contato para conquistar seu AI Agent personalizado"
       }
     },
