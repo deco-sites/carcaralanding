@@ -168,7 +168,7 @@ export default function MethodologySection({
               {/* Top Row (2 columns) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div
-                  className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[280px] sm:min-h-[320px] md:min-h-[380px]`}
+                  className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[380px]`}
                 >
                   <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                     {discoveryBox.title}
@@ -178,7 +178,7 @@ export default function MethodologySection({
                   </p>
                 </div>
                 <div
-                  className={`p-4 sm:p-5 md:p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[280px] sm:min-h-[320px] md:min-h-[380px]`}
+                  className={`p-4 sm:p-5 md:p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[380px]`}
                 >
                   <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                     {prototypingBox.title}
@@ -190,7 +190,7 @@ export default function MethodologySection({
               </div>
               {/* Bottom Row */}
               <div
-                className={`p-4 sm:p-5 md:p-6 ${analysisBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[200px] sm:min-h-[220px] md:min-h-[256px]`}
+                className={`p-4 sm:p-5 md:p-6 ${analysisBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[256px]`}
               >
                 <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                   {analysisBox.title}
@@ -203,7 +203,7 @@ export default function MethodologySection({
 
             {/* Second Column (4 spans - tall yellow box) */}
             <div
-              className={`lg:col-span-3 p-4 sm:p-5 md:p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[280px] sm:min-h-[320px] md:min-h-[637px] lg:min-h-[760px]`}
+              className={`lg:col-span-3 p-4 sm:p-5 md:p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[637px] lg:min-h-[760px]`}
             >
               <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                 {implementationBox.title}

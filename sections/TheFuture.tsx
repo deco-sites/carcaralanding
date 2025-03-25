@@ -1,44 +1,141 @@
-import { useSignal } from "@preact/signals";
-import { useEffect, useRef } from "preact/hooks";
 import { H1 } from "../components/ui/Typography.tsx";
 import Badge from "../components/ui/Badge.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
+import FutureCards from "../islands/FutureCards.tsx";
 
-interface FutureItem {
-  title: string;
-  description: string;
-  size?: "small" | "medium" | "large";
-  isHighlight?: boolean;
+export interface Props {
+  /**
+   * @title Badge Text
+   * @description Text displayed in the badge above the title
+   * @default "O Futuro"
+   */
+  badgeText?: string;
+
+  /**
+   * @title Section Title
+   * @description Main title of the section
+   * @default "O Futuro da IA está Aqui"
+   */
+  title?: string;
+
+  /**
+   * @title Section Description
+   * @description Text displayed below the title
+   * @default "Descubra como a IA está transformando a forma como trabalhamos e criamos. Essas tendências não são apenas previsões - elas já estão se tornando realidade."
+   */
+  description?: string;
+
+  /**
+   * @title Card 1 - Times de IA
+   * @description Content for the first card (blue)
+   */
+  card1: {
+    /**
+     * @default "Times de IA"
+     */
+    title: string;
+    /**
+     * @format textarea
+     * @default "Empresas terão equipes dedicadas de Agentes de IA trabalhando junto com humanos, revolucionando a produtividade e inovação."
+     */
+    description: string;
+  };
+
+  /**
+   * @title Card 2 - IA como Commodity
+   * @description Content for the second card (green)
+   */
+  card2: {
+    /**
+     * @default "IA como Commodity"
+     */
+    title: string;
+    /**
+     * @format textarea
+     * @default "Modelos de IA se tornarão commodities padronizadas, tornando capacidades avançadas acessíveis a todas as empresas."
+     */
+    description: string;
+  };
+
+  /**
+   * @title Card 3 - Programação Natural
+   * @description Content for the third card (yellow)
+   */
+  card3: {
+    /**
+     * @default "Programação Natural"
+     */
+    title: string;
+    /**
+     * @format textarea
+     * @default "A programação evoluirá para interações em linguagem natural, tornando o desenvolvimento de software mais intuitivo e acessível."
+     */
+    description: string;
+  };
+
+  /**
+   * @title Card 4 - Interface Dinâmica
+   * @description Content for the fourth card (red)
+   */
+  card4: {
+    /**
+     * @default "Interface Dinâmica"
+     */
+    title: string;
+    /**
+     * @format textarea
+     * @default "Interfaces de usuário serão geradas em tempo real, adaptando-se perfeitamente às necessidades e contexto de cada usuário."
+     */
+    description: string;
+  };
 }
 
-export default function TheFuture() {
-  const activeItem = useSignal<number>(0);
-
-  const futureItems: FutureItem[] = [
+export default function TheFuture({
+  badgeText = "O Futuro",
+  title = "O Futuro da IA está Aqui",
+  description =
+    "Descubra como a IA está transformando a forma como trabalhamos e criamos.",
+  card1 = {
+    title: "Times de IA",
+    description:
+      "Empresas terão equipes dedicadas de Agentes de IA trabalhando junto com humanos, revolucionando a produtividade e inovação.",
+  },
+  card2 = {
+    title: "IA como Commodity",
+    description:
+      "Modelos de IA se tornarão commodities padronizadas, tornando capacidades avançadas acessíveis a todas as empresas.",
+  },
+  card3 = {
+    title: "Programação Natural",
+    description:
+      "A programação evoluirá para interações em linguagem natural, tornando o desenvolvimento de software mais intuitivo e acessível.",
+  },
+  card4 = {
+    title: "Interface Dinâmica",
+    description:
+      "Interfaces de usuário serão geradas em tempo real, adaptando-se perfeitamente às necessidades e contexto de cada usuário.",
+  },
+}: Props) {
+  const cards = [
     {
-      title: "AI Teams",
-      description:
-        "Companies will have dedicated teams of AI Agents working alongside humans, revolutionizing productivity and innovation.",
-      size: "medium",
+      ...card1,
+      color: "azul" as const,
+      icon: "robot",
     },
     {
-      title: "AI as Commodity",
-      description:
-        "AI models will become standardized commodities, making advanced capabilities accessible to all businesses.",
-      size: "medium",
+      ...card2,
+      color: "verde" as const,
+      icon: "deployed_code",
     },
     {
-      title: "Natural Programming",
-      description:
-        "Programming will evolve to natural language interactions, making software development more intuitive and accessible.",
-      size: "medium",
+      ...card3,
+      color: "amarelo" as const,
+      icon: "code_blocks",
     },
     {
-      title: "Dynamic UI",
-      description:
-        "User interfaces will be generated in real-time, adapting perfectly to each user's needs and context.",
-      size: "large",
-      isHighlight: true,
+      ...card4,
+      color: "vermelho" as const,
+      icon: "magic_exchange",
     },
   ];
 
@@ -53,86 +150,20 @@ export default function TheFuture() {
               withDot
               dotColor="primary"
             >
-              The Future
+              {badgeText}
             </Badge>
             <H1 className="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif">
-              The Future of AI is Here
+              {title}
             </H1>
             <p className="text-center max-w-[280px] sm:max-w-sm md:max-w-md text-ca-300 px-4 sm:px-0">
-              Discover how AI is transforming the way we work and create. These
-              trends are not just predictions - they're already becoming
-              reality.
+              {description}
             </p>
           </div>
 
           {/* Grid Layout */}
-          <div className="w-full grid grid-rows-[repeat(5,auto)] grid-cols-10 gap-0">
-            {/* Row 1 */}
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-
-            {/* AI Teams */}
-            <div className="relative col-[3/5] row-[1/3] border border-ca-400 bg-ca-800 rounded-[1.25rem] group cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 p-6 flex flex-col bg-center bg-no-repeat bg-cover">
-                <div className="text-vermelho text-sm">*</div>
-                <h3 className="text-ca-50 text-xl font-normal mt-2">
-                  AI Teams
-                </h3>
-              </div>
-            </div>
-
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-
-            {/* AI as Commodity */}
-            <div className="relative col-[8/10] row-[1/3] border border-ca-400 bg-ca-800 rounded-[1.25rem] group cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 p-6 flex flex-col bg-center bg-no-repeat bg-cover">
-                <div className="text-vermelho text-sm">*</div>
-                <h3 className="text-ca-50 text-xl font-normal mt-2">
-                  AI as Commodity
-                </h3>
-              </div>
-            </div>
-
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-
-            {/* Row 2 continues - empty cells */}
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-            <div className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square" />
-
-            {/* Natural Programming - Center */}
-            <div className="relative col-[5/7] row-[3/5] border border-ca-400 bg-ca-800 rounded-[1.25rem] group cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 p-6 flex flex-col bg-center bg-no-repeat bg-cover">
-                <div className="text-vermelho text-sm">*</div>
-                <h3 className="text-ca-50 text-xl font-normal mt-2">
-                  Natural Programming
-                </h3>
-                <p className="text-ca-300 text-sm mt-2">
-                  Programming will evolve to natural language interactions,
-                  making software development more intuitive and accessible.
-                </p>
-              </div>
-            </div>
-
-            {/* Dynamic UI - Right */}
-            <div className="relative col-[6/8] row-[4/6] border border-ca-400 bg-vermelho rounded-[1.25rem] group cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 p-6 flex flex-col bg-center bg-no-repeat bg-cover">
-                <div className="text-black text-xl">→</div>
-                <h3 className="text-black text-xl font-normal mt-2">
-                  Dynamic UI
-                </h3>
-              </div>
-            </div>
-
-            {/* Fill remaining cells with 1x1 squares */}
-            {[...Array(20)].map((_, i) => (
-              <div
-                key={i}
-                className="relative border border-ca-400 bg-ca-900 rounded-[1.25rem] aspect-square"
-              />
-            ))}
+          <div className="relative w-full">
+            {/* Interactive Cards */}
+            <FutureCards cards={cards} />
           </div>
         </div>
       </ContentContainer>

@@ -39,7 +39,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
     ?.value;
 
   return (
-    <div className="relative w-[384px] h-[600px] group flex-shrink-0">
+    <div className="relative w-[300px] h-[400px] sm:w-[384px] sm:h-[600px] group flex-shrink-0">
       <Image
         src={post.image || ""}
         alt={post.title || ""}
@@ -85,7 +85,7 @@ export default function BlogPostList({
   return (
     <section className={`w-full py-20 ${className}`} id="cases">
       <ContentContainer>
-        <div className="flex px-4 sm:px-16 flex-col gap-16">
+        <div className="flex px-4 sm:px-16 flex-col gap-8 sm:gap-16">
           {/* Header */}
           <div className="flex justify-between items-end flex-wrap gap-8">
             <div className="flex flex-col gap-6 max-w-[883px]">

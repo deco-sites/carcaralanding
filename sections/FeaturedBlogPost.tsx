@@ -92,7 +92,7 @@ export default function FeaturedBlogPost({
                   {badgeText}
                 </Badge>
 
-                <H1 class="text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight">
+                <H1 className="text-left text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif">
                   {fallbackTitle}
                 </H1>
 
@@ -153,7 +153,7 @@ export default function FeaturedBlogPost({
                 {badgeText}
               </Badge>
 
-              <H1 class="text-ca-50 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-normal leading-tight">
+              <H1 className="text-left text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif">
                 {title}
               </H1>
 

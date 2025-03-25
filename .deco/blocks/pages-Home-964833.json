@@ -151,6 +151,29 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/TheFuture.tsx",
+        "cards": [],
+        "card2": {
+          "title": "Interface Dinâmica",
+          "description": "Interfaces de usuário serão geradas em tempo real, adaptando-se perfeitamente às necessidades e contexto de cada usuário."
+        },
+        "card1": {
+          "title": "Times de IA",
+          "description": "Empresas terão equipes dedicadas de Agentes de IA trabalhando junto com humanos."
+        },
+        "card3": {
+          "title": "IA como Commodity",
+          "description": "Modelos de IA se tornarão commodities padronizadas, tornando capacidades avançadas acessíveis."
+        },
+        "card4": {
+          "title": "Programação Natural",
+          "description": "A programação evoluirá para interações em linguagem natural."
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/FeaturedBlogPost.tsx",
         "post": {},
         "posts": {

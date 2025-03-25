@@ -83,7 +83,7 @@ function ServicesSection({
           >
             {badgeText}
           </Badge>
-          <H1 className="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif">
+          <H1 className="text-left text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal font-serif">
             {title}
           </H1>
         </div>

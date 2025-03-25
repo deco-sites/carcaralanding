@@ -132,6 +132,15 @@ export interface FooterProps {
    * Right decoration image
    */
   rightDecoration?: ImageWidget;
+
+  /**
+   * Mobile logo configuration
+   */
+  mobileLogo?: {
+    image: ImageWidget;
+    alt: string;
+    href: string;
+  };
 }
 
 const SocialIcon = ({ type, href, ariaLabel }: SocialIcon) => {
@@ -208,11 +217,8 @@ export default function Footer({
     },
   ],
   rightDecoration = "https://placehold.co/409x641",
+  mobileLogo,
 }: FooterProps) {
-  // Convert blog posts to links with debug logging
-  console.log("Raw posts:", transformationStoriesColumn.posts);
-  console.log("Column title:", transformationStoriesColumn.title);
-
   const transformationLinks = transformationStoriesColumn.posts
     ?.filter((post): post is BlogPost => {
       const isValid = Boolean(post && post.title);
@@ -280,26 +286,41 @@ export default function Footer({
         </div>
 
         <div class="w-full max-w-3xl flex flex-col justify-start items-start gap-8 relative z-10">
-          <div class="self-stretch flex flex-col sm:flex-row justify-between items-center sm:items-start gap-6 sm:gap-0">
-            <div class="flex flex-col sm:flex-row justify-center sm:justify-start items-center sm:items-center gap-4 sm:gap-6">
-              <div class="flex flex-col sm:flex-row justify-center sm:justify-start items-center sm:items-start gap-4 sm:gap-6">
+          <div class="w-full flex flex-col sm:flex-row justify-between items-start gap-6 sm:gap-0">
+            <div class="w-full flex flex-col sm:flex-row justify-start items-start sm:items-center gap-4 sm:gap-6">
+              <div class="w-full flex flex-col sm:flex-row justify-start items-start gap-4 sm:gap-6">
                 {legalLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    class="text-ca-900 text-sm font-normal font-sans leading-tight hover:text-vermelho transition-colors text-center sm:text-left"
+                    class="text-ca-900 text-sm font-normal font-sans leading-tight hover:text-vermelho transition-colors"
                   >
                     {link.label}
                   </a>
                 ))}
               </div>
             </div>
-            <div class="flex justify-center sm:justify-start items-start gap-3">
+            <div class="flex justify-start sm:justify-start items-start gap-3">
               {socialIcons.map((social) => (
                 <SocialIcon key={social.type} {...social} />
               ))}
             </div>
           </div>
+
+          {/* Mobile Logo */}
+          {mobileLogo && (
+            <div class="w-full flex justify-center sm:hidden mt-8">
+              <a href={mobileLogo.href} class="inline-block">
+                <Image
+                  src={mobileLogo.image}
+                  alt={mobileLogo.alt}
+                  width={120}
+                  height={40}
+                  class="h-10 w-auto object-contain"
+                />
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>

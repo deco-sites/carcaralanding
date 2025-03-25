@@ -4,6 +4,7 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $FutureCards from "./islands/FutureCards.tsx";
 import * as $ServicesAccordion from "./islands/ServicesAccordion.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -14,6 +15,7 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
+    "./islands/FutureCards.tsx": $FutureCards,
     "./islands/ServicesAccordion.tsx": $ServicesAccordion,
     "./islands/SliderJS.tsx": $SliderJS,
   },
