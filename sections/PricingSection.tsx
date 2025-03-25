@@ -194,7 +194,7 @@ export default function PricingSection({
                 </div>
               </div>
 
-              <ul className="flex-grow space-y-4 mb-8">
+              <ul className="space-y-4 mb-8">
                 {consultingPlan.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-ca-300 text-xl">•</span>
@@ -203,19 +203,21 @@ export default function PricingSection({
                 ))}
               </ul>
 
-              <Button
-                href={consultingPlan.ctaUrl}
-                variant="outline"
-                size="md"
-                class="w-full mt-auto"
-              >
-                {consultingPlan.ctaText}
-              </Button>
+              <div className="mt-auto">
+                <Button
+                  href={consultingPlan.ctaUrl}
+                  variant="outline"
+                  size="md"
+                  class="w-full"
+                >
+                  {consultingPlan.ctaText}
+                </Button>
+              </div>
             </div>
 
             {/* Pilot Project */}
             <div
-              className={`flex flex-col h-full py-16 px-10 bg-vermelho border border-ca-700 rounded-none -mx-2 z-10 md:self-stretch`}
+              className={`flex flex-col h-full p-8 bg-vermelho border border-ca-700 rounded-none md:-my-8 z-10 md:self-stretch`}
             >
               <div className="mb-8">
                 <H3Serif className="text-ca-50 mb-4">
@@ -226,7 +228,7 @@ export default function PricingSection({
                 </div>
               </div>
 
-              <ul className="flex-grow space-y-4 mb-8">
+              <ul className="space-y-4 mb-8">
                 {pilotPlan.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-ca-50 text-xl">•</span>
@@ -235,14 +237,16 @@ export default function PricingSection({
                 ))}
               </ul>
 
-              <Button
-                href={pilotPlan.ctaUrl}
-                variant="primary"
-                size="md"
-                class="w-full mt-auto"
-              >
-                {pilotPlan.ctaText}
-              </Button>
+              <div className="mt-auto">
+                <Button
+                  href={pilotPlan.ctaUrl}
+                  variant="primary"
+                  size="md"
+                  class="w-full"
+                >
+                  {pilotPlan.ctaText}
+                </Button>
+              </div>
             </div>
 
             {/* Development Partner */}
@@ -256,7 +260,7 @@ export default function PricingSection({
                 </div>
               </div>
 
-              <ul className="flex-grow space-y-4 mb-8">
+              <ul className="space-y-4 mb-8">
                 {developmentPlan.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-ca-300 text-xl">•</span>
@@ -265,14 +269,16 @@ export default function PricingSection({
                 ))}
               </ul>
 
-              <Button
-                href={developmentPlan.ctaUrl}
-                variant="outline"
-                size="md"
-                class="w-full mt-auto"
-              >
-                {developmentPlan.ctaText}
-              </Button>
+              <div className="mt-auto">
+                <Button
+                  href={developmentPlan.ctaUrl}
+                  variant="outline"
+                  size="md"
+                  class="w-full"
+                >
+                  {developmentPlan.ctaText}
+                </Button>
+              </div>
             </div>
           </div>
         </div>
