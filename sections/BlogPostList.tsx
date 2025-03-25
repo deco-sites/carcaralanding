@@ -190,7 +190,7 @@ export default function BlogPostList({
     posts,
     blogCase,
 }: BlogPostListProps) {
-    const displayPosts = posts?.filter(post => post && post.image)?.slice(0, 6) || []
+    const displayPosts = posts?.filter(post => post && post.image)?.slice(1, 7) || []
 
     return (
         <section className='w-full py-20' id='cases'>
