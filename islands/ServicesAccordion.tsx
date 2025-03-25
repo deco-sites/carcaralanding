@@ -18,6 +18,7 @@ interface Service {
   image: ImageWidget;
   buttonText?: string;
   buttonLink?: string;
+  showButton?: boolean;
 }
 
 interface ServicesAccordionProps {
@@ -46,7 +47,7 @@ function ServicesAccordion({ services }: ServicesAccordionProps) {
       isAnimating.value = true;
     }, 0);
 
-    intervalRef.current = window.setInterval(() => {
+    intervalRef.current = globalThis.setInterval(() => {
       // Disable animation before changing item
       isAnimating.value = false;
       itemVisible.value = (itemVisible.value + 1) % services.length;
@@ -188,21 +189,23 @@ function ServicesAccordion({ services }: ServicesAccordionProps) {
                       </div>
                     </div>
                     <div className="mt-10 overflow-hidden">
-                      <div
-                        className={`transform transition-all duration-700 delay-300 ease-out ${
-                          isActive
-                            ? "translate-y-0 opacity-100"
-                            : "translate-y-full opacity-0"
-                        }`}
-                      >
-                        <Button
-                          href={service.buttonLink || "#"}
-                          variant="primary"
-                          size="md"
+                      {(service.showButton !== false) && (
+                        <div
+                          className={`transform transition-all duration-700 delay-300 ease-out ${
+                            isActive
+                              ? "translate-y-0 opacity-100"
+                              : "translate-y-full opacity-0"
+                          }`}
                         >
-                          {service.buttonText || "Saiba mais"}
-                        </Button>
-                      </div>
+                          <Button
+                            href={service.buttonLink || "#"}
+                            variant="primary"
+                            size="md"
+                          >
+                            {service.buttonText || "Saiba mais"}
+                          </Button>
+                        </div>
+                      )}
                     </div>
 
                     {/* Mobile Image - only shown on mobile */}
