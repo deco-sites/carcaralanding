@@ -161,49 +161,35 @@ export default function MethodologySection({
             </Button>
           </div>
 
-          {/* Bento Grid */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-2">
-            {/* First Column (3 spans) */}
-            <div className="lg:col-span-4 grid grid-cols-1 gap-2">
-              {/* Top Row (2 columns) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                <div
-                  className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[380px]`}
-                >
-                  <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
-                    {discoveryBox.title}
-                  </h3>
-                  <p className="text-ca-100 text-sm sm:text-base leading-normal">
-                    {discoveryBox.description}
-                  </p>
-                </div>
-                <div
-                  className={`p-4 sm:p-5 md:p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[380px]`}
-                >
-                  <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
-                    {prototypingBox.title}
-                  </h3>
-                  <p className="text-ca-100 text-sm sm:text-base leading-normal">
-                    {prototypingBox.description}
-                  </p>
-                </div>
-              </div>
-              {/* Bottom Row */}
-              <div
-                className={`p-4 sm:p-5 md:p-6 ${analysisBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[256px]`}
-              >
-                <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
-                  {analysisBox.title}
-                </h3>
-                <p className="text-ca-100 text-sm sm:text-base leading-normal">
-                  {analysisBox.description}
-                </p>
-              </div>
+          {/* Bento Grid - Modified to use flex for better mobile stacking */}
+          <div className="w-full flex flex-col lg:flex-row gap-2">
+            {/* Discovery Box */}
+            <div
+              className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[700px] w-full`}
+            >
+              <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
+                {discoveryBox.title}
+              </h3>
+              <p className="text-ca-100 text-sm sm:text-base leading-normal">
+                {discoveryBox.description}
+              </p>
             </div>
 
-            {/* Second Column (4 spans - tall yellow box) */}
+            {/* Prototyping Box */}
             <div
-              className={`lg:col-span-3 p-4 sm:p-5 md:p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[320px] sm:min-h-[320px] md:min-h-[637px] lg:min-h-[760px]`}
+              className={`p-4 sm:p-5 md:p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[700px] w-full`}
+            >
+              <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
+                {prototypingBox.title}
+              </h3>
+              <p className="text-ca-100 text-sm sm:text-base leading-normal">
+                {prototypingBox.description}
+              </p>
+            </div>
+
+            {/* Implementation Box */}
+            <div
+              className={`p-4 sm:p-5 md:p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[700px] w-full`}
             >
               <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                 {implementationBox.title}
