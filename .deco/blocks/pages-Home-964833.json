@@ -102,6 +102,15 @@
             "src": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
             "altText": "baw"
           },
+          {},
+          {
+            "src": "https://assets.decocache.com/carcaralanding/1588b405-48b6-4cc6-ab56-d55624a4b5c9/farm2.svg",
+            "altText": "farm"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg",
+            "altText": "als"
+          },
           {}
         ]
       }
@@ -231,7 +240,7 @@
           {
             "buttonText": "\"Saiba mais\"",
             "title": "AI Agent VTEX",
-            "image": "https://assets.decocache.com/carcaralanding/7ad16470-2907-462e-bc8f-ef42beef0e49/Captura-de-Tela-2025-03-25-as-16.03.58.png",
+            "image": "https://assets.decocache.com/carcaralanding/7c8d0db2-1c44-4e3c-9448-73fe95941490/vtexaiagent.png",
             "subtitle": "Gerencie o crescimento da sua operação VTEX",
             "description": "Tenha um especialista da sua operação VTEX trabalhando ao seu lado. Tenha insights de estoque, analise a performance das suas vendas e ganhe recomendações estratégicas para aumentar receita.",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
