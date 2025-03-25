@@ -86,13 +86,10 @@ export interface ResultsSectionProps {
 /**
  * Renders an individual statistic item
  */
-function StatisticBlock({
-  prefix = "",
-  value,
-  suffix = "",
-  description,
-  accentColor = "amarelo",
-}: StatisticItem) {
+function StatisticBlock(
+  { prefix = "", value, suffix = "", description, accentColor = "amarelo" }:
+    StatisticItem,
+) {
   return (
     <div className="flex-1 self-stretch p-4 sm:p-6 md:p-10 lg:p-20 flex flex-col justify-center items-start gap-2">
       <div className="self-stretch">
@@ -231,9 +228,10 @@ export default function ResultsSection({
               {badgeText}
             </Badge>
 
-            <H1 class="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal">
-              {title}
-            </H1>
+            <h1
+              class="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
 
             <Body class="text-center max-w-[280px] sm:max-w-sm md:max-w-md text-ca-300 px-4 sm:px-0">
               {subtitle}
