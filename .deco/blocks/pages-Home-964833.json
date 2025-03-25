@@ -126,9 +126,10 @@
           },
           {
             "value": "20",
-            "suffix": "x + Rápido",
+            "suffix": "x ",
             "accentColor": "verde",
-            "description": "Do que processos anteriores"
+            "description": "Do que processos anteriores",
+            "afterText": "+ Rápido"
           },
           {
             "prefix": "+",
@@ -245,17 +246,23 @@
       "section": {
         "__resolveType": "site/sections/MethodologySection.tsx",
         "discoveryBox": {
-          "title": "1. Definição"
+          "title": "1. Definição",
+          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png"
         },
         "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "prototypingBox": {
-          "title": "2. Prototipagem"
+          "title": "2. Prototipagem",
+          "image": "https://assets.decocache.com/carcaralanding/f85a5f8e-c585-4b88-a9e9-c618b8736a34/1.png"
         },
         "implementationBox": {
           "title": "3. Implementação",
-          "description": "Integramos a solução à sua infraestrutura existente, com integração às suas ferramentas legado, treinamento da sua equipe e monitoramento contínuo para maximizar o retorno."
+          "description": "Integramos a solução à sua infraestrutura existente, com integração às suas ferramentas legado, treinamento da sua equipe e monitoramento contínuo para maximizar o retorno.",
+          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png"
         },
-        "ctaText": "Conheça mais nossos serviços"
+        "ctaText": "Conheça mais nossos serviços",
+        "analysisBox": {
+          "image": "https://assets.decocache.com/carcaralanding/f86e1da5-62ef-43e6-b071-7c7356306ef2/4.png"
+        }
       }
     },
     {
@@ -297,6 +304,12 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Divider.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/PricingSection.tsx"
       }
     },
     {

@@ -4,6 +4,7 @@ import { Body, Eyebrow, HeroTitle } from "../components/ui/Typography.tsx";
 import Button from "../components/ui/Button.tsx";
 import Badge from "../components/ui/Badge.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
+import SliderHero, { SliderCard } from "../components/SliderHero.tsx";
 
 export interface BackgroundElement {
   /**
@@ -51,6 +52,21 @@ export interface BackgroundElement {
   width: string;
 }
 
+/**
+ * @titleBy title
+ */
+export interface HeroCard {
+  /**
+   * Card image
+   */
+  image: ImageWidget;
+
+  /**
+   * Card title/label
+   */
+  title: string;
+}
+
 export interface HeroProps {
   /**
    * @format rich-text
@@ -69,9 +85,9 @@ export interface HeroProps {
   badge?: string;
 
   /**
-   * Main hero image displayed below content
+   * Hero cards for the carousel
    */
-  image?: ImageWidget;
+  cards?: HeroCard[];
 
   /**
    * @default Fale com um especialista
@@ -98,6 +114,12 @@ export interface HeroProps {
    * @default true
    */
   showBackgroundElements?: boolean;
+
+  /**
+   * Auto-slide interval in milliseconds
+   * @default 4000
+   */
+  sliderInterval?: number;
 }
 
 export default function HeroSection({
@@ -105,7 +127,20 @@ export default function HeroSection({
   description =
     "Nossos projetos fazem a ponte entre o desafio de negócio e um AI Agent que dá resultado.",
   badge = "Mais de 3k AI Apps e Agents criados",
-  image = "https://placehold.co/1440x474",
+  cards = [
+    {
+      image: "https://placehold.co/1440x474",
+      title: "AI Applications",
+    },
+    {
+      image: "https://placehold.co/1440x474",
+      title: "AI Agents",
+    },
+    {
+      image: "https://placehold.co/1440x474",
+      title: "Enterprise Solutions",
+    },
+  ],
   ctaText = "Fale com um especialista",
   ctaHref = "/contato",
   backgroundElement1 = {
@@ -127,6 +162,7 @@ export default function HeroSection({
     width: "100%",
   },
   showBackgroundElements = true,
+  sliderInterval = 4000,
 }: HeroProps) {
   // Process title to apply correct styling to specific parts
   const processedTitle = title
@@ -135,6 +171,12 @@ export default function HeroSection({
     // Then apply color styling
     .replace("adoção de", "<span class='text-vermelho'>adoção de</span>")
     .replace("AI", "<span class='text-vermelho'>AI</span>");
+
+  // Convert HeroCard[] to SliderCard[] for compatibility with SliderHero
+  const sliderCards: SliderCard[] = cards.map((card) => ({
+    image: card.image,
+    title: card.title,
+  }));
 
   return (
     <section className="relative w-full bg-ca-900 overflow-hidden">
@@ -177,7 +219,7 @@ export default function HeroSection({
       )}
 
       {/* Content container - with higher z-index to appear above background elements */}
-      <ContentContainer className="py-8 sm:py-12 md:py-16 lg:py-24 pt-32 lg:pt-40 relative z-10">
+      <ContentContainer className="py-8 sm:py-12 md:py-16 lg:pt-24 pt-32 lg:pt-32 pb-8 lg:pb-12 relative z-10">
         <div className="flex flex-col justify-center items-center gap-6 sm:gap-8">
           <div className="flex flex-col justify-start items-center gap-4 sm:gap-6 px-4 sm:px-6 md:px-8">
             {/* Badge */}
@@ -208,7 +250,7 @@ export default function HeroSection({
             </Body>
 
             {/* CTA Button */}
-            <div className="mt-2 sm:mt-3 md:mt-4">
+            <div className="mt-2 sm:mt-3 md:mt-4 mb-4">
               <Button
                 href={ctaHref}
                 variant="primary"
@@ -221,17 +263,10 @@ export default function HeroSection({
         </div>
       </ContentContainer>
 
-      {/* Hero image - with higher z-index to appear above background elements */}
-      <ContentContainer className="p-0 relative z-10">
-        <Image
-          src={image}
-          alt="Carcará AI"
-          width={1440}
-          height={474}
-          class="w-full h-auto"
-          preload
-        />
-      </ContentContainer>
+      {/* Hero image slider - with higher z-index to appear above background elements */}
+      <div className="relative z-10 pb-10">
+        <SliderHero cards={sliderCards} interval={sliderInterval} />
+      </div>
     </section>
   );
 }

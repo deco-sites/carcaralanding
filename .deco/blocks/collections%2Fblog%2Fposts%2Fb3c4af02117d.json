@@ -4,7 +4,12 @@
   "post": {
     "authors": [],
     "categories": [],
-    "extraProps": [],
+    "extraProps": [
+      {
+        "key": "logoBrand",
+        "value": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg"
+      }
+    ],
     "title": "Als Sports ganha crescimento de receita 50% acima do esperado",
     "excerpt": "A nova solução permitiu à equipe implementar recursos específicos e melhorias que antes eram impossíveis ou exigiriam um grande investimento em desenvolvimento de software.",
     "image": "https://assets.decocache.com/carcaralanding/96f33e48-17be-4b98-9e42-32a5f781b2f1/Captura-de-Tela-2025-03-25-as-16.54.18.png",

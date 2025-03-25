@@ -28,6 +28,12 @@ export interface StatisticItem {
   suffix?: string;
 
   /**
+   * Additional text to display after the suffix with the same styling as the number
+   * @default ""
+   */
+  afterText?: string;
+
+  /**
    * The description text below the number
    * @default "AI Agents operando"
    */
@@ -87,8 +93,14 @@ export interface ResultsSectionProps {
  * Renders an individual statistic item
  */
 function StatisticBlock(
-  { prefix = "", value, suffix = "", description, accentColor = "amarelo" }:
-    StatisticItem,
+  {
+    prefix = "",
+    value,
+    suffix = "",
+    afterText = "",
+    description,
+    accentColor = "amarelo",
+  }: StatisticItem,
 ) {
   return (
     <div className="flex-1 self-stretch p-4 sm:p-6 md:p-10 lg:p-20 flex flex-col justify-center items-start gap-2">
@@ -111,6 +123,11 @@ function StatisticBlock(
             className={`text-${accentColor} text-5xl lg:text-6xl font-serif leading-tight`}
           >
             {suffix}
+          </span>
+        )}
+        {afterText && (
+          <span className="text-ca-50 text-5xl lg:text-6xl font-serif leading-tight">
+            {afterText}
           </span>
         )}
       </div>
@@ -229,7 +246,7 @@ export default function ResultsSection({
             </Badge>
 
             <h1
-              class="text-center text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal"
+              class="text-center font-serif text-ca-50 text-4xl sm:text-5xl lg:text-6xl font-normal"
               dangerouslySetInnerHTML={{ __html: title }}
             />
 

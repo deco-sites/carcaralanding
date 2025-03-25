@@ -4,7 +4,12 @@
   "post": {
     "authors": [],
     "categories": [],
-    "extraProps": [],
+    "extraProps": [
+      {
+        "key": "logoBrand",
+        "value": "https://assets.decocache.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg"
+      }
+    ],
     "title": "Livemode constrói seu próprio Photoshop",
     "excerpt": "Saiba como a Livemode, parceira da Cazé TV, está criando material gráficos para suas transmissões 100x mais rápido com 40 AI Agents diferentes.",
     "image": "https://assets.decocache.com/carcaralanding/95e32233-b090-47e3-a2df-7c4b8aeac784/Figma-Image-742x556.png",

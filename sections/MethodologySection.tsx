@@ -2,6 +2,8 @@
 import { ContentContainer } from "../components/Layout.tsx";
 import Badge from "../components/ui/Badge.tsx";
 import Button from "../components/ui/Button.tsx";
+import type { ImageWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 
 interface MethodologyBox {
   /**
@@ -19,6 +21,18 @@ interface MethodologyBox {
    * @description Tailwind class for the box background color (e.g., "bg-azul", "bg-verde", "bg-vermelho", "bg-amarelo")
    */
   bgColor: string;
+
+  /**
+   * @title Box Image
+   * @description Image displayed at the top of the box
+   */
+  image?: ImageWidget;
+
+  /**
+   * @title Image Alt Text
+   * @description Alternative text for the image
+   */
+  imageAlt?: string;
 }
 
 const defaultBoxes = {
@@ -165,8 +179,19 @@ export default function MethodologySection({
           <div className="w-full flex flex-col lg:flex-row gap-2">
             {/* Discovery Box */}
             <div
-              className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[700px] w-full`}
+              className={`p-4 sm:p-5 md:p-6 ${discoveryBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] w-full relative overflow-hidden`}
             >
+              {discoveryBox.image && (
+                <div className="absolute top-0 left-0 w-full">
+                  <Image
+                    src={discoveryBox.image}
+                    alt={discoveryBox.imageAlt || discoveryBox.title}
+                    width={500}
+                    height={300}
+                    class="w-full object-contain"
+                  />
+                </div>
+              )}
               <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                 {discoveryBox.title}
               </h3>
@@ -177,8 +202,19 @@ export default function MethodologySection({
 
             {/* Prototyping Box */}
             <div
-              className={`p-4 sm:p-5 md:p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[700px] w-full`}
+              className={`p-4 sm:p-5 md:p-6 ${prototypingBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] w-full relative overflow-hidden`}
             >
+              {prototypingBox.image && (
+                <div className="absolute top-0 left-0 w-full">
+                  <Image
+                    src={prototypingBox.image}
+                    alt={prototypingBox.imageAlt || prototypingBox.title}
+                    width={500}
+                    height={300}
+                    class="w-full object-contain"
+                  />
+                </div>
+              )}
               <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                 {prototypingBox.title}
               </h3>
@@ -189,8 +225,19 @@ export default function MethodologySection({
 
             {/* Implementation Box */}
             <div
-              className={`p-4 sm:p-5 md:p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[700px] w-full`}
+              className={`p-4 sm:p-5 md:p-6 ${implementationBox.bgColor} flex flex-col justify-end items-start gap-3 sm:gap-4 min-h-[470px] sm:min-h-[450px] md:min-h-[550px] w-full relative overflow-hidden`}
             >
+              {implementationBox.image && (
+                <div className="absolute top-0 left-0 w-full">
+                  <Image
+                    src={implementationBox.image}
+                    alt={implementationBox.imageAlt || implementationBox.title}
+                    width={500}
+                    height={300}
+                    class="w-full object-contain"
+                  />
+                </div>
+              )}
               <h3 className="text-ca-50 text-2xl sm:text-2xl md:text-3xl font-normal">
                 {implementationBox.title}
               </h3>
