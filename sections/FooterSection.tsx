@@ -20,15 +20,12 @@ interface FooterLinkProps {
   href: string;
 }
 
-const FooterLink = ({ children, href }: FooterLinkProps) => (
-  <a
-    href={href}
-    class="self-stretch py-2 inline-flex justify-start items-start"
-  >
+const FooterLink = ({ children }: FooterLinkProps) => (
+  <p class="self-stretch py-2 inline-flex justify-start items-start">
     <div class="flex-1 justify-start text-ca-900 text-base font-medium font-sans leading-normal">
       {children}
     </div>
-  </a>
+  </p>
 );
 
 interface Link {

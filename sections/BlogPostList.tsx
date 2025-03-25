@@ -4,9 +4,8 @@ import Image from "apps/website/components/Image.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
 import { Body, H1 } from "../components/ui/Typography.tsx";
 import Badge from "../components/ui/Badge.tsx";
-import Icon from "../components/ui/Icon.tsx";
+import Button from "../components/ui/Button.tsx";
 import SliderControllerJS from "../islands/SliderJS.tsx";
-import Button from "site/components/ui/Button.tsx";
 
 interface BlogCase {
   /**
@@ -37,6 +36,12 @@ interface BlogCase {
    * @default "Ler mais"
    */
   buttonText?: string;
+
+  /**
+   * Controls whether the button is displayed
+   * @default true
+   */
+  showButton?: boolean;
 }
 
 export interface BlogPostListProps {
@@ -107,6 +112,7 @@ function FeaturedBlogPost({
   fallbackExcerpt = "",
   fallbackImage = "https://placehold.co/742x556",
   buttonText = "Ler mais",
+  showButton = false,
 }: BlogCase) {
   // Get the first post from the array if available
   const post = posts?.[0];
@@ -127,12 +133,13 @@ function FeaturedBlogPost({
                   {fallbackExcerpt}
                 </Body>
               </div>
+            </div>
 
+            {showButton && (
               <Button href="/blog" variant="primary" size="md">
                 {buttonText}
               </Button>
-            </div>
-
+            )}
             {/* Image Column */}
             <div className="w-full lg:w-1/2">
               <Image
@@ -154,9 +161,6 @@ function FeaturedBlogPost({
   const title = post.title || fallbackTitle;
   const excerpt = post.excerpt || fallbackExcerpt;
   const image = post.image || fallbackImage;
-  const postUrl = `/blog/${
-    post.slug || post.title?.toLowerCase().replace(/\s+/g, "-")
-  }`;
 
   return (
     <div className="w-full bg-ca-900 overflow-hidden">
@@ -171,15 +175,6 @@ function FeaturedBlogPost({
 
               <Body class="text-ca-300 text-sm sm:text-base">{excerpt}</Body>
             </div>
-
-            <Button
-              href={postUrl}
-              variant="primary"
-              size="md"
-              class="w-full sm:w-auto"
-            >
-              {buttonText}
-            </Button>
           </div>
 
           {/* Image Column */}
@@ -228,7 +223,6 @@ export default function BlogPostList({
               </h2>
             </div>
           </div>
-          <div className="w-full h-px bg-ca-700" />
 
           <FeaturedBlogPost {...blogCase} />
 
