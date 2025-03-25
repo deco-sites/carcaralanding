@@ -138,7 +138,7 @@
           }
         ],
         "subtitle": "Mais rapidez e economia a cada AI Agent implementado ",
-        "title": "<p>Nossos clientes escalam seus negócios com AI</p>"
+        "title": "<p>Escale seu negócio com AI</p>"
       }
     },
     {
@@ -151,25 +151,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/FeaturedBlogPost.tsx",
-        "post": {},
-        "posts": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 1
-        },
-        "badgeText": "Nosso serviço"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Divider.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/BlogPostList.tsx",
         "posts": {
           "__resolveType": "blog/loaders/BlogpostList.ts",
@@ -177,9 +158,14 @@
           "count": 6
         },
         "blogCase": {
-          "posts": null
+          "posts": {
+            "__resolveType": "blog/loaders/BlogpostList.ts",
+            "count": 1,
+            "sortBy": "date_desc"
+          }
         },
-        "badgeText": "Noss"
+        "badgeText": "Nossos cases",
+        "title": "O impacto que tivemos em nossos clientes"
       }
     },
     {
@@ -245,7 +231,7 @@
           }
         ],
         "badgeText": "Contrate seu próximo AI Agent hoje",
-        "title": "AI Agents para empoderar seu time"
+        "title": "Nossa soluções para empoderar seu time"
       }
     },
     {
