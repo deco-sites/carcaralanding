@@ -34,7 +34,8 @@
           "buttons": [
             {
               "variant": "primary",
-              "label": "Agende uma reunião"
+              "label": "Agende uma reunião",
+              "href": "https://calendar.app.google/VvgENxewXsBNjXPF7"
             }
           ]
         }
@@ -52,7 +53,8 @@
         "title": "<h1>Aceleramos a</h1><h1>adoção de AI</h1><h1>na sua empresa</h1>",
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
-        }
+        },
+        "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7"
       }
     },
     {
@@ -173,37 +175,43 @@
             "title": "CMS Generativo",
             "subtitle": "Conteúdo inteligente e escalável",
             "description": "Transforme sua criação de conteúdo com um sistema que gera, gerencia e otimiza textos automaticamente, mantendo sua identidade de marca e aumentando significativamente sua produtividade.",
-            "image": "https://assets.decocache.com/carcaralanding/16543901-125b-4d53-ae3f-45e4afd1a782/cms.png"
+            "image": "https://assets.decocache.com/carcaralanding/16543901-125b-4d53-ae3f-45e4afd1a782/cms.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           },
           {
             "title": "Agentes de SEO",
             "subtitle": "Visibilidade estratégica",
             "description": "Nossos agentes de SEO analisam continuamente seu mercado, otimizam seu conteúdo e implementam estratégias que aumentam sua visibilidade orgânica, trazendo o público certo para seu negócio.",
-            "image": "https://assets.decocache.com/carcaralanding/6cd390e0-8c8b-4e93-99ef-f4e021c79ca2/seo.png"
+            "image": "https://assets.decocache.com/carcaralanding/6cd390e0-8c8b-4e93-99ef-f4e021c79ca2/seo.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           },
           {
             "title": "AI Creative Suite",
             "subtitle": "Criatividade sem limites",
             "description": "Gere imagens, textos e designs alinhados com sua marca em segundos. Nossa suite criativa elimina gargalos de produção e permite que você escale sua comunicação visual com consistência e qualidade.",
-            "image": "https://assets.decocache.com/carcaralanding/25a88b43-b9e7-4749-825a-f9f849d02bd0/creative.png"
+            "image": "https://assets.decocache.com/carcaralanding/25a88b43-b9e7-4749-825a-f9f849d02bd0/creative.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           },
           {
             "title": "AI Video Content Intelligence",
             "subtitle": "Vídeos que convertem",
             "description": "Transforme como você produz, analisa e otimiza conteúdo em vídeo. Nossa tecnologia identifica padrões de engajamento, extrai insights valiosos e sugere melhorias que aumentam conversões.",
-            "image": "https://assets.decocache.com/carcaralanding/8a779fdf-c9f5-4580-aac7-f0789019cab5/video.png"
+            "image": "https://assets.decocache.com/carcaralanding/8a779fdf-c9f5-4580-aac7-f0789019cab5/video.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           },
           {
             "title": "AI Data Scientist",
             "subtitle": "Dados que decidem",
             "description": "Tenha um cientista de dados AI que trabalha 24/7, transformando informações complexas em insights claros e acionáveis. Tome decisões baseadas em dados sem precisar de uma equipe especializada.",
-            "image": "https://assets.decocache.com/carcaralanding/9954af22-987f-497d-ba1f-caefaed47e33/data.png"
+            "image": "https://assets.decocache.com/carcaralanding/9954af22-987f-497d-ba1f-caefaed47e33/data.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           },
           {
             "title": "AI WhatsApp Assistant",
             "subtitle": "Atendimento inteligente",
             "description": "Um assistente que entende o contexto das conversas, resolve problemas complexos e se comunica naturalmente com seus clientes, proporcionando atendimento personalizado em escala.",
-            "image": "https://assets.decocache.com/carcaralanding/a7f6857b-b8b9-4d99-bd39-7ae2f5d41519/whatsapp.png"
+            "image": "https://assets.decocache.com/carcaralanding/a7f6857b-b8b9-4d99-bd39-7ae2f5d41519/whatsapp.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           }
         ],
         "badgeText": "Quem você quer contratar hoje?",
@@ -237,7 +245,8 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/MethodologySection.tsx",
-        "discoveryBox": {}
+        "discoveryBox": {},
+        "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
       }
     },
     {
@@ -285,7 +294,8 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/CTASection.tsx",
-        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg"
+        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
+        "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
       }
     },
     {
