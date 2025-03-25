@@ -49,12 +49,13 @@
           "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "showBackgroundElements": true,
-        "title": "<h1>Aceleramos a </h1><h1>adoção de AI</h1><h1>na sua empresa</h1>",
+        "title": "<h1>Construimos</h1><h1><span style=\"color: #b13431\">AI</span> <span style=\"color: #b13431\">Agents</span></h1><h1>personalizados</h1>",
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         },
         "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7",
-        "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png"
+        "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
+        "ctaText": "Acelere sua operação"
       }
     },
     {
@@ -136,7 +137,8 @@
             "accentColor": "azul"
           }
         ],
-        "subtitle": "Mais rapidez e economia a cada AI Agent implementado "
+        "subtitle": "Mais rapidez e economia a cada AI Agent implementado ",
+        "title": "<p>Nossos clientes escalam seus negócios com AI</p>"
       }
     },
     {
@@ -144,6 +146,36 @@
       "section": {
         "__resolveType": "site/sections/Divider.tsx",
         "paddingTop": 0
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/FeaturedBlogPost.tsx",
+        "post": {},
+        "posts": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 1
+        },
+        "badgeText": "Nosso serviço"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/BlogPostList.tsx",
+        "posts": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 6
+        }
       }
     },
     {
@@ -166,18 +198,6 @@
         "card4": {
           "title": "Programação Natural",
           "description": "A programação evoluirá para interações em linguagem natural."
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/FeaturedBlogPost.tsx",
-        "post": {},
-        "posts": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 1
         }
       }
     },
@@ -241,23 +261,6 @@
         ],
         "badgeText": "Contrate seu próximo AI Agent hoje",
         "title": "AI Agents para empoderar seu time"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Divider.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/BlogPostList.tsx",
-        "posts": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 6
-        }
       }
     },
     {

@@ -1,0 +1,9 @@
+{
+  "__resolveType": "site/sections/ResultsSection.tsx",
+  "badgeText": "\"Resultados\"",
+  "title": "<p>\"Nossos clientes vencem com AI\"</p>",
+  "subtitle": "\"Nossos projetos fazem a ponte entre o desafio de negócio e um AI Agent que dá resultado.\"",
+  "statistics": [],
+  "animateNumbers": true,
+  "animationDuration": 2000
+}
