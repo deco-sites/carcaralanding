@@ -316,7 +316,13 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/PricingSection.tsx"
+        "__resolveType": "site/sections/PricingSection.tsx",
+        "consultingPlan": {
+          "price": "$200/hr"
+        },
+        "developmentPlan": {
+          "price": "$7,500/m"
+        }
       }
     },
     {
