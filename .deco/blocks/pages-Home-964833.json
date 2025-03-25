@@ -45,16 +45,16 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/HeroSection.tsx",
-        "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
         "backgroundElement1": {
           "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "showBackgroundElements": true,
-        "title": "<h1>Aceleramos a</h1><h1>adoção de AI</h1><h1>na sua empresa</h1>",
+        "title": "<h1>Aceleramos a </h1><h1>adoção de AI</h1><h1>na sua empresa</h1>",
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         },
-        "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+        "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png"
       }
     },
     {
@@ -86,10 +86,6 @@
             "altText": "miess"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/513af902-b6a2-446c-b345-b6e28c728f11/luccasnetologo.svg",
-            "altText": "luccasneto"
-          },
-          {
             "src": "https://assets.decocache.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
             "altText": "livemode"
           },
@@ -104,7 +100,8 @@
           {
             "src": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
             "altText": "baw"
-          }
+          },
+          {}
         ]
       }
     },
@@ -121,14 +118,14 @@
         "animateNumbers": true,
         "statistics": [
           {
-            "value": "300",
+            "value": "3000",
             "description": "AI Agents operando",
             "accentColor": "vermelho",
             "prefix": "+"
           },
           {
             "value": "20",
-            "suffix": "x Rápido",
+            "suffix": "x + Rápido",
             "accentColor": "verde",
             "description": "Do que processos anteriores"
           },
@@ -237,8 +234,8 @@
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           }
         ],
-        "badgeText": "Quem você quer contratar hoje?",
-        "title": "AI Agents em harmonia com seu time"
+        "badgeText": "Contrate seu próximo AI Agent hoje",
+        "title": "AI Agents para empoderar seu time"
       }
     },
     {
