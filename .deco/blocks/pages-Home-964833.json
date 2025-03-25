@@ -175,6 +175,9 @@
           "__resolveType": "blog/loaders/BlogpostList.ts",
           "sortBy": "date_desc",
           "count": 6
+        },
+        "blogCase": {
+          "posts": null
         }
       }
     },
@@ -236,7 +239,8 @@
             "title": "AI Agent VTEX",
             "image": "https://assets.decocache.com/carcaralanding/7ad16470-2907-462e-bc8f-ef42beef0e49/Captura-de-Tela-2025-03-25-as-16.03.58.png",
             "subtitle": "Gerencie o crescimento da sua operação VTEX",
-            "description": "Tenha um especialista da sua operação VTEX trabalhando ao seu lado. Tenha insights de estoque, analise a performance das suas vendas e ganhe recomendações estratégicas para aumentar receita."
+            "description": "Tenha um especialista da sua operação VTEX trabalhando ao seu lado. Tenha insights de estoque, analise a performance das suas vendas e ganhe recomendações estratégicas para aumentar receita.",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
           }
         ],
         "badgeText": "Contrate seu próximo AI Agent hoje",
@@ -254,12 +258,17 @@
       "section": {
         "__resolveType": "site/sections/MethodologySection.tsx",
         "discoveryBox": {
-          "title": "1. Descoberta e definição"
+          "title": "1. Definição"
         },
         "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "prototypingBox": {
           "title": "2. Prototipagem"
-        }
+        },
+        "implementationBox": {
+          "title": "3. Implementação",
+          "description": "Integramos a solução à sua infraestrutura existente, com integração às suas ferramentas legado, treinamento da sua equipe e monitoramento contínuo para maximizar o retorno."
+        },
+        "ctaText": "Conheça mais nossos serviços"
       }
     },
     {
