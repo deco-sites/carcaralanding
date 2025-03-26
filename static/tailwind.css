@@ -3244,10 +3244,6 @@ input.tab:checked + .tab-content,
 .m-8{
   margin: 2rem;
 }
-.-mx-2{
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-}
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -3358,14 +3354,11 @@ input.tab:checked + .tab-content,
 .aspect-\[2\/1\]{
   aspect-ratio: 2/1;
 }
+.aspect-\[3\/2\]{
+  aspect-ratio: 3/2;
+}
 .aspect-\[4\/1\]{
   aspect-ratio: 4/1;
-}
-.aspect-\[4\/3\.2\]{
-  aspect-ratio: 4/3.2;
-}
-.aspect-\[4\/3\]{
-  aspect-ratio: 4/3;
 }
 .h-0{
   height: 0px;
@@ -3496,9 +3489,6 @@ input.tab:checked + .tab-content,
 }
 .min-h-\[157px\]{
   min-height: 157px;
-}
-.min-h-\[180px\]{
-  min-height: 180px;
 }
 .min-h-\[292px\]{
   min-height: 292px;
@@ -4386,10 +4376,6 @@ input.tab:checked + .tab-content,
 }
 .p-8{
   padding: 2rem;
-}
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 .px-2{
   padding-left: 0.5rem;
@@ -5482,6 +5468,11 @@ input.tab:checked + .tab-content,
     left: 85%;
   }
 
+  .md\:-my-8{
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+
   .md\:mx-10{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -5937,11 +5928,6 @@ input.tab:checked + .tab-content,
   .lg\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .lg\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .lg\:text-6xl{

@@ -1,13 +1,6 @@
-"use client";
-
-import { useSignal } from "@preact/signals";
-import { useEffect, useRef } from "preact/hooks";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import Image from "apps/website/components/Image.tsx";
 import Badge from "../components/ui/Badge.tsx";
-import Button from "../components/ui/Button.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
-import { animate } from "npm:@motionone/dom@10.18.0";
 import ServicesAccordion from "../islands/ServicesAccordion.tsx";
 import { H1 } from "site/components/ui/Typography.tsx";
 
@@ -42,6 +35,12 @@ interface Service {
    * Button link
    */
   buttonLink?: string;
+
+  /**
+   * Show button
+   * @default true
+   */
+  showButton?: boolean;
 }
 
 interface ServicesSectionProps {

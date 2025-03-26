@@ -4,9 +4,8 @@ import Image from "apps/website/components/Image.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
 import { Body, H1 } from "../components/ui/Typography.tsx";
 import Badge from "../components/ui/Badge.tsx";
-import Icon from "../components/ui/Icon.tsx";
+import Button from "../components/ui/Button.tsx";
 import SliderControllerJS from "../islands/SliderJS.tsx";
-import Button from "site/components/ui/Button.tsx";
 
 interface BlogCase {
   /**
@@ -37,6 +36,12 @@ interface BlogCase {
    * @default "Ler mais"
    */
   buttonText?: string;
+
+  /**
+   * Controls whether the button is displayed
+   * @default true
+   */
+  showButton?: boolean;
 }
 
 export interface BlogPostListProps {
@@ -66,14 +71,14 @@ function BlogPostCard({ post }: { post: BlogPost }) {
     ?.value;
 
   return (
-    <div className="w-full flex-shrink-0 flex flex-col h-full">
+    <div className="w-full flex-shrink-0 flex flex-col h-full border border-ca-700">
       <div className="relative">
         <Image
           src={post.image || ""}
           alt={post.title || ""}
           width={384}
           height={320}
-          class="w-full h-auto object-cover aspect-[4/3.2]"
+          class="w-full h-auto object-cover aspect-[3/2]"
         />
 
         {logoBrand && (
@@ -89,13 +94,10 @@ function BlogPostCard({ post }: { post: BlogPost }) {
         )}
       </div>
 
-      <div className="p-5 flex flex-col gap-4 flex-grow min-h-[180px]">
-        <H1 className="text-left text-ca-50 text-xl sm:text-2xl font-normal font-serif">
+      <div className="p-8 flex flex-col gap-4 flex-grow">
+        <H1 className="text-left text-ca-50 text-xl sm:text-3xl font-normal font-serif">
           {post.title}
         </H1>
-        <Body class="text-ca-300 text-sm sm:text-base">
-          {post.excerpt}
-        </Body>
       </div>
     </div>
   );
@@ -107,19 +109,20 @@ function FeaturedBlogPost({
   fallbackExcerpt = "",
   fallbackImage = "https://placehold.co/742x556",
   buttonText = "Ler mais",
+  showButton = false,
 }: BlogCase) {
   // Get the first post from the array if available
   const post = posts?.[0];
 
   if (!post) {
     return (
-      <div className="w-full bg-ca-900 overflow-hidden">
+      <div className="w-full bg-ca-900 overflow-hidden border border-ca-700">
         <ContentContainer>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Content Column */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-4 px-4 sm:px-6">
               <div className="w-full flex flex-col justify-start items-start gap-3">
-                <H1 className="text-left text-ca-50 text-2xl sm:text-3xl lg:text-4xl font-normal font-serif">
+                <H1 className="text-left text-ca-50 text-2xl sm:text-5xl font-normal font-serif">
                   {fallbackTitle}
                 </H1>
 
@@ -127,12 +130,13 @@ function FeaturedBlogPost({
                   {fallbackExcerpt}
                 </Body>
               </div>
+            </div>
 
+            {showButton && (
               <Button href="/blog" variant="primary" size="md">
                 {buttonText}
               </Button>
-            </div>
-
+            )}
             {/* Image Column */}
             <div className="w-full lg:w-1/2">
               <Image
@@ -140,7 +144,7 @@ function FeaturedBlogPost({
                 alt={fallbackTitle}
                 width={742}
                 height={556}
-                class="w-full h-auto object-cover aspect-[4/3]"
+                class="w-full h-auto object-cover aspect-[3/2]"
                 preload
               />
             </div>
@@ -154,32 +158,20 @@ function FeaturedBlogPost({
   const title = post.title || fallbackTitle;
   const excerpt = post.excerpt || fallbackExcerpt;
   const image = post.image || fallbackImage;
-  const postUrl = `/blog/${
-    post.slug || post.title?.toLowerCase().replace(/\s+/g, "-")
-  }`;
 
   return (
-    <div className="w-full bg-ca-900 overflow-hidden">
+    <div className="w-full bg-ca-900 overflow-hidden border border-ca-700">
       <ContentContainer>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Content Column */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-4 px-4 sm:px-6">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center items-start gap-4 px-4 sm:px-8">
             <div className="w-full flex flex-col justify-start items-start gap-3">
-              <H1 className="text-left text-ca-50 text-2xl sm:text-3xl lg:text-4xl font-normal font-serif">
+              <H1 className="text-left text-ca-50 text-2xl sm:text-5xl font-normal font-serif">
                 {title}
               </H1>
 
               <Body class="text-ca-300 text-sm sm:text-base">{excerpt}</Body>
             </div>
-
-            <Button
-              href={postUrl}
-              variant="primary"
-              size="md"
-              class="w-full sm:w-auto"
-            >
-              {buttonText}
-            </Button>
           </div>
 
           {/* Image Column */}
@@ -189,7 +181,7 @@ function FeaturedBlogPost({
               alt={title}
               width={742}
               height={556}
-              class="w-full h-auto object-cover aspect-[4/3]"
+              class="w-full h-auto object-cover aspect-[3/2]"
               preload
             />
           </div>
@@ -228,7 +220,6 @@ export default function BlogPostList({
               </h2>
             </div>
           </div>
-          <div className="w-full h-px bg-ca-700" />
 
           <FeaturedBlogPost {...blogCase} />
 

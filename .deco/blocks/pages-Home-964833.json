@@ -145,6 +145,15 @@
             "src": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
             "altText": "baw"
           },
+          {},
+          {
+            "src": "https://assets.decocache.com/carcaralanding/1588b405-48b6-4cc6-ab56-d55624a4b5c9/farm2.svg",
+            "altText": "farm"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg",
+            "altText": "als"
+          },
           {}
         ]
       }
@@ -233,50 +242,57 @@
             "subtitle": "Conteúdo inteligente e escalável",
             "description": "Transforme sua criação de conteúdo com um sistema que gera, gerencia e otimiza textos automaticamente, mantendo sua identidade de marca e aumentando significativamente sua produtividade.",
             "image": "https://assets.decocache.com/carcaralanding/16543901-125b-4d53-ae3f-45e4afd1a782/cms.png",
-            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
           },
           {
             "title": "Agentes de SEO",
             "subtitle": "Visibilidade estratégica",
             "description": "Nossos agentes de SEO analisam continuamente seu mercado, otimizam seu conteúdo e implementam estratégias que aumentam sua visibilidade orgânica, trazendo o público certo para seu negócio.",
             "image": "https://assets.decocache.com/carcaralanding/6cd390e0-8c8b-4e93-99ef-f4e021c79ca2/seo.png",
-            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
           },
           {
             "title": "AI Creative Suite",
             "subtitle": "Criatividade sem limites",
             "description": "Gere imagens, textos e designs alinhados com sua marca em segundos. Nossa suite criativa elimina gargalos de produção e permite que você escale sua comunicação visual com consistência e qualidade.",
             "image": "https://assets.decocache.com/carcaralanding/25a88b43-b9e7-4749-825a-f9f849d02bd0/creative.png",
-            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
           },
           {
             "title": "AI Video Content Intelligence",
             "subtitle": "Vídeos que convertem",
             "description": "Transforme como você produz, analisa e otimiza conteúdo em vídeo. Nossa tecnologia identifica padrões de engajamento, extrai insights valiosos e sugere melhorias que aumentam conversões.",
             "image": "https://assets.decocache.com/carcaralanding/8a779fdf-c9f5-4580-aac7-f0789019cab5/video.png",
-            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
           },
           {
             "title": "AI Data Scientist",
             "subtitle": "Dados que decidem",
             "description": "Tenha um cientista de dados AI que trabalha 24/7, transformando informações complexas em insights claros e acionáveis. Tome decisões baseadas em dados sem precisar de uma equipe especializada.",
             "image": "https://assets.decocache.com/carcaralanding/9954af22-987f-497d-ba1f-caefaed47e33/data.png",
-            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
           },
           {
             "title": "AI WhatsApp Assistant",
             "subtitle": "Atendimento inteligente",
             "description": "Um assistente que entende o contexto das conversas, resolve problemas complexos e se comunica naturalmente com seus clientes, proporcionando atendimento personalizado em escala.",
             "image": "https://assets.decocache.com/carcaralanding/a7f6857b-b8b9-4d99-bd39-7ae2f5d41519/whatsapp.png",
-            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
           },
           {
             "buttonText": "\"Saiba mais\"",
             "title": "AI Agent VTEX",
-            "image": "https://assets.decocache.com/carcaralanding/7ad16470-2907-462e-bc8f-ef42beef0e49/Captura-de-Tela-2025-03-25-as-16.03.58.png",
+            "image": "https://assets.decocache.com/carcaralanding/7c8d0db2-1c44-4e3c-9448-73fe95941490/vtexaiagent.png",
             "subtitle": "Gerencie o crescimento da sua operação VTEX",
             "description": "Tenha um especialista da sua operação VTEX trabalhando ao seu lado. Tenha insights de estoque, analise a performance das suas vendas e ganhe recomendações estratégicas para aumentar receita.",
-            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
           }
         ],
         "badgeText": "Contrate seu próximo AI Agent hoje",
@@ -363,7 +379,46 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/PricingSection.tsx"
+        "__resolveType": "site/sections/PricingSection.tsx",
+        "consultingPlan": {
+          "price": "$200/hr",
+          "title": "Consultoria",
+          "ctaText": "Agende uma reunião",
+          "features": [
+            "Cursos e Workshops",
+            "Análise Estratégica",
+            "Minimização de risco implementação AI",
+            "Futuro de negócios com AI"
+          ],
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        },
+        "developmentPlan": {
+          "price": "$7,500/m",
+          "title": "Parceria recorrente",
+          "ctaText": "Agente uma reunião",
+          "features": [
+            "Time ininterrupto alocado na sua operação",
+            "Gestores de Projeto e Desenvolvedores AI",
+            "Escale com o seu ritmo e necessidades",
+            "Insights Estratégicos ilimitados"
+          ],
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        },
+        "badgeText": "Pricing",
+        "title": "Garanta um AI Agent estruturado e seguro com um time validado",
+        "description": "Nosso time de desenvolvedores, analistas de dados e gestores de projeto são especialistas em desenvolvimento de software personalizados, acelerações de empresas com soluções AI-first e criação de AI Agents inovadores. ",
+        "pilotPlan": {
+          "title": "Projeto Personalizado",
+          "price": "Entre em contato",
+          "features": [
+            "Do discovery à implementação",
+            "Integração dentro da sua operação",
+            "30-60 dias de projeto",
+            "Time de especialistas totalmente alocado"
+          ],
+          "ctaText": "Entre em contato",
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        }
       }
     },
     {
