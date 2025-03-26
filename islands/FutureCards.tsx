@@ -67,14 +67,8 @@ export default function FutureCards({
     },
   ],
 }: Props) {
-  console.log("FutureCards island mounting");
-
-  useEffect(() => {
-    console.log("Island mounted, active item:", activeItem.value);
-  }, []);
 
   const handleMouseEnter = (index: number) => {
-    console.log("Mouse enter:", index);
     // Only change active item if hovering a different card
     if (activeItem.value !== index) {
       activeItem.value = index;

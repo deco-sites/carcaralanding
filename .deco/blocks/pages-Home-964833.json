@@ -51,18 +51,61 @@
         "showBackgroundElements": true,
         "title": "<h1>Construimos</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents únicos</span></h1><h1>para sua empresa</h1>",
         "backgroundElement2": {
-          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg",
+          "configCarousel": {}
         },
         "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
-        "ctaText": "Acelere sua operação"
+        "ctaText": "Acelere sua operação",
+        "configCarousel": {
+          "items": [
+            {
+              "id": "2",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/dbca0255-39c6-44c0-8da7-c75771c9af01/hero-contentagent.png",
+              "title": "Content Analyzer AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            },
+            {
+              "id": "3",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/5b92de4f-c2be-4529-84c4-444b98c39c09/hero-seoagent.png",
+              "title": "SEO AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            },
+            {
+              "id": "4",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/0af3b685-0b82-403b-9bd1-03b263ee247e/hero-vtexaiagent.png",
+              "title": "VTEX AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            },
+            {
+              "id": "5",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/47be7401-5483-46a9-8d93-2253258f43da/hero-whatsappagent.png",
+              "title": "WhatsApp AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            },
+            {
+              "id": "1",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/47be7401-5483-46a9-8d93-2253258f43da/hero-whatsappagent.png",
+              "title": "WhatsApp AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            }
+          ],
+          "autoplayInterval": 4,
+          "debugHud": false
+        }
       }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Divider.tsx",
-        "paddingTop": 0
+        "paddingTop": 0,
+        "paddingBottom": 24
       }
     },
     {
@@ -109,7 +152,9 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Divider.tsx"
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
       }
     },
     {
@@ -146,7 +191,8 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Divider.tsx",
-        "paddingTop": 0
+        "paddingTop": 0,
+        "paddingBottom": 24
       }
     },
     {
@@ -172,7 +218,9 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Divider.tsx"
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
       }
     },
     {
@@ -238,7 +286,9 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Divider.tsx"
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
       }
     },
     {
@@ -268,7 +318,9 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Divider.tsx"
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
       }
     },
     {
@@ -303,7 +355,9 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Divider.tsx"
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
       }
     },
     {

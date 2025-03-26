@@ -222,9 +222,6 @@ export default function Footer({
   const transformationLinks = transformationStoriesColumn.posts
     ?.filter((post): post is BlogPost => {
       const isValid = Boolean(post && post.title);
-      if (!isValid) {
-        console.log("Filtered out invalid post:", post);
-      }
       return isValid;
     })
     .slice(0, 6)
@@ -235,7 +232,6 @@ export default function Footer({
           post.slug || post.title?.toLowerCase().replace(/\s+/g, "-") || "post"
         }`,
       };
-      console.log("Created link:", link);
       return link;
     }) || [];
 

@@ -5,6 +5,8 @@ import Button from "../components/ui/Button.tsx";
 import Badge from "../components/ui/Badge.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
 import SliderHero, { SliderCard } from "../components/SliderHero.tsx";
+import Carousel from "site/islands/Carrosel.tsx";
+import { CarouselItem } from "site/components/ui/Carrosel.tsx";
 
 export interface BackgroundElement {
   /**
@@ -120,6 +122,22 @@ export interface HeroProps {
    * @default 4000
    */
   sliderInterval?: number;
+
+  configCarousel: {
+      /**
+   * @title {{title}}
+   */
+  items: CarouselItem[];
+  /**
+   * @title Tempo de troca automática de slides (0 para desativar)
+   */
+  autoplayInterval?: number;
+
+  /**
+   * @title Exibir HUD de debug
+   */
+  debugHud?: boolean;
+  }
 }
 
 export default function HeroSection({
@@ -163,6 +181,8 @@ export default function HeroSection({
   },
   showBackgroundElements = true,
   sliderInterval = 4000,
+  configCarousel
+  
 }: HeroProps) {
   // Process title to apply correct styling to specific parts
   const processedTitle = title
@@ -265,7 +285,7 @@ export default function HeroSection({
 
       {/* Hero image slider - with higher z-index to appear above background elements */}
       <div className="relative z-10 pb-10">
-        <SliderHero cards={sliderCards} interval={sliderInterval} />
+        <Carousel items={configCarousel.items} autoplayInterval={configCarousel.autoplayInterval} debugHud={configCarousel.debugHud} />
       </div>
     </section>
   );
