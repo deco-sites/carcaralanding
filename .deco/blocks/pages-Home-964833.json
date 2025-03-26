@@ -400,7 +400,6 @@
         },
         "badgeText": "Pricing",
         "title": "Garanta um AI Agent estruturado e seguro com um time validado",
-        "description": "Nosso time de desenvolvedores, analistas de dados e gestores de projeto são especialistas em desenvolvimento de software personalizados, acelerações de empresas com soluções AI-first e criação de AI Agents inovadores. ",
         "pilotPlan": {
           "title": "Projeto Personalizado",
           "price": "Entre em contato",
@@ -412,7 +411,8 @@
           ],
           "ctaText": "Entre em contato",
           "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
-        }
+        },
+        "description": " "
       }
     },
     {
