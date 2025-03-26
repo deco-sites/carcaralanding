@@ -56,7 +56,6 @@
         },
         "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
-        "ctaText": "Acelere sua operação",
         "configCarousel": {
           "items": [
             {
@@ -90,7 +89,8 @@
           ],
           "autoplayInterval": 4,
           "debugHud": false
-        }
+        },
+        "ctaText": "Entre em contato conosco"
       }
     },
     {
@@ -352,14 +352,15 @@
           },
           {
             "question": "Como vocês garantem a segurança e conformidade dos dados usados pelos agentes de IA?",
-            "answer": "Na arquitetura de cada AI Agent, nós definimos exatamente o nível de acesso à dados que os modelos fundamentais terão e com quais critérios. Além disso, você tem visibilidade total das atividades do Agent e os logs do que foi gerado."
+            "answer": "Na arquitetura de cada AI Agent, nós definimos exatamente o nível de acesso à dados que os modelos fundamentais terão e com quais critérios. Além disso, você tem visibilidade total das atividades do Agent e dos logs gerados."
           },
           {
             "question": "Qual o investimento médio para um projeto de IA e em quanto tempo posso esperar retorno?",
             "answer": "Depende da arquitetura e do escopo do projeto. No entanto, nós precificamos nosso serviço para nossos clientes terem retorno do projeto entre 3-6 meses."
           }
         ],
-        "title": "Tudo que você precisa saber "
+        "title": "Tudo que você precisa saber ",
+        "contactUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
       }
     },
     {
