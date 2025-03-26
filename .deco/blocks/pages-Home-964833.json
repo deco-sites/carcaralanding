@@ -375,7 +375,7 @@
       "section": {
         "__resolveType": "site/sections/PricingSection.tsx",
         "consultingPlan": {
-          "price": "$200/hr",
+          "price": "R$500/hr",
           "title": "Consultoria",
           "ctaText": "Agende uma reunião",
           "features": [
@@ -387,21 +387,21 @@
           "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
         },
         "developmentPlan": {
-          "price": "$7,500/m",
-          "title": "Parceria recorrente",
+          "price": "R$70.000/m",
+          "title": "Parceria Recorrente",
           "ctaText": "Agente uma reunião",
           "features": [
-            "Time ininterrupto alocado na sua operação",
-            "Gestores de Projeto e Desenvolvedores AI",
+            "Time alocado integralmente na sua operação",
+            "Arquitetos e Desenvolvedores de AI",
             "Escale com o seu ritmo e necessidades",
             "Insights Estratégicos ilimitados"
           ],
           "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
         },
-        "badgeText": "Pricing",
-        "title": "Garanta um AI Agent estruturado e seguro com um time validado",
+        "title": "Garanta o resultado com um time experiente",
+        "description": "Nosso time de engenheiros respira projetos em alta escala e está na fronteira das aplicações de AI. Estamos prontos para te ajudar como for melhor para o seu momento.",
         "pilotPlan": {
-          "title": "Projeto Personalizado",
+          "title": "AI Agent Customizado",
           "price": "Entre em contato",
           "features": [
             "Do discovery à implementação",
@@ -412,7 +412,7 @@
           "ctaText": "Entre em contato",
           "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
         },
-        "description": " "
+        "badgeText": "Valores"
       }
     },
     {
