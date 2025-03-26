@@ -167,7 +167,7 @@
         "animateNumbers": true,
         "statistics": [
           {
-            "value": "3000",
+            "value": "300",
             "description": "AI Agents operando",
             "accentColor": "vermelho",
             "prefix": "+"
