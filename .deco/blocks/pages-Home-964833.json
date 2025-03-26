@@ -86,13 +86,6 @@
               "title": "WhatsApp AI Agent",
               "subtitle": "123123",
               "duration": "4"
-            },
-            {
-              "id": "1",
-              "imageUrl": "https://assets.decocache.com/carcaralanding/47be7401-5483-46a9-8d93-2253258f43da/hero-whatsappagent.png",
-              "title": "WhatsApp AI Agent",
-              "subtitle": "123123",
-              "duration": "4"
             }
           ],
           "autoplayInterval": 4,
@@ -145,7 +138,6 @@
             "src": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
             "altText": "baw"
           },
-          {},
           {
             "src": "https://assets.decocache.com/carcaralanding/1588b405-48b6-4cc6-ab56-d55624a4b5c9/farm2.svg",
             "altText": "farm"
@@ -154,7 +146,9 @@
             "src": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg",
             "altText": "als"
           },
-          {}
+          {
+            "src": "https://assets.decocache.com/carcaralanding/f5e68d4d-4ebc-411b-8e96-9436a0e0bfa7/reserva.svg"
+          }
         ]
       }
     },

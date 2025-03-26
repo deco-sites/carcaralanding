@@ -124,20 +124,20 @@ export interface HeroProps {
   sliderInterval?: number;
 
   configCarousel: {
-      /**
-   * @title {{title}}
-   */
-  items: CarouselItem[];
-  /**
-   * @title Tempo de troca automática de slides (0 para desativar)
-   */
-  autoplayInterval?: number;
+    /**
+     * @title {{title}}
+     */
+    items: CarouselItem[];
+    /**
+     * @title Tempo de troca automática de slides (0 para desativar)
+     */
+    autoplayInterval?: number;
 
-  /**
-   * @title Exibir HUD de debug
-   */
-  debugHud?: boolean;
-  }
+    /**
+     * @title Exibir HUD de debug
+     */
+    debugHud?: boolean;
+  };
 }
 
 export default function HeroSection({
@@ -181,8 +181,7 @@ export default function HeroSection({
   },
   showBackgroundElements = true,
   sliderInterval = 4000,
-  configCarousel
-  
+  configCarousel,
 }: HeroProps) {
   // Process title to apply correct styling to specific parts
   const processedTitle = title
@@ -239,9 +238,9 @@ export default function HeroSection({
       )}
 
       {/* Content container - with higher z-index to appear above background elements */}
-      <ContentContainer className="py-8 sm:py-12 md:py-16 lg:pt-24 pt-32 lg:pt-32 pb-8 lg:pb-12 relative z-10">
-        <div className="flex flex-col justify-center items-center gap-6 sm:gap-8">
-          <div className="flex flex-col justify-start items-center gap-4 sm:gap-6 px-4 sm:px-6 md:px-8">
+      <ContentContainer className="py-8 sm:py-12 md:py-16 pt-32 lg:pt-32 pb-8 lg:pb-12 mb-12 relative z-10">
+        <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-start items-center gap-4 sm:gap-5 px-4 sm:px-6 md:px-8">
             {/* Badge */}
             <Badge
               variant="outline"
@@ -256,10 +255,10 @@ export default function HeroSection({
             {/* Title */}
             <div className="text-center w-full sm:max-w-2xl mx-auto">
               <h1
-                className="hero-title font-serif text-6xl lg:text-8xl text-ca-50 tracking-[-0.01em]"
+                className="hero-title font-serif text-6xl lg:text-[5.25rem] text-ca-50 tracking-[-0.01em]"
                 dangerouslySetInnerHTML={{
                   __html:
-                    `<div class="space-y-0 leading-[1.1] md:leading-[1.1]">${processedTitle}</div>`,
+                    `<div class="space-y-0 leading-[1] md:leading-[1]">${processedTitle}</div>`,
                 }}
               />
             </div>
@@ -285,7 +284,11 @@ export default function HeroSection({
 
       {/* Hero image slider - with higher z-index to appear above background elements */}
       <div className="relative z-10 pb-10">
-        <Carousel items={configCarousel.items} autoplayInterval={configCarousel.autoplayInterval} debugHud={configCarousel.debugHud} />
+        <Carousel
+          items={configCarousel.items}
+          autoplayInterval={configCarousel.autoplayInterval}
+          debugHud={configCarousel.debugHud}
+        />
       </div>
     </section>
   );
