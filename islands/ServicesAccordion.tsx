@@ -220,7 +220,7 @@ function ServicesAccordion({ services }: ServicesAccordionProps) {
                           alt={service.title}
                           width={500}
                           height={300}
-                          className="w-full object-cover"
+                          className="w-full object-cover object-left"
                         />
                       </div>
                     </div>
@@ -246,7 +246,7 @@ function ServicesAccordion({ services }: ServicesAccordionProps) {
               alt={service.title}
               width={748}
               height={760}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-left"
             />
           </div>
         ))}

@@ -72,7 +72,13 @@ function BlogPostCard({ post }: { post: BlogPost }) {
 
   return (
     <div className="w-full flex-shrink-0 flex flex-col h-full border border-ca-700">
-      <div className="relative">
+      <div className="p-8 flex flex-col gap-4 flex-grow">
+        <H1 className="text-left text-ca-50 text-xl sm:text-3xl font-normal font-serif">
+          {post.title}
+        </H1>
+      </div>
+
+      <div className="relative mt-auto">
         <Image
           src={post.image || ""}
           alt={post.title || ""}
@@ -92,12 +98,6 @@ function BlogPostCard({ post }: { post: BlogPost }) {
             />
           </div>
         )}
-      </div>
-
-      <div className="p-8 flex flex-col gap-4 flex-grow">
-        <H1 className="text-left text-ca-50 text-xl sm:text-3xl font-normal font-serif">
-          {post.title}
-        </H1>
       </div>
     </div>
   );

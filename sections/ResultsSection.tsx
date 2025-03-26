@@ -103,7 +103,7 @@ function StatisticBlock(
   }: StatisticItem,
 ) {
   return (
-    <div className="flex-1 self-stretch p-4 sm:p-6 md:p-10 lg:p-20 flex flex-col justify-center items-start gap-2">
+    <div className="flex-1 self-stretch p-4 sm:p-6 md:p-10 lg:p-15 lg:py-20 flex flex-col justify-center items-start gap-2">
       <div className="self-stretch">
         {prefix && (
           <span
