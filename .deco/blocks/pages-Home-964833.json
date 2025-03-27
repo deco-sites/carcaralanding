@@ -49,13 +49,14 @@
           "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "showBackgroundElements": true,
-        "title": "<h1>Construimos</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents únicos</span></h1><h1>para sua empresa</h1>",
+        "title": "<h1>Construimos</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents </span></h1><h1>para sua empresa</h1>",
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg",
           "configCarousel": {}
         },
         "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
+        "ctaText": "Vire uma empresa AI-First",
         "configCarousel": {
           "items": [
             {
