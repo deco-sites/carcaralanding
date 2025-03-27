@@ -90,7 +90,8 @@
           "autoplayInterval": 4,
           "debugHud": false
         },
-        "ctaText": "Entre em contato conosco"
+        "ctaText": "Entre em contato conosco",
+        "badge": "Acelere seu negócio"
       }
     },
     {
