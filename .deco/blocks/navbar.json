@@ -1,0 +1,38 @@
+{
+  "__resolveType": "site/sections/HeaderSection.tsx",
+  "logo": {
+    "desktop": {
+      "src": "https://assets.decocache.com/carcaralanding/2a0428e3-b1e8-428c-a220-4e4b9b837529/carc.svg",
+      "alt": "carcara-logo"
+    },
+    "mobile": {
+      "src": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
+      "alt": "carcara-logo"
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "label": "Serviços",
+        "href": "#services"
+      },
+      {
+        "label": "Casos",
+        "href": "#cases"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      }
+    ]
+  },
+  "cta": {
+    "buttons": [
+      {
+        "variant": "primary",
+        "label": "Agende uma reunião",
+        "href": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+      }
+    ]
+  }
+}

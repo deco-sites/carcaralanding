@@ -8,6 +8,7 @@ import * as $Carrosel from "./islands/Carrosel.tsx";
 import * as $FutureCards from "./islands/FutureCards.tsx";
 import * as $ServicesAccordion from "./islands/ServicesAccordion.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
+import * as $TestimonialsCarousel from "./islands/TestimonialsCarousel.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -20,6 +21,7 @@ const manifest = {
     "./islands/FutureCards.tsx": $FutureCards,
     "./islands/ServicesAccordion.tsx": $ServicesAccordion,
     "./islands/SliderJS.tsx": $SliderJS,
+    "./islands/TestimonialsCarousel.tsx": $TestimonialsCarousel,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

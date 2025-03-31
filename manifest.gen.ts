@@ -16,23 +16,27 @@ import * as $$$$$$4 from "./sections/FAQSection.tsx";
 import * as $$$$$$6 from "./sections/FooterSection.tsx";
 import * as $$$$$$7 from "./sections/Header.tsx";
 import * as $$$$$$8 from "./sections/HeaderSection.tsx";
-import * as $$$$$$22 from "./sections/hero-1.tsx";
-import * as $$$$$$23 from "./sections/hero-2.tsx";
+import * as $$$$$$26 from "./sections/hero-1.tsx";
+import * as $$$$$$27 from "./sections/hero-2.tsx";
 import * as $$$$$$9 from "./sections/Hero.tsx";
-import * as $$$$$$24 from "./sections/hero2.tsx";
+import * as $$$$$$28 from "./sections/hero2.tsx";
 import * as $$$$$$10 from "./sections/HeroSection.tsx";
 import * as $$$$$$11 from "./sections/ImageWithParagraph.tsx";
-import * as $$$$$$25 from "./sections/loaders/BlogPostList.ts";
-import * as $$$$$$12 from "./sections/Logos.tsx";
-import * as $$$$$$13 from "./sections/MethodologySection.tsx";
-import * as $$$$$$14 from "./sections/Page.tsx";
-import * as $$$$$$15 from "./sections/PricingSection.tsx";
-import * as $$$$$$16 from "./sections/ResultsSection.tsx";
-import * as $$$$$$17 from "./sections/SectionDivider.tsx";
-import * as $$$$$$18 from "./sections/ServicesSection.tsx";
-import * as $$$$$$19 from "./sections/Testimonials.tsx";
-import * as $$$$$$20 from "./sections/TheFuture.tsx";
-import * as $$$$$$21 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$12 from "./sections/IntegrationPlatformsSection.tsx";
+import * as $$$$$$29 from "./sections/loaders/BlogPostList.ts";
+import * as $$$$$$13 from "./sections/Logos.tsx";
+import * as $$$$$$14 from "./sections/MethodologySection.tsx";
+import * as $$$$$$15 from "./sections/Page.tsx";
+import * as $$$$$$16 from "./sections/PricingSection.tsx";
+import * as $$$$$$17 from "./sections/ResultsSection.tsx";
+import * as $$$$$$18 from "./sections/SectionDivider.tsx";
+import * as $$$$$$19 from "./sections/ServicesSection.tsx";
+import * as $$$$$$20 from "./sections/Testimonials.tsx";
+import * as $$$$$$21 from "./sections/TestimonialsSection.tsx";
+import * as $$$$$$22 from "./sections/TheFuture.tsx";
+import * as $$$$$$23 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$24 from "./sections/VtexAgentHero.tsx";
+import * as $$$$$$25 from "./sections/VtexFeatures.tsx";
 
 const manifest = {
   "sections": {
@@ -45,23 +49,27 @@ const manifest = {
     "site/sections/FooterSection.tsx": $$$$$$6,
     "site/sections/Header.tsx": $$$$$$7,
     "site/sections/HeaderSection.tsx": $$$$$$8,
-    "site/sections/hero-1.tsx": $$$$$$22,
-    "site/sections/hero-2.tsx": $$$$$$23,
+    "site/sections/hero-1.tsx": $$$$$$26,
+    "site/sections/hero-2.tsx": $$$$$$27,
     "site/sections/Hero.tsx": $$$$$$9,
-    "site/sections/hero2.tsx": $$$$$$24,
+    "site/sections/hero2.tsx": $$$$$$28,
     "site/sections/HeroSection.tsx": $$$$$$10,
     "site/sections/ImageWithParagraph.tsx": $$$$$$11,
-    "site/sections/loaders/BlogPostList.ts": $$$$$$25,
-    "site/sections/Logos.tsx": $$$$$$12,
-    "site/sections/MethodologySection.tsx": $$$$$$13,
-    "site/sections/Page.tsx": $$$$$$14,
-    "site/sections/PricingSection.tsx": $$$$$$15,
-    "site/sections/ResultsSection.tsx": $$$$$$16,
-    "site/sections/SectionDivider.tsx": $$$$$$17,
-    "site/sections/ServicesSection.tsx": $$$$$$18,
-    "site/sections/Testimonials.tsx": $$$$$$19,
-    "site/sections/TheFuture.tsx": $$$$$$20,
-    "site/sections/Theme/Theme.tsx": $$$$$$21,
+    "site/sections/IntegrationPlatformsSection.tsx": $$$$$$12,
+    "site/sections/loaders/BlogPostList.ts": $$$$$$29,
+    "site/sections/Logos.tsx": $$$$$$13,
+    "site/sections/MethodologySection.tsx": $$$$$$14,
+    "site/sections/Page.tsx": $$$$$$15,
+    "site/sections/PricingSection.tsx": $$$$$$16,
+    "site/sections/ResultsSection.tsx": $$$$$$17,
+    "site/sections/SectionDivider.tsx": $$$$$$18,
+    "site/sections/ServicesSection.tsx": $$$$$$19,
+    "site/sections/Testimonials.tsx": $$$$$$20,
+    "site/sections/TestimonialsSection.tsx": $$$$$$21,
+    "site/sections/TheFuture.tsx": $$$$$$22,
+    "site/sections/Theme/Theme.tsx": $$$$$$23,
+    "site/sections/VtexAgentHero.tsx": $$$$$$24,
+    "site/sections/VtexFeatures.tsx": $$$$$$25,
   },
   "apps": {
     "site/apps/blog/types.ts": $$$$$$$$$$$0,

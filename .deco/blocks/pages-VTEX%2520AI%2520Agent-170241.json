@@ -1,0 +1,91 @@
+{
+  "name": "VTEX AI Agent",
+  "path": "/vtex-ai-agent",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "navbar"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/VtexAgentHero.tsx",
+        "backgroundElement1": {
+          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+        },
+        "backgroundElement2": {
+          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+        },
+        "title": "<p>Converse com a sua<span style=\"color: #b13431\"> loja VTEX</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/IntegrationPlatformsSection.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/VtexFeatures.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/TestimonialsSection.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/CTASection.tsx",
+        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
+        "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+        "title": "Pronto para evoluir sua empresa?",
+        "subtitle": "Entre em contato para conquistar seu AI Agent personalizado"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/FooterSection.tsx",
+        "rightDecoration": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
+        "transformationStoriesColumn": {
+          "posts": {
+            "__resolveType": "blog/loaders/BlogpostList.ts",
+            "sortBy": "date_desc",
+            "count": 5
+          },
+          "show": true
+        },
+        "industriesColumn": {
+          "show": false
+        }
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
