@@ -239,7 +239,7 @@ export default function TestimonialsSection({
         </div>
       )}
 
-      <ContentContainer className="px-4 sm:px-6 md:px-8 relative z-10">
+      <ContentContainer className="px-4 sm:px-16 relative z-10">
         {/* Header Section */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <Badge

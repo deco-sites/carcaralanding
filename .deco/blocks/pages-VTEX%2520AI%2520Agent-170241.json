@@ -18,27 +18,8 @@
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         },
-        "title": "<p>Converse com a sua<span style=\"color: #b13431\"> loja VTEX</span></p>"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/IntegrationPlatformsSection.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Divider.tsx",
-        "paddingTop": 0,
-        "paddingBottom": 24
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/VtexFeatures.tsx"
+        "title": "<p>Converse com a sua<span style=\"color: #b13431\"> loja VTEX</span></p>",
+        "chatIcon": "https://assets.decocache.com/carcaralanding/527d8e8a-e055-4335-ab6f-51ba323f3edf/vtex-logo-carcara-03.png"
       }
     },
     {
@@ -52,7 +33,189 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/TestimonialsSection.tsx"
+        "__resolveType": "site/sections/IntegrationPlatformsSection.tsx",
+        "badgeText": "Onde Utilizar",
+        "title": "Integre seu AI Agent em diversas plataformas",
+        "description": "Conecte seu AI Agent onde sua equipe já trabalha, automatizando tarefas e fornecendo respostas em tempo real.",
+        "ctaText": "Comece agora",
+        "ctaUrl": "/contato",
+        "platforms": [
+          {
+            "name": "WhatsApp",
+            "description": "Atendimento automatizado 24/7 com respostas personalizadas para seus clientes via WhatsApp.",
+            "benefits": [
+              "Suporte ao cliente 24/7 sem intervenção humana",
+              "Respostas personalizadas baseadas no contexto",
+              "Automação de processos de venda e pós-venda"
+            ],
+            "builtinIcon": "WhatsApp",
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/a02b16d2-6015-475b-aad6-f2147400b977/whatsapp.png",
+            "accentColor": "bg-verde",
+            "icon": "https://assets.decocache.com/carcaralanding/0f8100b6-3905-45c6-8095-2b47cfb0dcf6/whatsapp.svg"
+          },
+          {
+            "name": "Slack",
+            "description": "Respostas instantâneas e automação de fluxos de trabalho para sua equipe direto no Slack.",
+            "benefits": [
+              "Automatização de tarefas administrativas",
+              "Resposta a perguntas frequentes sobre dados internos",
+              "Integração com outras ferramentas da empresa"
+            ],
+            "customIcon": "slack",
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/52611d4d-e7ff-40d3-9a27-328b12c1efa0/slack.png",
+            "accentColor": "bg-azul",
+            "icon": "https://assets.decocache.com/carcaralanding/6f5fd620-e236-466d-bfb7-b51719463425/slack.svg"
+          },
+          {
+            "name": "Microsoft Teams",
+            "description": "Integração perfeita com Teams para colaboração e suporte à tomada de decisões empresariais.",
+            "benefits": [
+              "Agendamento inteligente de reuniões",
+              "Sumários automáticos de discussões",
+              "Pesquisa de dados e documentos corporativos"
+            ],
+            "customIcon": "teams",
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/385a6f03-fc3e-4f8f-b118-25acfe31e410/teams.png",
+            "accentColor": "bg-vermelho",
+            "icon": "https://assets.decocache.com/carcaralanding/8dd18346-b98a-42ec-bb61-619bb3c79486/teams.svg"
+          },
+          {
+            "name": "Admin deco.cx",
+            "description": "Assistente de marketing e conteúdo integrado diretamente na plataforma deco.cx.",
+            "benefits": [
+              "Criação de conteúdo otimizado para SEO",
+              "Análise de performance de páginas",
+              "Sugestões de melhorias baseadas em dados"
+            ],
+            "customIcon": "deco",
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/9922c0b4-c76f-42b3-a703-181cfaf52bd9/deco.png",
+            "accentColor": "bg-amarelo",
+            "icon": "https://assets.decocache.com/carcaralanding/d14e4282-f516-4d05-8821-e5410cb9d10a/deco.svg"
+          }
+        ],
+        "backgroundElement": {
+          "image": "https://placehold.co/3505x2270/282B2E/282B2E",
+          "opacity": 25,
+          "rotation": 167.02,
+          "top": "33%",
+          "position": {
+            "right": "-25%"
+          },
+          "zIndex": -10,
+          "width": "100%"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/VtexFeatures.tsx",
+        "title": "<p>Maximize sua operação VTEX</p>",
+        "description": "Seu AI Agent conectado à sua loja VTEX oferece um conjunto completo de funcionalidades para otimizar sua gestão, mantendo total controle de custos.",
+        "budgetMessage": "Defina um limite máximo de gastos para seu AI Agent e mantenha o controle total de custos de uso da plataforma",
+        "ctaText": "Quero otimizar minha VTEX",
+        "ctaUrl": "/contato",
+        "features": [
+          {
+            "id": "estoque",
+            "title": "Gestão de Estoque",
+            "description": "Monitore níveis de estoque, receba alertas de baixo estoque e faça pedidos de reposição automaticamente.",
+            "icon": "inventory"
+          },
+          {
+            "id": "vendas",
+            "title": "Análise de Vendas",
+            "description": "Acompanhe as vendas em tempo real, identifique tendências e receba insights sobre o desempenho da sua loja VTEX.",
+            "icon": "trending_up"
+          },
+          {
+            "id": "catalogo",
+            "title": "Gerenciamento de Catálogo",
+            "description": "Atualize produtos, preços e categorias com comandos simples de linguagem natural, sem navegar por menus complexos.",
+            "icon": "category"
+          },
+          {
+            "id": "configuracao",
+            "title": "Configuração da Loja",
+            "description": "Altere configurações da loja, ajuste políticas e atualize informações sem precisar acessar painéis administrativos.",
+            "icon": "settings"
+          },
+          {
+            "id": "clientes",
+            "title": "Insights de Clientes",
+            "description": "Obtenha informações valiosas sobre o comportamento dos clientes, segmentação e histórico de compras para decisões de marketing.",
+            "icon": "people"
+          }
+        ],
+        "budgetBackgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/TestimonialsSection.tsx",
+        "title": "O que nossos clientes estão dizendo",
+        "badgeText": "Depoimentos",
+        "description": "Veja o que empresas que já estão utilizando nossos AI Agents dizem sobre os resultados.",
+        "ctaText": "Fale conosco",
+        "ctaUrl": "/contato",
+        "testimonials": [
+          {
+            "name": "Representante da Osklen",
+            "position": "Diretor de Tecnologia",
+            "company": "Osklen",
+            "quote": "Acredito que esse AI Agent pode revolucionar a forma como gerenciamos nossa operação VTEX, trazendo eficiência e insights valiosos para nosso dia a dia.",
+            "accentColor": "bg-verde"
+          },
+          {
+            "name": "Maria Silva",
+            "position": "Gerente de E-commerce",
+            "company": "Fashion Brand",
+            "quote": "A capacidade do AI Agent de analisar nossos dados de vendas e sugerir ações estratégicas nos permitiu aumentar as conversões em 23% nos primeiros dois meses.",
+            "accentColor": "bg-azul"
+          },
+          {
+            "name": "Carlos Mendes",
+            "position": "COO",
+            "company": "Tech Retail",
+            "quote": "Implementamos o AI Agent em nossa operação VTEX e conseguimos reduzir em 45% o tempo gasto em tarefas operacionais rotineiras. Nossa equipe agora pode focar em estratégias de crescimento.",
+            "accentColor": "bg-vermelho"
+          },
+          {
+            "name": "Ana Ferreira",
+            "position": "Diretora de Marketing",
+            "company": "Home & Decor",
+            "quote": "A agilidade com que conseguimos obter insights sobre o comportamento dos nossos clientes através do AI Agent transformou nossa abordagem de marketing, tornando nossas campanhas muito mais efetivas.",
+            "accentColor": "bg-amarelo"
+          }
+        ],
+        "backgroundElement": {
+          "image": "https://placehold.co/3505x2270/282B2E/282B2E",
+          "opacity": 15,
+          "rotation": -4.51,
+          "top": "50%",
+          "position": {
+            "left": "-40%"
+          },
+          "zIndex": -10,
+          "width": "100%"
+        }
       }
     },
     {
