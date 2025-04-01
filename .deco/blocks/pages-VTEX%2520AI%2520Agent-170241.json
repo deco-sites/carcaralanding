@@ -19,7 +19,8 @@
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         },
         "title": "<p>Converse com a sua<span style=\"color: #b13431\"> loja VTEX</span></p>",
-        "chatIcon": "https://assets.decocache.com/carcaralanding/527d8e8a-e055-4335-ab6f-51ba323f3edf/vtex-logo-carcara-03.png"
+        "chatIcon": "https://assets.decocache.com/carcaralanding/527d8e8a-e055-4335-ab6f-51ba323f3edf/vtex-logo-carcara-03.png",
+        "primaryCtaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7"
       }
     },
     {
@@ -122,7 +123,7 @@
         "description": "Seu AI Agent conectado à sua loja VTEX oferece um conjunto completo de funcionalidades para otimizar sua gestão, mantendo total controle de custos.",
         "budgetMessage": "Defina um limite máximo de gastos para seu AI Agent e mantenha o controle total de custos de uso da plataforma",
         "ctaText": "Quero otimizar minha VTEX",
-        "ctaUrl": "/contato",
+        "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "features": [
           {
             "id": "estoque",
@@ -174,7 +175,7 @@
         "badgeText": "Depoimentos",
         "description": "Veja o que empresas que já estão utilizando nossos AI Agents dizem sobre os resultados.",
         "ctaText": "Fale conosco",
-        "ctaUrl": "/contato",
+        "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "testimonials": [
           {
             "name": "Representante da Osklen",
