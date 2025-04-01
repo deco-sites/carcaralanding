@@ -3530,6 +3530,9 @@ input.tab:checked + .tab-content,
 .max-h-\[300px\]{
   max-height: 300px;
 }
+.max-h-\[400px\]{
+  max-height: 400px;
+}
 .max-h-\[55px\]{
   max-height: 55px;
 }
@@ -4648,9 +4651,6 @@ input.tab:checked + .tab-content,
 .pl-3{
   padding-left: 0.75rem;
 }
-.pl-5{
-  padding-left: 1.25rem;
-}
 .pr-2{
   padding-right: 0.5rem;
 }
@@ -5353,6 +5353,12 @@ input.tab:checked + .tab-content,
 }
 .disabled\:hidden:disabled{
   display: none;
+}
+.disabled\:cursor-not-allowed:disabled{
+  cursor: not-allowed;
+}
+.disabled\:opacity-50:disabled{
+  opacity: 0.5;
 }
 .group[open] .group-open\:rotate-180{
   --tw-rotate: 180deg;

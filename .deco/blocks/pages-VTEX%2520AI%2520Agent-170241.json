@@ -3,33 +3,24 @@
   "path": "/vtex-ai-agent",
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "navbar"
-      }
+      "__resolveType": "navbar"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/VtexAgentHero.tsx",
-        "backgroundElement1": {
-          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
-        },
-        "backgroundElement2": {
-          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
-        },
-        "title": "<p>Converse com a sua<span style=\"color: #b13431\"> loja VTEX</span></p>",
-        "chatIcon": "https://assets.decocache.com/carcaralanding/527d8e8a-e055-4335-ab6f-51ba323f3edf/vtex-logo-carcara-03.png",
-        "primaryCtaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7"
-      }
+      "__resolveType": "site/sections/VtexAgentHero.tsx",
+      "backgroundElement1": {
+        "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+      },
+      "backgroundElement2": {
+        "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+      },
+      "title": "<p>Converse com a sua<span style=\"color: #b13431\"> loja VTEX</span></p>",
+      "chatIcon": "https://assets.decocache.com/carcaralanding/527d8e8a-e055-4335-ab6f-51ba323f3edf/vtex-logo-carcara-03.png",
+      "primaryCtaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Divider.tsx",
-        "paddingTop": 0,
-        "paddingBottom": 24
-      }
+      "__resolveType": "site/sections/Divider.tsx",
+      "paddingTop": 0,
+      "paddingBottom": 24
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

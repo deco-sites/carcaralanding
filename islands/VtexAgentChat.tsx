@@ -1,9 +1,11 @@
 /** @jsxImportSource preact */
 import { useEffect, useRef, useState } from "preact/hooks";
-import { animate, stagger } from "npm:@motionone/dom@10.18.0";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import { Head } from "$fresh/runtime.ts";
+import { signal } from "@preact/signals";
+import { Message } from "site/sdk/messages.ts";
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
 interface ChatMessage {
   /**
@@ -30,6 +32,11 @@ interface ChatMessage {
    * Additional message to show after list items
    */
   afterListMessage?: string;
+
+  /**
+   * Timestamp of the message
+   */
+  timestamp: number;
 }
 
 interface VtexAgentChatProps {
@@ -52,16 +59,30 @@ interface VtexAgentChatProps {
   chatPlaceholder?: string;
 
   /**
-   * Chat messages to display in the interface
+   * Initial chat messages to display in the interface
    */
-  chatMessages?: ChatMessage[];
+  chatMessages?: Message[];
 
   /**
    * Chat icon image
    * @default https://placehold.co/200x200/B13431/FFFFFF?text=AI
    */
   chatIcon?: ImageWidget;
+
+  /**
+   * Optional callback for when a message is sent
+   */
+  onMessageSent?: (message: string) => Promise<void>;
+
+  /**
+   * Optional callback for when the AI response is received
+   */
+  onAIResponse?: (response: Message) => void;
 }
+
+// Create a global signal for chat messages that persists between renders
+const chatMessagesSignal = signal<Message[]>([]);
+const isTypingSignal = signal<boolean>(false);
 
 export default function VtexAgentChat({
   chatTitle = "AI Agent VTEX",
@@ -69,161 +90,121 @@ export default function VtexAgentChat({
   chatPlaceholder = "Digite sua mensagem...",
   chatMessages = [],
   chatIcon = "https://placehold.co/200x200/B13431/FFFFFF?text=AI",
+  onMessageSent,
+  onAIResponse,
 }: VtexAgentChatProps) {
   const chatRef = useRef<HTMLDivElement>(null);
-  const [typedMessages, setTypedMessages] = useState<string[]>([]);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Function to simulate typing effect for a message
-  const simulateTyping = (message: string, messageIndex: number) => {
-    let currentText = "";
-    const messageLength = message.length;
-    let charIndex = 0;
-    let typingSpeed = 35;
+  useEffect(() => {
+    if (chatRef.current) {
+      chatRef.current.scrollTo({
+        top: chatRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  }, [chatMessagesSignal.value]);
 
-    const typingInterval = setInterval(() => {
-      if (charIndex < messageLength) {
-        currentText += message.charAt(charIndex);
-        setTypedMessages((prev) => {
-          const newMessages = [...prev];
-          newMessages[messageIndex] = currentText;
-          return newMessages;
-        });
-        charIndex++;
-      } else {
-        clearInterval(typingInterval);
+  // Initialize chat messages if provided
+  useEffect(() => {
+    if (chatMessages.length > 0 && chatMessagesSignal.value.length === 0) {
+      chatMessagesSignal.value = chatMessages;
+    }
+  }, [chatMessages]);
+
+  // Handle message submission
+  const handleSubmit = async (e?: Event) => {
+    e?.preventDefault();
+
+    if (!inputValue.trim() || isLoading) return;
+
+    // Add user message
+    const userMessage: Message = {
+      content: inputValue.trim(),
+      role: "user",
+      timestamp: Date.now().toString(),
+      id: crypto.randomUUID(),
+    };
+
+    chatMessagesSignal.value = [...chatMessagesSignal.value, userMessage];
+    setInputValue("");
+    setIsLoading(true);
+    isTypingSignal.value = true;
+
+    try {
+      // Call the onMessageSent callback if provided
+      if (onMessageSent) {
+        await onMessageSent(userMessage.content);
       }
-    }, typingSpeed);
 
-    return () => clearInterval(typingInterval);
+      // Placeholder for API integration
+      // This is where you would make the API call to get the AI response
+      // For now, we'll simulate a response after a delay
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch(
+        "https://vtex-agent.deco.site/live/invoke/site/actions/chat/ai-response.ts",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            message: userMessage.content,
+            assistantUrl: "/catalog-specialist",
+            threadId: crypto.randomUUID(),
+            threadMessages: chatMessagesSignal.value.slice(-8),
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+
+      const result = await response.json();
+
+      // Simulate AI response (replace this with actual API integration)
+      const aiResponse: Message = {
+        content: result.message,
+        role: "assistant",
+        timestamp: Date.now().toString(),
+        id: crypto.randomUUID(),
+      };
+
+      chatMessagesSignal.value = [...chatMessagesSignal.value, aiResponse];
+
+      // Call the onAIResponse callback if provided
+      if (onAIResponse) {
+        onAIResponse(aiResponse);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      // Add error message to chat
+      chatMessagesSignal.value = [...chatMessagesSignal.value, {
+        content:
+          "Sorry, there was an error processing your message. Please try again.",
+        role: "assistant",
+        timestamp: Date.now().toString(),
+        id: crypto.randomUUID(),
+      }];
+    } finally {
+      setIsLoading(false);
+      isTypingSignal.value = false;
+    }
   };
 
-  // Initialize typed messages array
-  useEffect(() => {
-    // Initialize with empty strings for each message
-    setTypedMessages(chatMessages.map(() => ""));
-  }, [chatMessages]);
+  // Handle input changes
+  const handleInputChange = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    setInputValue(target.value);
+  };
 
-  useEffect(() => {
-    if (!chatRef.current) return;
-
-    // Slight delay to ensure DOM is ready
-    const timer = setTimeout(() => {
-      try {
-        // Animate chat messages one by one
-        const chatMessageElements = chatRef.current?.querySelectorAll(
-          ".chat-message",
-        );
-
-        if (chatMessageElements && chatMessageElements.length > 0) {
-          // First hide all messages
-          chatMessageElements.forEach((msg) => {
-            if (msg instanceof HTMLElement) {
-              msg.style.opacity = "0";
-              msg.style.display = "none";
-            }
-          });
-
-          // Then animate them one by one with typing effect
-          let delay = 600;
-          chatMessageElements.forEach((msg, index) => {
-            if (
-              msg instanceof HTMLElement &&
-              index < chatMessageElements.length - 1
-            ) { // Skip the typing indicator
-              setTimeout(() => {
-                try {
-                  // Check if component is still mounted
-                  if (!chatRef.current) return;
-
-                  // Show the message
-                  msg.style.display = "flex";
-
-                  // Animate the message appearance
-                  animate(
-                    msg,
-                    {
-                      opacity: [0, 1],
-                      transform: ["translateY(10px)", "translateY(0)"],
-                    },
-                    {
-                      easing: [0.25, 0.1, 0.25, 1],
-                      duration: 0.4,
-                    },
-                  );
-
-                  // Start typing animation for AI messages
-                  if (
-                    msg.classList.contains("ai-typing") && chatMessages[index]
-                  ) {
-                    // Get original message
-                    const originalMessage = chatMessages[index].message || "";
-                    simulateTyping(originalMessage, index);
-                  }
-
-                  // Show typing indicator after message if next is from AI
-                  if (
-                    index < chatMessageElements.length - 2 &&
-                    !msg.classList.contains("ai-typing")
-                  ) {
-                    const typingIndicator = chatRef.current?.querySelector(
-                      ".typing-indicator-container",
-                    );
-                    if (typingIndicator instanceof HTMLElement) {
-                      setTimeout(() => {
-                        if (!chatRef.current) return;
-                        typingIndicator.style.display = "flex";
-                        typingIndicator.style.opacity = "1";
-
-                        // Hide typing indicator after a delay
-                        setTimeout(() => {
-                          if (!chatRef.current) return;
-                          typingIndicator.style.opacity = "0";
-                          setTimeout(() => {
-                            if (!chatRef.current) return;
-                            typingIndicator.style.display = "none";
-                          }, 300);
-                        }, 1500);
-                      }, 400);
-                    }
-                  }
-                } catch (error) {
-                  console.error("Error animating chat message:", error);
-                }
-              }, delay);
-
-              // Increase delay for next message
-              delay += (index % 2 === 0) ? 2200 : 1800; // AI messages take longer
-            }
-          });
-        }
-
-        // Animate typing indicator dots
-        const typingDots = chatRef.current?.querySelectorAll(
-          ".typing-indicator span",
-        );
-        if (typingDots && typingDots.length > 0) {
-          animate(
-            typingDots,
-            {
-              transform: ["translateY(0)", "translateY(-5px)", "translateY(0)"],
-            },
-            {
-              delay: stagger(0.15),
-              easing: [0.42, 0, 0.58, 1],
-              duration: 0.5,
-              repeat: Infinity,
-            },
-          );
-        }
-      } catch (error) {
-        console.error("Error in animation effect:", error);
-      }
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [chatMessages]);
+  // Handle enter key press
+  const handleKeyPress = (e: KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
 
   return (
     <>
@@ -235,12 +216,11 @@ export default function VtexAgentChat({
       </Head>
 
       <div
-        ref={chatRef}
-        className="bg-ca-900 border border-ca-700/80 shadow-xl p-3 sm:p-4 md:p-5 w-full mx-auto flex flex-col h-full"
+        class="bg-ca-900 border border-ca-700/80 shadow-xl p-3 sm:p-4 md:p-5 w-full mx-auto flex flex-col h-full"
       >
         {/* Chat Header */}
-        <div className="flex items-center pb-3 border-b border-ca-700/80">
-          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden bg-vermelho flex items-center justify-center">
+        <div class="flex items-center pb-3 border-b border-ca-700/80">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden bg-vermelho flex items-center justify-center">
             <Image
               src={chatIcon}
               alt={chatTitle}
@@ -249,125 +229,96 @@ export default function VtexAgentChat({
               class="w-full h-full object-cover"
             />
           </div>
-          <div className="ml-2 sm:ml-3">
-            <h3 className="text-ca-50 font-medium text-sm sm:text-base">
+          <div class="ml-2 sm:ml-3">
+            <h3 class="text-ca-50 font-medium text-sm sm:text-base">
               {chatTitle}
             </h3>
-            <p className="text-ca-300 text-xs">{chatSubtitle}</p>
+            <p class="text-ca-300 text-xs">{chatSubtitle}</p>
           </div>
         </div>
 
-        {/* Chat Messages - Responsive height and spacing */}
-        <div className="py-3 sm:py-4 space-y-3 sm:space-y-4 min-h-[240px] sm:min-h-[300px] md:min-h-[400px] flex-grow flex flex-col justify-start overflow-y-auto">
-          {chatMessages.map((message, index) => (
+        {/* Chat Messages */}
+        <div ref={chatRef} class="py-3 sm:py-4 space-y-3 sm:space-y-4 min-h-[240px] sm:min-h-[300px] md:min-h-[400px] max-h-[400px] flex-grow flex flex-col justify-start overflow-y-auto">
+          {chatMessagesSignal.value.map((message, index) => (
             <div
-              key={index}
-              className={`chat-message ${
-                message.fromAI ? "ai-typing" : ""
-              } flex ${!message.fromAI ? "justify-end" : ""}`}
-              style={{ opacity: 0, display: "none" }}
+              key={message.timestamp}
+              class={`chat-message flex ${
+                message.role === "user" ? "justify-end" : ""
+              }`}
             >
               <div
-                className={`
+                class={`
                   ${
-                  message.fromAI
+                  message.role !== "user"
                     ? "bg-ca-700 rounded-lg rounded-tl-none"
                     : "bg-vermelho/80 rounded-lg rounded-br-none"
                 } px-3 py-2 sm:p-4 max-w-[95%] sm:max-w-[90%]
                 `}
               >
-                <p className="text-ca-100 text-sm sm:text-base">
-                  {message.fromAI
-                    ? (typedMessages[index] || "")
-                    : message.message}
-                </p>
-
-                {message.hasList && message.listItems &&
-                  message.listItems.length > 0 && (
-                  <>
-                    <p className="text-ca-100 mt-2 text-sm sm:text-base">
-                      {message.fromAI &&
-                          typedMessages[index]?.length >= message.message.length
-                        ? "3 produtos estão com menos de 20% do estoque:"
-                        : (message.fromAI
-                          ? ""
-                          : "3 produtos estão com menos de 20% do estoque:")}
-                    </p>
-                    <ul
-                      className="text-ca-100 list-disc pl-5 mt-1 text-sm sm:text-base"
-                      style={{
-                        opacity: message.fromAI
-                          ? (typedMessages[index]?.length >=
-                              message.message.length
-                            ? 1
-                            : 0)
-                          : 1,
-                        transition: "opacity 0.3s",
-                      }}
-                    >
-                      {message.listItems.map((item, itemIndex) => (
-                        <li key={itemIndex}>{item}</li>
-                      ))}
-                    </ul>
-                    {message.afterListMessage && (
-                      <p
-                        className="text-ca-100 mt-2 text-sm sm:text-base"
-                        style={{
-                          opacity: message.fromAI
-                            ? (typedMessages[index]?.length >=
-                                message.message.length
-                              ? 1
-                              : 0)
-                            : 1,
-                          transition: "opacity 0.3s",
-                        }}
-                      >
-                        {message.afterListMessage}
-                      </p>
-                    )}
-                  </>
+                {message.role !== "tool" && (
+                  <p
+                    class="text-ca-100 text-sm sm:text-base"
+                    dangerouslySetInnerHTML={{
+                      __html: marked(message.content, {}),
+                    }}
+                  />
+                )}
+                {message.role === "tool" && (
+                  <p class="text-ca-100 text-sm sm:text-base">
+                    {message.toolName}
+                  </p>
                 )}
               </div>
             </div>
           ))}
 
-          {/* Typing Indicator Container */}
-          <div
-            className="chat-message typing-indicator-container flex items-center"
-            style={{ opacity: 0, display: "none" }}
-          >
-            <div className="bg-ca-700 rounded-lg rounded-tl-none px-3 py-2 sm:px-4 sm:py-3 max-w-xs">
-              <div className="typing-indicator flex space-x-1">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-ca-400 rounded-full">
-                </span>
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-ca-400 rounded-full">
-                </span>
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-ca-400 rounded-full">
-                </span>
+          {/* Typing Indicator */}
+          {isTypingSignal.value && (
+            <div class="chat-message typing-indicator-container flex items-center">
+              <div class="bg-ca-700 rounded-lg rounded-tl-none px-3 py-2 sm:px-4 sm:py-3 max-w-xs">
+                <div class="typing-indicator flex space-x-1">
+                  <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-ca-400 rounded-full">
+                  </span>
+                  <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-ca-400 rounded-full">
+                  </span>
+                  <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-ca-400 rounded-full">
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
-          {/* Empty state message - only shown when no messages and container is empty */}
-          {chatMessages.length === 0 && (
-            <div className="flex items-center justify-center h-full opacity-50 text-ca-400 text-center p-3 sm:p-6 text-sm sm:text-base">
+          {/* Empty state message */}
+          {chatMessagesSignal.value.length === 0 && (
+            <div class="flex items-center justify-center h-full opacity-50 text-ca-400 text-center p-3 sm:p-6 text-sm sm:text-base">
               <p>Conversa com o AI Agent será exibida aqui</p>
             </div>
           )}
+
+          {/* Invisible div for scrolling to bottom */}
+          <div ref={messagesEndRef} />
         </div>
 
         {/* Chat Input */}
-        <div className="pt-3 border-t border-ca-700/80 mt-auto">
-          <div className="flex items-stretch">
+        <div class="pt-3 border-t border-ca-700/80 mt-auto">
+          <form onSubmit={handleSubmit} class="flex items-stretch">
             <input
+              ref={inputRef}
               type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              onKeyPress={handleKeyPress}
               placeholder={chatPlaceholder}
-              className="flex-grow bg-ca-900 border border-ca-700 border-r-0  px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base text-ca-100 focus:outline-none focus:ring-1 focus:ring-vermelho"
-              readOnly
+              disabled={isLoading}
+              class="flex-grow bg-ca-900 border border-ca-700 border-r-0 px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base text-ca-100 focus:outline-none focus:ring-1 focus:ring-vermelho disabled:opacity-50 disabled:cursor-not-allowed"
             />
-            <button className="bg-vermelho hover:bg-opacity-90 text-ca-50 px-3 sm:px-4 flex items-center justify-center">
+            <button
+              type="submit"
+              disabled={isLoading || !inputValue.trim()}
+              class="bg-vermelho hover:bg-opacity-90 text-ca-50 px-3 sm:px-4 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+            >
               <span
-                className="material-symbols-rounded"
+                class="material-symbols-rounded"
                 style={{
                   fontSize: "18px",
                   fontVariationSettings:
@@ -377,7 +328,7 @@ export default function VtexAgentChat({
                 send
               </span>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </>

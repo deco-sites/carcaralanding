@@ -6,6 +6,7 @@ import Button from "../components/ui/Button.tsx";
 import Badge from "../components/ui/Badge.tsx";
 import { ContentContainer } from "../components/Layout.tsx";
 import VtexAgentChat from "../islands/VtexAgentChat.tsx";
+import { Message } from "site/sdk/messages.ts";
 
 export interface BackgroundElement {
   /**
@@ -158,7 +159,7 @@ export interface VtexAgentHeroProps {
   /**
    * Chat messages to display in the interface
    */
-  chatMessages?: ChatMessage[];
+  chatMessages?: Message[];
 
   /**
    * Chat icon image
@@ -201,24 +202,10 @@ export default function VtexAgentHero({
   chatPlaceholder = "Digite sua mensagem...",
   chatMessages = [
     {
-      message: "Olá! Como posso ajudar com a sua loja VTEX hoje?",
-      fromAI: true,
-    },
-    {
-      message: "Qual o status do estoque dos produtos em promoção?",
-      fromAI: false,
-    },
-    {
-      message: "Verificando estoque dos 12 produtos em promoção...",
-      fromAI: true,
-      hasList: true,
-      listItems: [
-        "Camiseta Verão (5 unidades)",
-        "Tênis Runner (8 unidades)",
-        "Boné Urban (12 unidades)",
-      ],
-      afterListMessage:
-        "Gostaria que eu criasse um pedido de reposição para esses itens?",
+      content: "Olá! Como posso ajudar com a sua loja VTEX hoje?",
+      role: "assistant",
+      id: crypto.randomUUID(),
+      timestamp: Date.now().toString(),
     },
   ],
   chatIcon = "https://placehold.co/200x200/B13431/FFFFFF?text=AI",
