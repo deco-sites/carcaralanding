@@ -11,7 +11,7 @@ import * as $ServicesAccordion from "./islands/ServicesAccordion.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
 import * as $TestimonialsCarousel from "./islands/TestimonialsCarousel.tsx";
 import * as $VtexAgentChat from "./islands/VtexAgentChat.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
