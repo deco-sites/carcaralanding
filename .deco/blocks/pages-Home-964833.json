@@ -211,8 +211,8 @@
         "blogCase": {
           "posts": {
             "__resolveType": "blog/loaders/BlogpostList.ts",
-            "count": 1,
-            "sortBy": "date_desc"
+            "sortBy": "date_desc",
+            "count": 1
           }
         },
         "badgeText": "Nossos cases",
