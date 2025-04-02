@@ -1,0 +1,460 @@
+{
+  "name": "Home - EN",
+  "path": "/en",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HeaderSection.tsx",
+        "logo": {
+          "desktop": {
+            "src": "https://assets.decocache.com/carcaralanding/2a0428e3-b1e8-428c-a220-4e4b9b837529/carc.svg"
+          },
+          "mobile": {
+            "src": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg"
+          }
+        },
+        "navigation": {
+          "items": [
+            {
+              "label": "Services",
+              "href": "#services"
+            },
+            {
+              "label": "Cases",
+              "href": "#cases"
+            },
+            {
+              "label": "FAQ",
+              "href": "#faq"
+            }
+          ]
+        },
+        "cta": {
+          "buttons": [
+            {
+              "variant": "primary",
+              "label": "Schedule a meeting.",
+              "href": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HeroSection.tsx",
+        "backgroundElement1": {
+          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+        },
+        "showBackgroundElements": true,
+        "title": "<h1>We build</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents</span></h1><h1>for you company.</h1>",
+        "backgroundElement2": {
+          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg",
+          "configCarousel": {}
+        },
+        "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+        "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
+        "ctaText": "Get in touch with us",
+        "configCarousel": {
+          "items": [
+            {
+              "id": "2",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/dbca0255-39c6-44c0-8da7-c75771c9af01/hero-contentagent.png",
+              "title": "Content Analyzer AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            },
+            {
+              "id": "3",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/5b92de4f-c2be-4529-84c4-444b98c39c09/hero-seoagent.png",
+              "title": "SEO AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            },
+            {
+              "id": "4",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/0af3b685-0b82-403b-9bd1-03b263ee247e/hero-vtexaiagent.png",
+              "title": "VTEX AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            },
+            {
+              "id": "5",
+              "imageUrl": "https://assets.decocache.com/carcaralanding/47be7401-5483-46a9-8d93-2253258f43da/hero-whatsappagent.png",
+              "title": "WhatsApp AI Agent",
+              "subtitle": "123123",
+              "duration": "4"
+            }
+          ],
+          "autoplayInterval": 4,
+          "debugHud": false
+        },
+        "badge": "Become an AI-First company.",
+        "description": "Our projects bridge the gap between business challenges and AI Agents that deliver results."
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Logos.tsx",
+        "logos": [
+          {
+            "src": "https://assets.decocache.com/carcaralanding/6ba87d40-56a6-4589-bad6-7b0869880436/ZeeDog.svg",
+            "altText": "zeedog"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/d44b9be7-10c8-49fd-b06d-cdce137996dc/torra.svg",
+            "altText": "torra"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/0d36379f-7590-4753-ac22-66bf8329b9d2/osklen.svg",
+            "altText": "osklen"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/3fb9d2ef-d917-4d97-b3dd-ade75045a9b0/Miess.svg",
+            "altText": "miess"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
+            "altText": "livemode"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/2394b6ef-0530-4cf8-aa2b-7967c23b6217/leroylogo.svg",
+            "altText": "leroymerlin"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/3c644eff-1b32-4022-bf61-85412298d045/CVLB.svg",
+            "altText": "cvl"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
+            "altText": "baw"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/1588b405-48b6-4cc6-ab56-d55624a4b5c9/farm2.svg",
+            "altText": "farm"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg",
+            "altText": "als"
+          },
+          {
+            "src": "https://assets.decocache.com/carcaralanding/f5e68d4d-4ebc-411b-8e96-9436a0e0bfa7/reserva.svg"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ResultsSection.tsx",
+        "animateNumbers": true,
+        "statistics": [
+          {
+            "value": "300",
+            "description": "AI Agents in action",
+            "accentColor": "vermelho",
+            "prefix": "+"
+          },
+          {
+            "value": "20",
+            "suffix": "x ",
+            "accentColor": "verde",
+            "description": "compared to previous processes",
+            "afterText": "+ fast"
+          },
+          {
+            "prefix": "+",
+            "value": "80%",
+            "description": "with immediate savings",
+            "accentColor": "azul"
+          }
+        ],
+        "subtitle": "More speed and savings with every AI Agent implemented",
+        "title": "<p>Scale your business with AI</p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/BlogPostList.tsx",
+        "blogCase": {
+          "posts": {
+            "__resolveType": "blog/loaders/BlogpostList.ts",
+            "count": 1,
+            "sortBy": "date_desc",
+            "postSlugs": []
+          }
+        },
+        "badgeText": "Our success stories",
+        "title": "The impact we've made on our clients",
+        "posts": {
+          "__resolveType": "blog/loaders/BlogpostList.ts",
+          "sortBy": "date_desc",
+          "count": 6
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ServicesSection.tsx",
+        "services": [
+          {
+            "title": "Generative CMS",
+            "subtitle": "Intelligent and scalable content",
+            "description": "Transform your content creation with a system that automatically generates, manages, and optimizes texts, maintaining your brand identity and significantly increasing your productivity.",
+            "image": "https://assets.decocache.com/carcaralanding/16543901-125b-4d53-ae3f-45e4afd1a782/cms.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
+          },
+          {
+            "title": "SEO Agents",
+            "subtitle": "Strategic visibility",
+            "description": "Our SEO agents continuously analyze your market, optimize your content, and implement strategies that increase your organic visibility, bringing the right audience to your business.",
+            "image": "https://assets.decocache.com/carcaralanding/6cd390e0-8c8b-4e93-99ef-f4e021c79ca2/seo.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
+          },
+          {
+            "title": "AI Creative Suite",
+            "subtitle": "Creativity without limits",
+            "description": "Generate brand-aligned images, texts, and designs in seconds. Our creative suite eliminates production bottlenecks and allows you to scale your visual communication with consistency and quality.",
+            "image": "https://assets.decocache.com/carcaralanding/25a88b43-b9e7-4749-825a-f9f849d02bd0/creative.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
+          },
+          {
+            "title": "AI Video Content Intelligence",
+            "subtitle": "Videos that convert",
+            "description": "Transform how you produce, analyze, and optimize video content. Our technology identifies engagement patterns, extracts valuable insights, and suggests improvements that increase conversions.",
+            "image": "https://assets.decocache.com/carcaralanding/8a779fdf-c9f5-4580-aac7-f0789019cab5/video.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
+          },
+          {
+            "title": "AI Data Scientist",
+            "subtitle": "Data that decides",
+            "description": "Have an AI data scientist working 24/7, transforming complex information into clear and actionable insights. Make data-driven decisions without needing a specialized team.",
+            "image": "https://assets.decocache.com/carcaralanding/9954af22-987f-497d-ba1f-caefaed47e33/data.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
+          },
+          {
+            "title": "AI WhatsApp Assistant",
+            "subtitle": "Intelligent service",
+            "description": "An assistant that understands the context of conversations, solves complex problems, and communicates naturally with your customers, providing personalized service at scale.",
+            "image": "https://assets.decocache.com/carcaralanding/a7f6857b-b8b9-4d99-bd39-7ae2f5d41519/whatsapp.png",
+            "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+            "showButton": false
+          },
+          {
+            "buttonText": "Learn more",
+            "title": "AI Agent VTEX",
+            "image": "https://assets.decocache.com/carcaralanding/7c8d0db2-1c44-4e3c-9448-73fe95941490/vtexaiagent.png",
+            "subtitle": "Manage the growth of your VTEX operation",
+            "description": "Have a specialist from your VTEX operation working alongside you. Gain stock insights, analyze your sales performance, and receive strategic recommendations to increase revenue.",
+            "buttonLink": "https://carcara.tech/vtex-ai-agent",
+            "showButton": true
+          }
+        ],
+        "badgeText": "Hire your next AI Agent today",
+        "title": "Our solutions to empower your team"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MethodologySection.tsx",
+        "discoveryBox": {
+          "title": "1. Definition",
+          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png"
+        },
+        "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+        "prototypingBox": {
+          "title": "2. Prototyping",
+          "image": "https://assets.decocache.com/carcaralanding/f85a5f8e-c585-4b88-a9e9-c618b8736a34/1.png"
+        },
+        "implementationBox": {
+          "title": "3. Implementation",
+          "description": "We integrate the solution into your existing infrastructure, with integration to your legacy tools, training your team, and continuous monitoring to maximize return.",
+          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png"
+        },
+        "ctaText": "Learn more about our services",
+        "analysisBox": {
+          "image": "https://assets.decocache.com/carcaralanding/f86e1da5-62ef-43e6-b071-7c7356306ef2/4.png"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/FAQSection.tsx",
+        "items": [
+          {
+            "question": "What is the definition of an AI Agent?",
+            "answer": "An AI Agent is a software that has AI as the basis of its operation that can autonomously handle creative and complex tasks"
+          },
+          {
+            "question": "How long does it take, on average, to develop and integrate an AI Agent in my company?",
+            "answer": "On average 1 month between project closure and the AI agent's entry into your operation."
+          },
+          {
+            "question": "What happens if I want to modify or expand the AI Agent after the initial implementation?",
+            "answer": "You have access to your AI Agent's code and can always evolve it on your own or hire our team to help you."
+          },
+          {
+            "question": "How do you ensure the security and compliance of data used by AI agents?",
+            "answer": "In the architecture of each AI Agent, we define exactly the level of data access that the foundational models will have and with what criteria. Additionally, you have full visibility of the Agent's activities and generated logs."
+          },
+          {
+            "question": "What is the average investment for an AI project and how soon can I expect a return?",
+            "answer": "It depends on the architecture and scope of the project. However, we price our service for our clients to have a return on the project within 3-6 months."
+          }
+        ],
+        "title": "Everything you need to know",
+        "contactUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 24,
+        "paddingBottom": 24
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/PricingSection.tsx",
+        "consultingPlan": {
+          "price": "R$500/hr",
+          "title": "Consulting",
+          "ctaText": "Schedule a meeting",
+          "features": [
+            "Courses and Workshops",
+            "Strategic Analysis",
+            "AI implementation risk minimization",
+            "Future of business with AI"
+          ],
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        },
+        "developmentPlan": {
+          "price": "R$70,000/m",
+          "title": "Recurring Partnership",
+          "ctaText": "Schedule a meeting",
+          "features": [
+            "Team fully allocated to your operation",
+            "AI Architects and Developers",
+            "Scale with your pace and needs",
+            "Unlimited Strategic Insights"
+          ],
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        },
+        "title": "Ensure results with an experienced team",
+        "description": "Our team of engineers breathes high-scale projects and is at the frontier of AI applications. We are ready to help you in whatever way is best for your moment.",
+        "pilotPlan": {
+          "title": "Custom AI Agent",
+          "price": "Contact us",
+          "features": [
+            "From discovery to implementation",
+            "Integration within your operation",
+            "30-60 day project",
+            "Team of specialists fully allocated"
+          ],
+          "ctaText": "Contact us",
+          "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        },
+        "badgeText": "Pricing"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/CTASection.tsx",
+        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
+        "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+        "title": "Ready to evolve your company?",
+        "subtitle": "Get in touch to secure your personalized AI Agent"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/FooterSection.tsx",
+        "rightDecoration": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
+        "transformationStoriesColumn": {
+          "posts": {
+            "__resolveType": "blog/loaders/BlogpostList.ts",
+            "sortBy": "date_desc",
+            "count": 5
+          },
+          "show": true,
+          "title": "Transformation stories"
+        },
+        "industriesColumn": {
+          "show": false,
+          "title": "Transformation stories"
+        },
+        "useCasesColumn": {
+          "title": "Top use cases"
+        }
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
