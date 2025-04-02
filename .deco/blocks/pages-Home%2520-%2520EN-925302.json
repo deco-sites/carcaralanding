@@ -325,7 +325,9 @@
         "ctaText": "Learn more about our services",
         "analysisBox": {
           "image": "https://assets.decocache.com/carcaralanding/f86e1da5-62ef-43e6-b071-7c7356306ef2/4.png"
-        }
+        },
+        "title": "Methodology focused on quick results",
+        "badgeText": "How we work"
       }
     },
     {
@@ -363,7 +365,9 @@
           }
         ],
         "title": "Everything you need to know",
-        "contactUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
+        "contactUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
+        "contactText": "If you don't find what you're looking for, ",
+        "contactLinkText": "contact us"
       }
     },
     {
@@ -448,7 +452,28 @@
           "title": "Transformation stories"
         },
         "useCasesColumn": {
-          "title": "Top use cases"
+          "title": "Top use cases",
+          "show": true,
+          "links": [
+            {
+              "label": "CMS Generativo"
+            },
+            {
+              "label": "Agentes de SEO"
+            },
+            {
+              "label": "AI Creative Suite"
+            },
+            {
+              "label": "AI Video Content Intelligence"
+            },
+            {
+              "label": "AI Data Scientist"
+            },
+            {
+              "label": "AI Whatsapp Assistant"
+            }
+          ]
         }
       }
     }
