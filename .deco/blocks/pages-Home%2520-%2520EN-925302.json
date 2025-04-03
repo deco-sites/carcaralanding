@@ -430,7 +430,8 @@
         "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
         "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "title": "Ready to evolve your company?",
-        "subtitle": "Get in touch to secure your personalized AI Agent"
+        "subtitle": "Get in touch to secure your personalized AI Agent",
+        "buttonText": "Schedule a meeting"
       }
     },
     {
@@ -456,10 +457,10 @@
           "show": true,
           "links": [
             {
-              "label": "CMS Generativo"
+              "label": "Generative CMS"
             },
             {
-              "label": "Agentes de SEO"
+              "label": "SEO Agents"
             },
             {
               "label": "AI Creative Suite"
