@@ -310,12 +310,14 @@
         "__resolveType": "site/sections/MethodologySection.tsx",
         "discoveryBox": {
           "title": "1. Definition",
-          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png"
+          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png",
+          "description": "We dive into your business to identify high-impact opportunities, analyzing processes, data, and specific challenges to determine the ideal solution for your needs."
         },
         "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "prototypingBox": {
           "title": "2. Prototyping",
-          "image": "https://assets.decocache.com/carcaralanding/f85a5f8e-c585-4b88-a9e9-c618b8736a34/1.png"
+          "image": "https://assets.decocache.com/carcaralanding/f85a5f8e-c585-4b88-a9e9-c618b8736a34/1.png",
+          "description": "We develop a functional solution in days, allowing you to validate the real impact before making larger investments and adjust the direction based on concrete results."
         },
         "implementationBox": {
           "title": "3. Implementation",
