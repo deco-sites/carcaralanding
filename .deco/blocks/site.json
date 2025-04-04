@@ -1,14 +1,14 @@
 {
   "seo": {
     "type": "website",
-    "title": "Carcará",
+    "title": "Carcará | Aceleramos a adoção de AI na sua empresa",
     "jsonLDs": [],
-    "noIndexing": false,
+    "noIndexing": true,
     "description": "Nossos projetos fazem a ponte entre o desafio de negócio e um AI Agent que dá resultado.",
-    "titleTemplate": "Carcará | Aceleramos a adoção de AI na sua empresa",
-    "descriptionTemplate": "%s | Nossos projetos fazem a ponte entre o desafio de negócio e um AI Agent que dá resultado.",
     "favicon": "https://assets.decocache.com/carcaralanding/8948f588-bdb2-4bd6-afe7-e68d8cad49c9/faviconcarcara.svg",
-    "image": "https://assets.decocache.com/carcaralanding/059baa65-18d1-4b8d-80bb-0f20d698418f/seocarcara.png"
+    "image": "https://assets.decocache.com/carcaralanding/059baa65-18d1-4b8d-80bb-0f20d698418f/seocarcara.png",
+    "titleTemplate": "%s",
+    "descriptionTemplate": "%s"
   },
   "global": [
     {

@@ -49,7 +49,7 @@
           "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "showBackgroundElements": true,
-        "title": "<h1>We build</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents</span></h1><h1>for you company.</h1>",
+        "title": "<h1>We build</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents</span></h1><h1>for you company</h1>",
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg",
           "configCarousel": {}
@@ -403,7 +403,7 @@
         "__resolveType": "site/sections/PricingSection.tsx",
         "title": "Ensure results with an experienced team",
         "consultingPlan": {
-          "price": "R$500/hr",
+          "price": "$200/hr",
           "title": "Consulting",
           "ctaText": "Schedule a meeting",
           "features": [
@@ -415,7 +415,7 @@
           "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
         },
         "developmentPlan": {
-          "price": "R$70,000/m",
+          "price": "$12.500/m",
           "title": "Recurring Partnership",
           "ctaText": "Schedule a meeting",
           "features": [
@@ -513,7 +513,10 @@
     }
   ],
   "seo": {
-    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "Carcará | We accelerate AI adoption in your company",
+    "type": "article",
+    "description": "Our projects bridge the gap between the business challenge and an AI Agent that delivers results"
   },
   "__resolveType": "website/pages/Page.tsx"
 }
