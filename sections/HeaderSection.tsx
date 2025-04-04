@@ -1,6 +1,7 @@
 import Button from "../components/ui/Button.tsx";
 import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import LanguageSwitcher from "../islands/LanguageSwitcher.tsx";
 
 export interface NavItem {
   label: string;
@@ -120,8 +121,12 @@ export default function HeaderSection({
             </nav>
           </div>
 
-          {/* Right side CTA buttons */}
-          <div className="flex justify-start items-center gap-2">
+          {/* Right side CTA buttons and Language Switcher */}
+          <div className="flex justify-start items-center gap-3">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
+
+            {/* CTA Buttons */}
             {cta.buttons.map((button, index) => (
               <Button
                 key={index}
