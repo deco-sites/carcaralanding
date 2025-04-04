@@ -231,7 +231,21 @@
             "sortBy": "date_desc",
             "count": 5
           },
-          "show": true
+          "show": true,
+          "links": [
+            {
+              "label": "Nossa Implementação na Farm Rio aumentou 27% da receita mensal da marca"
+            },
+            {
+              "label": "Leroy Merlin ganha produtividade substituindo 3 ferramentas pelo nosso CMS"
+            },
+            {
+              "label": "Livemode constrói seu próprio Photoshop"
+            },
+            {
+              "label": "Als Sports ganha crescimento de receita 50% acima do esperado"
+            }
+          ]
         },
         "industriesColumn": {
           "show": false
