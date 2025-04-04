@@ -203,22 +203,39 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/BlogPostList.tsx",
-        "blogCase": {
-          "posts": {
-            "__resolveType": "blog/loaders/BlogpostList.ts",
-            "count": 1,
-            "sortBy": "date_desc",
-            "postSlugs": []
-          }
-        },
-        "badgeText": "Our success stories",
+        "__resolveType": "site/sections/SuccessStoriesSection.tsx",
         "title": "The impact we've made on our clients",
-        "posts": {
-          "__resolveType": "blog/loaders/BlogpostList.ts",
-          "sortBy": "date_desc",
-          "count": 6
-        }
+        "badgeText": "Our success stories",
+        "featuredStory": {
+          "image": "https://assets.decocache.com/carcaralanding/90b9a050-c0cd-4e73-9065-54b98a7e4a18/cases-04.png",
+          "title": "Our implementation at Farm Rio increased the brand's monthly revenue by 27%.",
+          "description": "The solution also delivered a website 40x faster than the legacy system.",
+          "showButton": true,
+          "buttonText": "oo"
+        },
+        "additionalStories": [
+          {
+            "accentColor": "\"amarelo\"",
+            "image": "https://assets.decocache.com/carcaralanding/a90cf32d-011e-4b7c-93d7-ea2bc1a1e9a3/cases-03.png",
+            "logo": "https://assets.decocache.com/carcaralanding/2394b6ef-0530-4cf8-aa2b-7967c23b6217/leroylogo.svg",
+            "title": "Leroy Merlin increased productivity by replacing 3 tools with our CMS."
+          },
+          {
+            "accentColor": "\"amarelo\"",
+            "title": "Livemode builds its own Photoshop.",
+            "image": "https://assets.decocache.com/carcaralanding/326511af-9a10-4211-99d9-5e05564ce626/cases-02.png",
+            "logo": "https://assets.decocache.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
+            "showButton": true,
+            "buttonText": "oi",
+            "buttonUrl": "j"
+          },
+          {
+            "accentColor": "\"amarelo\"",
+            "title": "Als Sports achieves revenue growth 50% above expectations",
+            "image": "https://assets.decocache.com/carcaralanding/1a26a3f6-3dd2-439e-b8f1-e19b6a057fcd/cases-01.png",
+            "logo": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg"
+          }
+        ]
       }
     },
     {
@@ -384,6 +401,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/PricingSection.tsx",
+        "title": "Ensure results with an experienced team",
         "consultingPlan": {
           "price": "R$500/hr",
           "title": "Consulting",
@@ -408,7 +426,6 @@
           ],
           "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7"
         },
-        "title": "Ensure results with an experienced team",
         "description": "Our team of engineers breathes high-scale projects and is at the frontier of AI applications. We are ready to help you in whatever way is best for your moment.",
         "pilotPlan": {
           "title": "Custom AI Agent",
@@ -429,9 +446,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/CTASection.tsx",
+        "title": "Ready to evolve your company?",
         "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
         "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
-        "title": "Ready to evolve your company?",
         "subtitle": "Get in touch to secure your personalized AI Agent",
         "buttonText": "Schedule a meeting"
       }
