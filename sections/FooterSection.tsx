@@ -1,7 +1,6 @@
 import { ComponentChildren } from "preact";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { BlogPost } from "apps/blog/types.ts";
 
 // Define a simpler interface for blog posts to avoid type conflicts
 export interface SimpleBlogPost {
@@ -63,27 +62,9 @@ interface SocialIcon {
   ariaLabel: string;
 }
 
-interface ColumnConfig {
-  title: string;
-  show?: boolean;
-}
-
 /**
  * Footer section component that displays navigation links, blog posts, and social media icons.
- *
- * To configure the blog posts in the CMS, use the following configuration for the transformationStoriesColumn:
- * ```json
- * {
- *   "transformationStoriesColumn": {
- *     "title": "Histórias de Transformação",
- *     "show": true,
- *     "posts": {
- *       "__resolveType": "blog/loaders/BlogpostList.ts",
- *       "sortBy": "date_desc",
- *       "count": 6
- *     }
- *   }
- * }
+
  * ```
  */
 export interface FooterProps {
@@ -98,12 +79,11 @@ export interface FooterProps {
 
   /**
    * Transformation stories column configuration.
-   * Configure with blog/loaders/BlogpostList.ts in the CMS to show latest blog posts
    */
   transformationStoriesColumn?: {
     title: string;
     show?: boolean;
-    posts?: BlogPost[] | null;
+    links: Link[];
   };
 
   /**
@@ -175,7 +155,17 @@ export default function Footer({
   transformationStoriesColumn = {
     title: "Histórias de Transformação",
     show: true,
-    posts: null,
+    links: [
+      {
+        label: "Como a IA está transformando o varejo",
+        href: "/blog/ia-transformando-varejo",
+      },
+      { label: "Casos de Sucesso em IA", href: "/blog/casos-sucesso-ia" },
+      {
+        label: "Tendências em Inteligência Artificial",
+        href: "/blog/tendencias-ia",
+      },
+    ],
   },
   industriesColumn = {
     title: "Indústrias",
@@ -216,22 +206,6 @@ export default function Footer({
   rightDecoration = "https://placehold.co/409x641",
   mobileLogo,
 }: FooterProps) {
-  const transformationLinks = transformationStoriesColumn.posts
-    ?.filter((post): post is BlogPost => {
-      const isValid = Boolean(post && post.title);
-      return isValid;
-    })
-    .slice(0, 6)
-    .map((post) => {
-      const link = {
-        label: post.title || "Untitled Post",
-        href: `/blog/${
-          post.slug || post.title?.toLowerCase().replace(/\s+/g, "-") || "post"
-        }`,
-      };
-      return link;
-    }) || [];
-
   // Get visible columns
   const visibleColumns = [
     useCasesColumn.show && (
@@ -247,7 +221,7 @@ export default function Footer({
         <FooterColumn
           title={transformationStoriesColumn.title ||
             "Histórias de Transformação"}
-          links={transformationLinks}
+          links={transformationStoriesColumn.links}
         />
       </div>
     ),

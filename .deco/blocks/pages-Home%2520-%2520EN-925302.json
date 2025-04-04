@@ -465,7 +465,21 @@
             "count": 5
           },
           "show": true,
-          "title": "Transformation stories"
+          "title": "Transformation stories",
+          "links": [
+            {
+              "label": "Our implementation at Farm Rio increased the brand's monthly revenue by 27%."
+            },
+            {
+              "label": "Leroy Merlin increased productivity by replacing 3 tools with our CMS."
+            },
+            {
+              "label": "Livemode builds its own Photoshop."
+            },
+            {
+              "label": "Als Sports achieves revenue growth 50% above expectations"
+            }
+          ]
         },
         "industriesColumn": {
           "show": false,
