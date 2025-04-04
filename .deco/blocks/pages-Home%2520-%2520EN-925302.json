@@ -210,7 +210,7 @@
           "image": "https://assets.decocache.com/carcaralanding/90b9a050-c0cd-4e73-9065-54b98a7e4a18/cases-04.png",
           "title": "Our implementation at Farm Rio increased the brand's monthly revenue by 27%.",
           "description": "The solution also delivered a website 40x faster than the legacy system.",
-          "showButton": true,
+          "showButton": false,
           "buttonText": "oo"
         },
         "additionalStories": [
@@ -225,7 +225,7 @@
             "title": "Livemode builds its own Photoshop.",
             "image": "https://assets.decocache.com/carcaralanding/326511af-9a10-4211-99d9-5e05564ce626/cases-02.png",
             "logo": "https://assets.decocache.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
-            "showButton": true,
+            "showButton": false,
             "buttonText": "oi",
             "buttonUrl": "j"
           },
