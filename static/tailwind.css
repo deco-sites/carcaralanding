@@ -3762,6 +3762,9 @@ input.tab:checked + .tab-content,
 .w-1\.5{
   width: 0.375rem;
 }
+.w-1\/2{
+  width: 50%;
+}
 .w-10{
   width: 2.5rem;
 }
@@ -4828,6 +4831,9 @@ input.tab:checked + .tab-content,
 }
 .pl-3{
   padding-left: 0.75rem;
+}
+.pl-5{
+  padding-left: 1.25rem;
 }
 .pr-2{
   padding-right: 0.5rem;

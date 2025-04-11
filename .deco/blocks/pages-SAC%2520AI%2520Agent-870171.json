@@ -93,7 +93,10 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/ImageTextSection.tsx",
-        "image": "https://assets.decocache.com/carcaralanding/edc5dad8-cb9c-4b74-85f8-601caa237773/sacint.png"
+        "image": "https://assets.decocache.com/carcaralanding/edc5dad8-cb9c-4b74-85f8-601caa237773/sacint.png",
+        "badgeText": "Integrações MCP",
+        "title": "<p>Agente Sempre <span style=\"color: #b13431\">Contextualizado</span></p>",
+        "description": "Conecte-se facilmente via API REST ou GraphQL — ou escolha entre mais de 100 integrações prontas. Compartilhe recursos e consultas com segurança entre equipes, de forma simples e eficiente"
       }
     },
     {

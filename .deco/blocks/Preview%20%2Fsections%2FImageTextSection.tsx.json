@@ -1,0 +1,8 @@
+{
+  "__resolveType": "site/sections/ImageTextSection.tsx",
+  "badgeText": "\"Sobre\"",
+  "title": "\"Conheça nossa <span class='text-vermelho'>plataforma</span>\"",
+  "description": "\"Nossa plataforma foi desenvolvida para ajudar empresas a adotarem IA de forma rápida e eficiente, com resultados mensuráveis desde o primeiro dia.\"",
+  "ctaText": "\"Saiba mais\"",
+  "ctaUrl": "\"#contact\""
+}

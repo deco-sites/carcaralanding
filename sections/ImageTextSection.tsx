@@ -49,6 +49,26 @@ export interface ImageTextSectionProps {
    * Additional CSS classes
    */
   class?: string;
+
+  /**
+   * @description Text for the left side of the new component
+   * @default "+ 100 MCPs"
+   */
+  leftText?: string;
+
+  /**
+   * @description Title for the right side of the new component
+   * @default "Acesso"
+   */
+  rightTitle?: string;
+
+  /**
+   * @description Description for the right side of the new component
+   * @default "Opções para diferentes níveis de acesso para cada situação definida"
+   */
+  rightDescription?: string;
+
+
 }
 
 export default function ImageTextSection({
@@ -61,6 +81,9 @@ export default function ImageTextSection({
   image = "https://placehold.co/800x600/282B2E/FFFFFF?text=Platform+Image",
   imageAlt = "Carcará Platform",
   class: className = "",
+  leftText = "+ 100 MCPs",
+  rightTitle = "Acesso",
+  rightDescription = "Opções para diferentes níveis de acesso para cada situação definida",
 }: ImageTextSectionProps) {
   return (
     <section
@@ -97,6 +120,30 @@ export default function ImageTextSection({
             >
               {ctaText}
             </Button>
+
+            <div className="mt-8 border-t border-b border-ca-700 flex items-stretch">
+              <div className="w-1/2 py-4 px-4 border-r border-ca-700 flex items-center">
+                <p className="font-['Instrument Serif'] text-2xl text-ca-50">
+                  {leftText}
+                </p>
+              </div>
+              <div className="w-1/2 py-4 px-4 flex flex-col justify-center">
+                <p className="font-['Instrument Serif'] text-2xl text-ca-50">
+                  {rightTitle}
+                </p>
+                <p className="text-ca-300 mt-2 text-sm">
+                  {rightDescription}
+                </p>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
           </div>
 
           {/* Image */}
