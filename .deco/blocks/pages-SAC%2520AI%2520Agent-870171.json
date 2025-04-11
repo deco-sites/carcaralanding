@@ -1,0 +1,141 @@
+{
+  "name": "SAC AI Agent",
+  "path": "/sac-ai-agent",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "navbar"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/AgentHero.tsx",
+        "backgroundElement1": {
+          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+        },
+        "backgroundElement2": {
+          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+        },
+        "conversation": [
+          {
+            "listItems": [],
+            "message": "Olá, fiz um pedido (#ORD-9283) na semana passada e não recebi nenhuma atualização. Você poderia me informar onde está meu pacote? Obrigado."
+          },
+          {
+            "listItems": [],
+            "message": "Olá! Acabei de verificar seu pedido (#ORD-9283) e posso ver que ele foi enviado ontem via Expresso. Seu número de rastreamento é TRK-82931, e atualmente está em trânsito saindo do nosso centro de distribuição. A entrega estimada é amanhã antes das 20h. Você pode acompanhar em tempo real no [link de rastreamento]. Me avise se precisar de mais alguma coisa!",
+            "fromAI": true
+          }
+        ],
+        "title": "<p>Escale seu atendimento com o <span style=\"color: #b03531\">SAC Co-Pilot</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/IntegrationPlatformsSection.tsx",
+        "platforms": [
+          {
+            "benefits": [
+              "Suporte ao cliente 24/7 sem intervenção humana",
+              "Respostas personalizadas baseadas no contexto",
+              "Automação de processos de venda e pós-venda"
+            ],
+            "customIcon": "slack",
+            "accentColor": "bg-verde",
+            "name": "Whatsapp",
+            "description": "Atendimento automatizado 24/7 com respostas personalizadas para seus clientes via WhatsApp.",
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/a02b16d2-6015-475b-aad6-f2147400b977/whatsapp.png"
+          },
+          {
+            "benefits": [
+              "Automatização de tarefas administrativas",
+              "Resposta a perguntas frequentes sobre dados internos",
+              "Integração com outras ferramentas da empresa"
+            ],
+            "customIcon": "slack",
+            "accentColor": "bg-azul",
+            "name": "Slack",
+            "description": "Respostas instantâneas e automação de fluxos de trabalho para sua equipe direto no Slack.",
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/52611d4d-e7ff-40d3-9a27-328b12c1efa0/slack.png"
+          },
+          {
+            "benefits": [
+              "Agendamento inteligente de reuniões",
+              "Sumários automáticos de discussões",
+              "Pesquisa de dados e documentos corporativos"
+            ],
+            "customIcon": "teams",
+            "accentColor": "bg-vermelho",
+            "name": "Microsoft Teams",
+            "description": "Integração perfeita com Teams para colaboração e suporte à tomada de decisões empresariais.",
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/385a6f03-fc3e-4f8f-b118-25acfe31e410/teams.png"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ImageTextSection.tsx",
+        "image": "https://assets.decocache.com/carcaralanding/edc5dad8-cb9c-4b74-85f8-601caa237773/sacint.png"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/AgentProcess.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/AgentFeatures.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/CTASection.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

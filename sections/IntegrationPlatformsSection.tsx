@@ -193,6 +193,12 @@ export default function IntegrationPlatformsSection({
   showBackgroundElements = true,
   class: className = "",
 }: IntegrationPlatformsSectionProps) {
+  // Ensure platforms have benefits array
+  const platformsWithBenefits = platforms.map((platform) => ({
+    ...platform,
+    benefits: platform.benefits || [],
+  }));
+
   return (
     <section
       id="integrations"
@@ -242,7 +248,7 @@ export default function IntegrationPlatformsSection({
 
         {/* Platform Tabs */}
         <div className="mb-16">
-          <PlatformTabs platforms={platforms} />
+          <PlatformTabs platforms={platformsWithBenefits} />
         </div>
 
         {/* CTA Button */}

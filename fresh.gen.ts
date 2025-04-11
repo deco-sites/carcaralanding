@@ -4,10 +4,12 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $AgentConversation from "./islands/AgentConversation.tsx";
 import * as $Carrosel from "./islands/Carrosel.tsx";
 import * as $FutureCards from "./islands/FutureCards.tsx";
 import * as $LanguageSwitcher from "./islands/LanguageSwitcher.tsx";
 import * as $PlatformTabs from "./islands/PlatformTabs.tsx";
+import * as $SACAgentTicket from "./islands/SACAgentTicket.tsx";
 import * as $ServicesAccordion from "./islands/ServicesAccordion.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
 import * as $TestimonialsCarousel from "./islands/TestimonialsCarousel.tsx";
@@ -20,10 +22,12 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
+    "./islands/AgentConversation.tsx": $AgentConversation,
     "./islands/Carrosel.tsx": $Carrosel,
     "./islands/FutureCards.tsx": $FutureCards,
     "./islands/LanguageSwitcher.tsx": $LanguageSwitcher,
     "./islands/PlatformTabs.tsx": $PlatformTabs,
+    "./islands/SACAgentTicket.tsx": $SACAgentTicket,
     "./islands/ServicesAccordion.tsx": $ServicesAccordion,
     "./islands/SliderJS.tsx": $SliderJS,
     "./islands/TestimonialsCarousel.tsx": $TestimonialsCarousel,

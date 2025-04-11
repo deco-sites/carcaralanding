@@ -1,1 +1,22 @@
-{"__resolveType":"site/sections/Footer.tsx","links":[],"bottomLinks":[],"social":[],"subscribe":{}}
+{
+  "__resolveType": "site/sections/FooterSection.tsx",
+  "rightDecoration": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
+  "transformationStoriesColumn": {
+    "posts": {
+      "__resolveType": "blog/loaders/BlogpostList.ts",
+      "sortBy": "date_desc",
+      "count": 5
+    },
+    "show": true
+  },
+  "industriesColumn": {
+    "show": false,
+    "links": []
+  },
+  "useCasesColumn": {
+    "links": [],
+    "title": "Cases"
+  },
+  "legalLinks": [],
+  "socialIcons": []
+}
