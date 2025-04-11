@@ -19,15 +19,15 @@ import * as $$$$$$7 from "./sections/FAQSection.tsx";
 import * as $$$$$$9 from "./sections/FooterSection.tsx";
 import * as $$$$$$10 from "./sections/Header.tsx";
 import * as $$$$$$11 from "./sections/HeaderSection.tsx";
-import * as $$$$$$31 from "./sections/hero-1.tsx";
-import * as $$$$$$32 from "./sections/hero-2.tsx";
+import * as $$$$$$32 from "./sections/hero-1.tsx";
+import * as $$$$$$33 from "./sections/hero-2.tsx";
 import * as $$$$$$12 from "./sections/Hero.tsx";
-import * as $$$$$$33 from "./sections/hero2.tsx";
+import * as $$$$$$34 from "./sections/hero2.tsx";
 import * as $$$$$$13 from "./sections/HeroSection.tsx";
 import * as $$$$$$14 from "./sections/ImageTextSection.tsx";
 import * as $$$$$$15 from "./sections/ImageWithParagraph.tsx";
 import * as $$$$$$16 from "./sections/IntegrationPlatformsSection.tsx";
-import * as $$$$$$34 from "./sections/loaders/BlogPostList.ts";
+import * as $$$$$$35 from "./sections/loaders/BlogPostList.ts";
 import * as $$$$$$17 from "./sections/Logos.tsx";
 import * as $$$$$$18 from "./sections/MethodologySection.tsx";
 import * as $$$$$$19 from "./sections/Page.tsx";
@@ -42,6 +42,7 @@ import * as $$$$$$27 from "./sections/TheFuture.tsx";
 import * as $$$$$$28 from "./sections/Theme/Theme.tsx";
 import * as $$$$$$29 from "./sections/VtexAgentHero.tsx";
 import * as $$$$$$30 from "./sections/VtexFeatures.tsx";
+import * as $$$$$$31 from "./sections/WppHero.tsx";
 
 const manifest = {
   "sections": {
@@ -57,15 +58,15 @@ const manifest = {
     "site/sections/FooterSection.tsx": $$$$$$9,
     "site/sections/Header.tsx": $$$$$$10,
     "site/sections/HeaderSection.tsx": $$$$$$11,
-    "site/sections/hero-1.tsx": $$$$$$31,
-    "site/sections/hero-2.tsx": $$$$$$32,
+    "site/sections/hero-1.tsx": $$$$$$32,
+    "site/sections/hero-2.tsx": $$$$$$33,
     "site/sections/Hero.tsx": $$$$$$12,
-    "site/sections/hero2.tsx": $$$$$$33,
+    "site/sections/hero2.tsx": $$$$$$34,
     "site/sections/HeroSection.tsx": $$$$$$13,
     "site/sections/ImageTextSection.tsx": $$$$$$14,
     "site/sections/ImageWithParagraph.tsx": $$$$$$15,
     "site/sections/IntegrationPlatformsSection.tsx": $$$$$$16,
-    "site/sections/loaders/BlogPostList.ts": $$$$$$34,
+    "site/sections/loaders/BlogPostList.ts": $$$$$$35,
     "site/sections/Logos.tsx": $$$$$$17,
     "site/sections/MethodologySection.tsx": $$$$$$18,
     "site/sections/Page.tsx": $$$$$$19,
@@ -80,6 +81,7 @@ const manifest = {
     "site/sections/Theme/Theme.tsx": $$$$$$28,
     "site/sections/VtexAgentHero.tsx": $$$$$$29,
     "site/sections/VtexFeatures.tsx": $$$$$$30,
+    "site/sections/WppHero.tsx": $$$$$$31,
   },
   "apps": {
     "site/apps/blog/types.ts": $$$$$$$$$$$0,

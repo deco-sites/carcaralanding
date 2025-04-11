@@ -14,6 +14,7 @@ import * as $ServicesAccordion from "./islands/ServicesAccordion.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
 import * as $TestimonialsCarousel from "./islands/TestimonialsCarousel.tsx";
 import * as $VtexAgentChat from "./islands/VtexAgentChat.tsx";
+import * as $WppConversation from "./islands/WppConversation.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -32,6 +33,7 @@ const manifest = {
     "./islands/SliderJS.tsx": $SliderJS,
     "./islands/TestimonialsCarousel.tsx": $TestimonialsCarousel,
     "./islands/VtexAgentChat.tsx": $VtexAgentChat,
+    "./islands/WppConversation.tsx": $WppConversation,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

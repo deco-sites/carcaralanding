@@ -11,25 +11,13 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/AgentHero.tsx",
+        "__resolveType": "site/sections/WppHero.tsx",
         "backgroundElement1": {
-          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+          "image": "https://assets.decocache.com/carcaralanding/f3233981-030b-49d7-bf55-b8dba9788110/wpp.svg"
         },
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
-        },
-        "conversation": [
-          {
-            "listItems": [],
-            "message": "Olá, fiz um pedido (#ORD-9283) na semana passada e não recebi nenhuma atualização. Você poderia me informar onde está meu pacote? Obrigado."
-          },
-          {
-            "listItems": [],
-            "message": "Olá! Acabei de verificar seu pedido (#ORD-9283) e posso ver que ele foi enviado ontem via Expresso. Seu número de rastreamento é TRK-82931, e atualmente está em trânsito saindo do nosso centro de distribuição. A entrega estimada é amanhã antes das 20h. Você pode acompanhar em tempo real no [link de rastreamento]. Me avise se precisar de mais alguma coisa!",
-            "fromAI": true
-          }
-        ],
-        "title": "<p>Escale seu atendimento usando <span style=\"color: #b13431\">WhatsApp</span></p>"
+        }
       }
     },
     {
@@ -134,13 +122,8 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/CTASection.tsx"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Footer"
+        "__resolveType": "site/sections/CTASection.tsx",
+        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg"
       }
     },
     {
