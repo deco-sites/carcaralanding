@@ -430,7 +430,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "footer"
+        "__resolveType": "Footer"
       }
     }
   ],

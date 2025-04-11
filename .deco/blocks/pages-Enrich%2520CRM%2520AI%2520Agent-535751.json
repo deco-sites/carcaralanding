@@ -1,6 +1,6 @@
 {
-  "name": "SAC AI Agent",
-  "path": "/sac-ai-agent",
+  "name": "Enrich CRM AI Agent",
+  "path": "/crm-ai-agent",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -29,7 +29,8 @@
             "fromAI": true
           }
         ],
-        "title": "<p>Escale seu atendimento com o <span style=\"color: rgb(176, 53, 49)\">SAC Co-Pilot</span></p>"
+        "title": "<p>Enriqueça seu CRM com o <span style=\"color: rgb(176, 53, 49)\">CRM Co-Pilot</span></p>",
+        "description": "O AI Agent abastece seu CRM com dados precisos e contextuais, economizando tempo e impulsionando suas estratégias de relacionamento."
       }
     },
     {
@@ -108,7 +109,36 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/AgentProcess.tsx"
+        "__resolveType": "site/sections/AgentProcess.tsx",
+        "badgeText": " Como funciona",
+        "description": "O AI Agent segue um fluxo preciso para coletar, verificar e integrar dados relevantes, mantendo seu CRM sempre completo e confiável.",
+        "steps": [
+          {
+            "title": "Identificação de lacunas",
+            "description": " Detecta automaticamente informações ausentes ou desatualizadas em seus registros de clientes.",
+            "icon": "circle",
+            "bgColor": "bg-azul"
+          },
+          {
+            "title": "Coleta de dados externos",
+            "description": "Integra com fontes externas para buscar dados públicos, sociais ou de mercado relevantes.",
+            "icon": "square",
+            "bgColor": "bg-verde"
+          },
+          {
+            "title": "Validação e cruzamento",
+            "description": " Compara e valida os dados coletados com os registros existentes para garantir consistência.",
+            "icon": "hexagon",
+            "bgColor": "bg-vermelho"
+          },
+          {
+            "title": "Atualização automatizada",
+            "description": "Preenche e atualiza os campos do CRM sem intervenção manual, em tempo real.",
+            "icon": "check",
+            "bgColor": "bg-amarelo"
+          }
+        ],
+        "title": "<p>Enriquecimento <span style=\"color: #b13431\">inteligente</span> de dados</p>"
       }
     },
     {
@@ -121,7 +151,47 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/AgentFeatures.tsx"
+        "__resolveType": "site/sections/AgentFeatures.tsx",
+        "features": [
+          {
+            "title": "Smart Field Detection",
+            "description": "Identifica automaticamente quais campos estão incompletos, inconsistentes ou desatualizados.",
+            "id": "Smart Field Detection"
+          },
+          {
+            "title": "External Data Sync",
+            "description": "Sincroniza com bancos de dados externos, APIs públicas e fontes de mercado para enriquecer registros com informações relevantes."
+          },
+          {
+            "title": "Lead Scoring Automatizado",
+            "description": "Gera pontuações de leads com base em dados comportamentais e históricos."
+          },
+          {
+            "title": "Profile Completion Engine",
+            "description": "Preenche perfis de contatos e empresas com dados adicionais como cargo, setor, localização e mais."
+          },
+          {
+            "title": "Custom Enrichment Rules",
+            "description": "Permite definir regras personalizadas para o enriquecimento de dados, de acordo com suas estratégias."
+          },
+          {
+            "title": "Activity Insight Layer",
+            "description": "Monitora interações e atividades em diferentes canais para atualizar automaticamente o histórico de relacionamento."
+          },
+          {
+            "title": "Segurança e Governança de Dados",
+            "description": "Permissões baseadas em função e compliance com LGPD/GDPR para garantir uso ético e seguro dos dados."
+          },
+          {
+            "title": "Atualização em Tempo Real",
+            "description": "Enriquece e atualiza registros automaticamente assim que novas informações surgem."
+          },
+          {
+            "title": "Painéis Inteligentes",
+            "description": "Visualize a qualidade dos dados, detecte gargalos e acompanhe o impacto do enriquecimento em suas operações."
+          }
+        ],
+        "description": "O Enrich CRM Agent traz um conjunto robusto de funcionalidades para transformar a qualidade e a utilidade dos dados no seu CRM."
       }
     },
     {

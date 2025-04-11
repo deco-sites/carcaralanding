@@ -1,0 +1,157 @@
+{
+  "name": "WhatsApp Agents",
+  "path": "/whatsapp-agents",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "navbar"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/AgentHero.tsx",
+        "backgroundElement1": {
+          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+        },
+        "backgroundElement2": {
+          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+        },
+        "conversation": [
+          {
+            "listItems": [],
+            "message": "Olá, fiz um pedido (#ORD-9283) na semana passada e não recebi nenhuma atualização. Você poderia me informar onde está meu pacote? Obrigado."
+          },
+          {
+            "listItems": [],
+            "message": "Olá! Acabei de verificar seu pedido (#ORD-9283) e posso ver que ele foi enviado ontem via Expresso. Seu número de rastreamento é TRK-82931, e atualmente está em trânsito saindo do nosso centro de distribuição. A entrega estimada é amanhã antes das 20h. Você pode acompanhar em tempo real no [link de rastreamento]. Me avise se precisar de mais alguma coisa!",
+            "fromAI": true
+          }
+        ],
+        "title": "<p>Escale seu atendimento usando <span style=\"color: #b13431\">WhatsApp</span></p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ImageTextSection.tsx",
+        "image": "https://assets.decocache.com/carcaralanding/edc5dad8-cb9c-4b74-85f8-601caa237773/sacint.png",
+        "badgeText": "Integrações MCP",
+        "title": "<p>Agente Sempre <span style=\"color: #b13431\">Contextualizado</span></p>",
+        "description": "Conecte-se facilmente via API REST ou GraphQL — ou escolha entre mais de 100 integrações prontas. Compartilhe recursos e consultas com segurança entre equipes, de forma simples e eficiente"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/AgentProcess.tsx",
+        "title": "<p>Automação de atendimento nunca foi tão fácil</p>",
+        "description": "Siga os passos abaixo para transformar completamente seu atendimento ao cliente via WhatsApp",
+        "badgeText": "Como funciona",
+        "steps": [
+          {
+            "title": "Conecte sua conta oficial do WhatsApp",
+            "icon": "chat",
+            "description": "Utilize nossa API aprovada ou um parceiro oficial para garantir um envio e recebimento seguro das mensagens.",
+            "bgColor": "bg-azul"
+          },
+          {
+            "title": "Defina fluxos de conversa e integrações",
+            "description": "Configure intenções, gatilhos e conecte sua base de dados (via MCP ou outras APIs) para personalizar cada interação.",
+            "bgColor": "bg-vermelho"
+          },
+          {
+            "title": "Automação com IA",
+            "description": "Nosso agente interpreta as mensagens em tempo real usando LLMs, respondendo dúvidas comuns ou direcionando para um atendente humano quando necessário.",
+            "bgColor": "bg-amarelo",
+            "icon": "robot"
+          },
+          {
+            "title": "Escalabilidade e monitoramento",
+            "description": "Gerencie altas demandas sem perder a qualidade. Monitore tudo em um painel unificado, ajustando fluxos conforme a necessidade.",
+            "bgColor": "bg-verde",
+            "icon": "visibility"
+          }
+        ],
+        "ctaText": "Ver em ação"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Divider.tsx",
+        "paddingTop": 0
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/AgentFeatures.tsx",
+        "features": [
+          {
+            "title": "Conexão Oficial com API do WhatsApp",
+            "description": "Envie e receba mensagens em conformidade com as políticas do WhatsApp, mantendo alta taxa de entrega e segurança.",
+            "icon": "chat"
+          },
+          {
+            "title": "Interpretação Inteligente via LLM",
+            "description": "Use modelos de linguagem avançados para compreender as intenções dos clientes e fornecer respostas contextuais.",
+            "icon": "network_node"
+          },
+          {
+            "title": "Acesso a Dados da Empresa",
+            "description": "Integre com qualquer sistema corporativo via MCP (Model Context Protocol) ou outras APIs para personalizar o atendimento.",
+            "icon": "database"
+          },
+          {
+            "title": "Escalabilidade e Consistência",
+            "description": "Respostas instantâneas para dúvidas frequentes e suporte contínuo, mesmo em alto volume de mensagens.",
+            "icon": "trending_up"
+          },
+          {
+            "title": "Personalização de fluxos",
+            "description": "Configure intenções, gatilhos e conecte sua base de dados (via MCP ou outras APIs) para personalizar cada interação."
+          }
+        ],
+        "title": "<p>Automatize e personalize <span style=\"color: #b13431\">cada interação</span></p>",
+        "ctaText": "Agende uma Demo"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/CTASection.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

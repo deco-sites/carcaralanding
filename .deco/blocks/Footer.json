@@ -7,15 +7,50 @@
       "sortBy": "date_desc",
       "count": 5
     },
-    "show": true
+    "show": true,
+    "links": [
+      {
+        "label": "Nossa implementação na Farm Rio aumentou o faturamento mensal da marca em 27%."
+      },
+      {
+        "label": "Leroy Merlin aumentou a produtividade substituindo 3 ferramentas pelo nosso CMS."
+      },
+      {
+        "label": "Livemode constrói seu próprio Photoshop."
+      },
+      {
+        "label": "Als Sports alcança crescimento de receita 50% acima das expectativas"
+      }
+    ],
+    "title": "Histórias de transformação"
   },
   "industriesColumn": {
     "show": false,
     "links": []
   },
   "useCasesColumn": {
-    "links": [],
-    "title": "Cases"
+    "links": [
+      {
+        "label": "CMS Generativo"
+      },
+      {
+        "label": "Agentes de SEO"
+      },
+      {
+        "label": "AI Creative Suite"
+      },
+      {
+        "label": "AI Video Content Intelligence"
+      },
+      {
+        "label": "AI Data Scientist"
+      },
+      {
+        "label": "AI Whatsapp Assistant"
+      }
+    ],
+    "title": "Top use cases",
+    "show": true
   },
   "legalLinks": [],
   "socialIcons": []
