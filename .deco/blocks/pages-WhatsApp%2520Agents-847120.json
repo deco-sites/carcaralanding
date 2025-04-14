@@ -17,7 +17,10 @@
         },
         "backgroundElement2": {
           "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
-        }
+        },
+        "title": "<p>Escale seu atendimento usando <span style=\"color: #557247\">WhatsApp</span></p>",
+        "primaryCtaText": "Marcar Demo",
+        "secondaryCtaText": "Saiba mais"
       }
     },
     {
@@ -60,7 +63,8 @@
           {
             "title": "Defina fluxos de conversa e integrações",
             "description": "Configure intenções, gatilhos e conecte sua base de dados (via MCP ou outras APIs) para personalizar cada interação.",
-            "bgColor": "bg-vermelho"
+            "bgColor": "bg-vermelho",
+            "icon": "account_tree"
           },
           {
             "title": "Automação com IA",
@@ -123,7 +127,8 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/CTASection.tsx",
-        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg"
+        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
+        "title": "Pronto para escalar seu atendimento?"
       }
     },
     {

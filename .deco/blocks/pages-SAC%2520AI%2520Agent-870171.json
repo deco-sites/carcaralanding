@@ -53,7 +53,8 @@
             "accentColor": "bg-verde",
             "name": "Whatsapp",
             "description": "Atendimento automatizado 24/7 com respostas personalizadas para seus clientes via WhatsApp.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/a02b16d2-6015-475b-aad6-f2147400b977/whatsapp.png"
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/26e81ae9-2fff-48c5-864f-c27d76e32ecd/whatsapp-sac.png",
+            "icon": "https://assets.decocache.com/carcaralanding/fe7af92a-45f7-4eeb-9b31-0267c54a0c52/whatsapp.svg"
           },
           {
             "benefits": [
@@ -65,7 +66,8 @@
             "accentColor": "bg-azul",
             "name": "Slack",
             "description": "Respostas instantâneas e automação de fluxos de trabalho para sua equipe direto no Slack.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/52611d4d-e7ff-40d3-9a27-328b12c1efa0/slack.png"
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/3628a08a-63e5-417e-ae00-2704dae1dbc5/slack-sac.png",
+            "icon": "https://assets.decocache.com/carcaralanding/94cb3c75-917d-4182-bbbe-46c45de1bb54/slack.svg"
           },
           {
             "benefits": [
@@ -77,7 +79,8 @@
             "accentColor": "bg-vermelho",
             "name": "Microsoft Teams",
             "description": "Integração perfeita com Teams para colaboração e suporte à tomada de decisões empresariais.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/385a6f03-fc3e-4f8f-b118-25acfe31e410/teams.png"
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/a9b6117f-c3a1-4341-bf2f-ee2a60367d46/teams-sac.png",
+            "icon": "https://assets.decocache.com/carcaralanding/1f32749d-89b2-4623-8a89-ff0a2e66d6b0/teams.svg"
           }
         ]
       }
