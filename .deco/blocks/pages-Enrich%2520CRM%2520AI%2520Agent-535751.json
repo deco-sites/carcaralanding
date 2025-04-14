@@ -46,18 +46,6 @@
         "platforms": [
           {
             "benefits": [
-              "Suporte ao cliente 24/7 sem intervenção humana",
-              "Respostas personalizadas baseadas no contexto",
-              "Automação de processos de venda e pós-venda"
-            ],
-            "customIcon": "slack",
-            "accentColor": "bg-verde",
-            "name": "Whatsapp",
-            "description": "Atendimento automatizado 24/7 com respostas personalizadas para seus clientes via WhatsApp.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/a02b16d2-6015-475b-aad6-f2147400b977/whatsapp.png"
-          },
-          {
-            "benefits": [
               "Automatização de tarefas administrativas",
               "Resposta a perguntas frequentes sobre dados internos",
               "Integração com outras ferramentas da empresa"
@@ -66,7 +54,7 @@
             "accentColor": "bg-azul",
             "name": "Slack",
             "description": "Respostas instantâneas e automação de fluxos de trabalho para sua equipe direto no Slack.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/52611d4d-e7ff-40d3-9a27-328b12c1efa0/slack.png"
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/78d767ff-ec13-479f-9955-2ce406b07801/slack-crm.png"
           },
           {
             "benefits": [
@@ -78,7 +66,7 @@
             "accentColor": "bg-vermelho",
             "name": "Microsoft Teams",
             "description": "Integração perfeita com Teams para colaboração e suporte à tomada de decisões empresariais.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/385a6f03-fc3e-4f8f-b118-25acfe31e410/teams.png"
+            "interfacePreview": "https://assets.decocache.com/carcaralanding/91181fde-4865-4302-a700-78b2729b771b/teams-crm.png"
           }
         ]
       }
@@ -94,7 +82,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/ImageTextSection.tsx",
-        "image": "https://assets.decocache.com/carcaralanding/edc5dad8-cb9c-4b74-85f8-601caa237773/sacint.png",
+        "image": "https://assets.decocache.com/carcaralanding/6944984a-2d47-4ca9-9ad7-5c266d25f22e/context-crm.png",
         "badgeText": "Integrações MCP",
         "title": "<p>Agente Sempre <span style=\"color: #b13431\">Contextualizado</span></p>",
         "description": "Conecte-se facilmente via API REST ou GraphQL — ou escolha entre mais de 100 integrações prontas. Compartilhe recursos e consultas com segurança entre equipes, de forma simples e eficiente"
@@ -156,42 +144,46 @@
           {
             "title": "Smart Field Detection",
             "description": "Identifica automaticamente quais campos estão incompletos, inconsistentes ou desatualizados.",
-            "id": "Smart Field Detection"
+            "id": "Smart Field Detection",
+            "icon": "checklist"
           },
           {
             "title": "External Data Sync",
-            "description": "Sincroniza com bancos de dados externos, APIs públicas e fontes de mercado para enriquecer registros com informações relevantes."
+            "description": "Sincroniza com bancos de dados externos, APIs públicas e fontes de mercado para enriquecer registros com informações relevantes.",
+            "icon": "hub"
           },
           {
             "title": "Lead Scoring Automatizado",
-            "description": "Gera pontuações de leads com base em dados comportamentais e históricos."
+            "description": "Gera pontuações de leads com base em dados comportamentais e históricos.",
+            "icon": "stars"
           },
           {
             "title": "Profile Completion Engine",
-            "description": "Preenche perfis de contatos e empresas com dados adicionais como cargo, setor, localização e mais."
+            "description": "Preenche perfis de contatos e empresas com dados adicionais como cargo, setor, localização e mais.",
+            "icon": "badge"
           },
           {
             "title": "Custom Enrichment Rules",
-            "description": "Permite definir regras personalizadas para o enriquecimento de dados, de acordo com suas estratégias."
+            "description": "Permite definir regras personalizadas para o enriquecimento de dados, de acordo com suas estratégias.",
+            "icon": "edit_square"
           },
           {
             "title": "Activity Insight Layer",
-            "description": "Monitora interações e atividades em diferentes canais para atualizar automaticamente o histórico de relacionamento."
+            "description": "Monitora interações e atividades em diferentes canais para atualizar automaticamente o histórico de relacionamento.",
+            "icon": "devices"
           },
           {
             "title": "Segurança e Governança de Dados",
-            "description": "Permissões baseadas em função e compliance com LGPD/GDPR para garantir uso ético e seguro dos dados."
-          },
-          {
-            "title": "Atualização em Tempo Real",
-            "description": "Enriquece e atualiza registros automaticamente assim que novas informações surgem."
+            "description": "Permissões baseadas em função e compliance com LGPD/GDPR para garantir uso ético e seguro dos dados.",
+            "icon": "verified_user"
           },
           {
             "title": "Painéis Inteligentes",
             "description": "Visualize a qualidade dos dados, detecte gargalos e acompanhe o impacto do enriquecimento em suas operações."
           }
         ],
-        "description": "O Enrich CRM Agent traz um conjunto robusto de funcionalidades para transformar a qualidade e a utilidade dos dados no seu CRM."
+        "description": "O Enrich CRM Agent traz um conjunto robusto de funcionalidades para transformar a qualidade e a utilidade dos dados no seu CRM.",
+        "title": "<p>Transforme seu <span style=\"color: #b13431\">CRM</span></p>"
       }
     },
     {
