@@ -288,12 +288,6 @@
             "description": "Transforme como você produz, analisa e otimiza conteúdo em vídeo. Nossa tecnologia identifica padrões de engajamento, extrai insights valiosos e sugere melhorias que aumentam conversões.",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
             "showButton": false
-          },
-          {
-            "buttonText": "\"Saiba mais\"",
-            "showButton": true,
-            "title": "Support Agent",
-            "description": "Automatize seu processo de atendimento ao cliente com AI. Integre com seus canais atuais via telefone (voz) ou chat (whatsapp, zendesk, etc)"
           }
         ],
         "badgeText": "Contrate seu próximo AI Agent hoje",
