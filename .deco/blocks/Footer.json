@@ -46,7 +46,12 @@
         "label": "AI Data Scientist"
       },
       {
-        "label": "AI Whatsapp Assistant"
+        "label": "AI Whatsapp Assistant",
+        "href": "https://carcara.tech/whatsapp-agents"
+      },
+      {
+        "label": "AI VTEX Agent",
+        "href": "https://carcara.tech/vtex-ai-agent"
       }
     ],
     "title": "Top use cases",
