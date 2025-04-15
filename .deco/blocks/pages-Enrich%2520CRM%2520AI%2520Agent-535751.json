@@ -21,12 +21,21 @@
         "conversation": [
           {
             "listItems": [],
-            "message": "Olá, fiz um pedido (#ORD-9283) na semana passada e não recebi nenhuma atualização. Você poderia me informar onde está meu pacote? Obrigado."
+            "message": " Olá, estou com um lead aqui que só tem o e-mail registrado. Tem como verificar e completar os dados desse contato pra mim? O e-mail é juliana.mura@exemplo.com."
           },
           {
-            "listItems": [],
-            "message": "Olá! Acabei de verificar seu pedido (#ORD-9283) e posso ver que ele foi enviado ontem via Expresso. Seu número de rastreamento é TRK-82931, e atualmente está em trânsito saindo do nosso centro de distribuição. A entrega estimada é amanhã antes das 20h. Você pode acompanhar em tempo real no [link de rastreamento]. Me avise se precisar de mais alguma coisa!",
-            "fromAI": true
+            "listItems": [
+              "Nome completo: Juliana Mura",
+              "Cargo: Gerente de Marketing",
+              "Empresa: Grupo Verdi",
+              "LinkedIn: linkedin.com/in/julianamura",
+              "Localização: São Paulo, SP",
+              "Setor: Varejo"
+            ],
+            "message": "Oi! Já estou analisando o lead com o e-mail juliana.mura@exemplo.com. Encontrei as seguintes informações públicas associadas:  ",
+            "fromAI": true,
+            "hasList": true,
+            "afterListMessage": "Esses dados já foram validados e adicionados ao seu CRM com o ID #LEAD-4731. Deseja que eu aplique uma pontuação automática de lead com base nesse novo perfil?"
           }
         ],
         "title": "<p>Enriqueça seu CRM com o <span style=\"color: rgb(176, 53, 49)\">CRM Co-Pilot</span></p>",
