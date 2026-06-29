@@ -8,10 +8,10 @@
         "__resolveType": "site/sections/HeaderSection.tsx",
         "logo": {
           "desktop": {
-            "src": "https://assets.decocache.com/carcaralanding/2a0428e3-b1e8-428c-a220-4e4b9b837529/carc.svg"
+            "src": "https://decoims.com/carcaralanding/2a0428e3-b1e8-428c-a220-4e4b9b837529/carc.svg"
           },
           "mobile": {
-            "src": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg"
+            "src": "https://decoims.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg"
           }
         },
         "navigation": {
@@ -46,43 +46,43 @@
       "section": {
         "__resolveType": "site/sections/HeroSection.tsx",
         "backgroundElement1": {
-          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+          "image": "https://decoims.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "showBackgroundElements": true,
         "title": "<h1>We build</h1><h1><span style=\"color: rgb(177, 52, 49)\">AI</span> <span style=\"color: rgb(177, 52, 49)\">Agents</span></h1><h1>for your company</h1>",
         "backgroundElement2": {
-          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg",
+          "image": "https://decoims.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg",
           "configCarousel": {}
         },
         "ctaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7",
-        "image": "https://assets.decocache.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
+        "image": "https://decoims.com/carcaralanding/c9cd5eae-9038-4899-9a92-141198822a4c/hero-image-agents.png",
         "ctaText": "Get in touch with us",
         "configCarousel": {
           "items": [
             {
               "id": "2",
-              "imageUrl": "https://assets.decocache.com/carcaralanding/de006fd8-174f-4502-827f-45e4d6080c48/hero-contentagent.png",
+              "imageUrl": "https://decoims.com/carcaralanding/de006fd8-174f-4502-827f-45e4d6080c48/hero-contentagent.png",
               "title": "Content Analyzer AI Agent",
               "subtitle": "123123",
               "duration": "4"
             },
             {
               "id": "3",
-              "imageUrl": "https://assets.decocache.com/carcaralanding/e9b3f07a-a745-4e69-9105-062edf41c13e/hero-seoagent.png",
+              "imageUrl": "https://decoims.com/carcaralanding/e9b3f07a-a745-4e69-9105-062edf41c13e/hero-seoagent.png",
               "title": "SEO AI Agent",
               "subtitle": "123123",
               "duration": "4"
             },
             {
               "id": "4",
-              "imageUrl": "https://assets.decocache.com/carcaralanding/7a1c130f-370c-43f3-811d-44eec2cc5eaa/hero-vtexaiagent.png",
+              "imageUrl": "https://decoims.com/carcaralanding/7a1c130f-370c-43f3-811d-44eec2cc5eaa/hero-vtexaiagent.png",
               "title": "VTEX AI Agent",
               "subtitle": "123123",
               "duration": "4"
             },
             {
               "id": "5",
-              "imageUrl": "https://assets.decocache.com/carcaralanding/0307a1ad-562d-4dc1-8660-9178219568c4/hero-whatsappagent.png",
+              "imageUrl": "https://decoims.com/carcaralanding/0307a1ad-562d-4dc1-8660-9178219568c4/hero-whatsappagent.png",
               "title": "WhatsApp AI Agent",
               "subtitle": "123123",
               "duration": "4"
@@ -109,47 +109,47 @@
         "__resolveType": "site/sections/Logos.tsx",
         "logos": [
           {
-            "src": "https://assets.decocache.com/carcaralanding/6ba87d40-56a6-4589-bad6-7b0869880436/ZeeDog.svg",
+            "src": "https://decoims.com/carcaralanding/6ba87d40-56a6-4589-bad6-7b0869880436/ZeeDog.svg",
             "altText": "zeedog"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/d44b9be7-10c8-49fd-b06d-cdce137996dc/torra.svg",
+            "src": "https://decoims.com/carcaralanding/d44b9be7-10c8-49fd-b06d-cdce137996dc/torra.svg",
             "altText": "torra"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/0d36379f-7590-4753-ac22-66bf8329b9d2/osklen.svg",
+            "src": "https://decoims.com/carcaralanding/0d36379f-7590-4753-ac22-66bf8329b9d2/osklen.svg",
             "altText": "osklen"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/3fb9d2ef-d917-4d97-b3dd-ade75045a9b0/Miess.svg",
+            "src": "https://decoims.com/carcaralanding/3fb9d2ef-d917-4d97-b3dd-ade75045a9b0/Miess.svg",
             "altText": "miess"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
+            "src": "https://decoims.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
             "altText": "livemode"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/2394b6ef-0530-4cf8-aa2b-7967c23b6217/leroylogo.svg",
+            "src": "https://decoims.com/carcaralanding/2394b6ef-0530-4cf8-aa2b-7967c23b6217/leroylogo.svg",
             "altText": "leroymerlin"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/3c644eff-1b32-4022-bf61-85412298d045/CVLB.svg",
+            "src": "https://decoims.com/carcaralanding/3c644eff-1b32-4022-bf61-85412298d045/CVLB.svg",
             "altText": "cvl"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
+            "src": "https://decoims.com/carcaralanding/18e0e935-95fc-4026-9d28-51f61c2fc21b/BAW.svg",
             "altText": "baw"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/1588b405-48b6-4cc6-ab56-d55624a4b5c9/farm2.svg",
+            "src": "https://decoims.com/carcaralanding/1588b405-48b6-4cc6-ab56-d55624a4b5c9/farm2.svg",
             "altText": "farm"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg",
+            "src": "https://decoims.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg",
             "altText": "als"
           },
           {
-            "src": "https://assets.decocache.com/carcaralanding/f5e68d4d-4ebc-411b-8e96-9436a0e0bfa7/reserva.svg"
+            "src": "https://decoims.com/carcaralanding/f5e68d4d-4ebc-411b-8e96-9436a0e0bfa7/reserva.svg"
           }
         ]
       }
@@ -208,7 +208,7 @@
         "title": "The impact we've made on our clients",
         "badgeText": "Our success stories",
         "featuredStory": {
-          "image": "https://assets.decocache.com/carcaralanding/90b9a050-c0cd-4e73-9065-54b98a7e4a18/cases-04.png",
+          "image": "https://decoims.com/carcaralanding/90b9a050-c0cd-4e73-9065-54b98a7e4a18/cases-04.png",
           "title": "Our implementation at Farm Rio increased the brand's monthly revenue by 27%.",
           "description": "The solution also delivered a website 40x faster than the legacy system.",
           "showButton": false,
@@ -217,15 +217,15 @@
         "additionalStories": [
           {
             "accentColor": "\"amarelo\"",
-            "image": "https://assets.decocache.com/carcaralanding/a90cf32d-011e-4b7c-93d7-ea2bc1a1e9a3/cases-03.png",
-            "logo": "https://assets.decocache.com/carcaralanding/2394b6ef-0530-4cf8-aa2b-7967c23b6217/leroylogo.svg",
+            "image": "https://decoims.com/carcaralanding/a90cf32d-011e-4b7c-93d7-ea2bc1a1e9a3/cases-03.png",
+            "logo": "https://decoims.com/carcaralanding/2394b6ef-0530-4cf8-aa2b-7967c23b6217/leroylogo.svg",
             "title": "Leroy Merlin increased productivity by replacing 3 tools with our CMS."
           },
           {
             "accentColor": "\"amarelo\"",
             "title": "Livemode builds its own Photoshop.",
-            "image": "https://assets.decocache.com/carcaralanding/326511af-9a10-4211-99d9-5e05564ce626/cases-02.png",
-            "logo": "https://assets.decocache.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
+            "image": "https://decoims.com/carcaralanding/326511af-9a10-4211-99d9-5e05564ce626/cases-02.png",
+            "logo": "https://decoims.com/carcaralanding/3bb48b86-2924-4dc3-a9ce-3dcb3caab032/livemode.svg",
             "showButton": false,
             "buttonText": "oi",
             "buttonUrl": "j"
@@ -233,8 +233,8 @@
           {
             "accentColor": "\"amarelo\"",
             "title": "Als Sports achieves revenue growth 50% above expectations",
-            "image": "https://assets.decocache.com/carcaralanding/1a26a3f6-3dd2-439e-b8f1-e19b6a057fcd/cases-01.png",
-            "logo": "https://assets.decocache.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg"
+            "image": "https://decoims.com/carcaralanding/1a26a3f6-3dd2-439e-b8f1-e19b6a057fcd/cases-01.png",
+            "logo": "https://decoims.com/carcaralanding/cd95d249-4020-439e-b339-0e39527d751f/als.svg"
           }
         ]
       }
@@ -256,7 +256,7 @@
             "title": "Generative CMS",
             "subtitle": "Intelligent and scalable content",
             "description": "Transform your content creation with a system that automatically generates, manages, and optimizes texts, maintaining your brand identity and significantly increasing your productivity.",
-            "image": "https://assets.decocache.com/carcaralanding/16543901-125b-4d53-ae3f-45e4afd1a782/cms.png",
+            "image": "https://decoims.com/carcaralanding/16543901-125b-4d53-ae3f-45e4afd1a782/cms.png",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
             "showButton": false
           },
@@ -264,7 +264,7 @@
             "title": "SEO Agents",
             "subtitle": "Strategic visibility",
             "description": "Our SEO agents continuously analyze your market, optimize your content, and implement strategies that increase your organic visibility, bringing the right audience to your business.",
-            "image": "https://assets.decocache.com/carcaralanding/6cd390e0-8c8b-4e93-99ef-f4e021c79ca2/seo.png",
+            "image": "https://decoims.com/carcaralanding/6cd390e0-8c8b-4e93-99ef-f4e021c79ca2/seo.png",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
             "showButton": false
           },
@@ -272,7 +272,7 @@
             "title": "AI Creative Suite",
             "subtitle": "Creativity without limits",
             "description": "Generate brand-aligned images, texts, and designs in seconds. Our creative suite eliminates production bottlenecks and allows you to scale your visual communication with consistency and quality.",
-            "image": "https://assets.decocache.com/carcaralanding/25a88b43-b9e7-4749-825a-f9f849d02bd0/creative.png",
+            "image": "https://decoims.com/carcaralanding/25a88b43-b9e7-4749-825a-f9f849d02bd0/creative.png",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
             "showButton": false
           },
@@ -280,7 +280,7 @@
             "title": "AI Video Content Intelligence",
             "subtitle": "Videos that convert",
             "description": "Transform how you produce, analyze, and optimize video content. Our technology identifies engagement patterns, extracts valuable insights, and suggests improvements that increase conversions.",
-            "image": "https://assets.decocache.com/carcaralanding/8a779fdf-c9f5-4580-aac7-f0789019cab5/video.png",
+            "image": "https://decoims.com/carcaralanding/8a779fdf-c9f5-4580-aac7-f0789019cab5/video.png",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
             "showButton": false
           },
@@ -288,7 +288,7 @@
             "title": "AI Data Scientist",
             "subtitle": "Data that decides",
             "description": "Have an AI data scientist working 24/7, transforming complex information into clear and actionable insights. Make data-driven decisions without needing a specialized team.",
-            "image": "https://assets.decocache.com/carcaralanding/9954af22-987f-497d-ba1f-caefaed47e33/data.png",
+            "image": "https://decoims.com/carcaralanding/9954af22-987f-497d-ba1f-caefaed47e33/data.png",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
             "showButton": false
           },
@@ -296,14 +296,14 @@
             "title": "AI WhatsApp Assistant",
             "subtitle": "Intelligent service",
             "description": "An assistant that understands the context of conversations, solves complex problems, and communicates naturally with your customers, providing personalized service at scale.",
-            "image": "https://assets.decocache.com/carcaralanding/a7f6857b-b8b9-4d99-bd39-7ae2f5d41519/whatsapp.png",
+            "image": "https://decoims.com/carcaralanding/a7f6857b-b8b9-4d99-bd39-7ae2f5d41519/whatsapp.png",
             "buttonLink": "https://calendar.app.google/VvgENxewXsBNjXPF7",
             "showButton": false
           },
           {
             "buttonText": "Learn more",
             "title": "AI Agent VTEX",
-            "image": "https://assets.decocache.com/carcaralanding/7c8d0db2-1c44-4e3c-9448-73fe95941490/vtexaiagent.png",
+            "image": "https://decoims.com/carcaralanding/7c8d0db2-1c44-4e3c-9448-73fe95941490/vtexaiagent.png",
             "subtitle": "Manage the growth of your VTEX operation",
             "description": "Have a specialist from your VTEX operation working alongside you. Gain stock insights, analyze your sales performance, and receive strategic recommendations to increase revenue.",
             "buttonLink": "https://carcara.tech/vtex-ai-agent",
@@ -328,23 +328,23 @@
         "__resolveType": "site/sections/MethodologySection.tsx",
         "discoveryBox": {
           "title": "1. Definition",
-          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png",
+          "image": "https://decoims.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png",
           "description": "We dive into your business to identify high-impact opportunities, analyzing processes, data, and specific challenges to determine the ideal solution for your needs."
         },
         "ctaUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "prototypingBox": {
           "title": "2. Prototyping",
-          "image": "https://assets.decocache.com/carcaralanding/f85a5f8e-c585-4b88-a9e9-c618b8736a34/1.png",
+          "image": "https://decoims.com/carcaralanding/f85a5f8e-c585-4b88-a9e9-c618b8736a34/1.png",
           "description": "We develop a functional solution in days, allowing you to validate the real impact before making larger investments and adjust the direction based on concrete results."
         },
         "implementationBox": {
           "title": "3. Implementation",
           "description": "We integrate the solution into your existing infrastructure, with integration to your legacy tools, training your team, and continuous monitoring to maximize return.",
-          "image": "https://assets.decocache.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png"
+          "image": "https://decoims.com/carcaralanding/cb79053f-97cf-4276-b929-9747d4b9d817/3.png"
         },
         "ctaText": "Learn more about our services",
         "analysisBox": {
-          "image": "https://assets.decocache.com/carcaralanding/f86e1da5-62ef-43e6-b071-7c7356306ef2/4.png"
+          "image": "https://decoims.com/carcaralanding/f86e1da5-62ef-43e6-b071-7c7356306ef2/4.png"
         },
         "title": "Methodology focused on quick results",
         "badgeText": "How we work"
@@ -448,7 +448,7 @@
       "section": {
         "__resolveType": "site/sections/CTASection.tsx",
         "title": "Ready to evolve your company?",
-        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
+        "backgroundImage": "https://decoims.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
         "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "subtitle": "Get in touch to secure your personalized AI Agent",
         "buttonText": "Schedule a meeting"
@@ -458,7 +458,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/FooterSection.tsx",
-        "rightDecoration": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
+        "rightDecoration": "https://decoims.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
         "transformationStoriesColumn": {
           "posts": {
             "__resolveType": "blog/loaders/BlogpostList.ts",

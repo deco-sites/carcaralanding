@@ -8,13 +8,13 @@
     {
       "__resolveType": "site/sections/VtexAgentHero.tsx",
       "backgroundElement1": {
-        "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+        "image": "https://decoims.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
       },
       "backgroundElement2": {
-        "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+        "image": "https://decoims.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
       },
       "title": "<p>Converse com a sua<span style=\"color: #b13431\"> loja VTEX</span></p>",
-      "chatIcon": "https://assets.decocache.com/carcaralanding/527d8e8a-e055-4335-ab6f-51ba323f3edf/vtex-logo-carcara-03.png",
+      "chatIcon": "https://decoims.com/carcaralanding/527d8e8a-e055-4335-ab6f-51ba323f3edf/vtex-logo-carcara-03.png",
       "primaryCtaHref": "https://calendar.app.google/VvgENxewXsBNjXPF7"
     },
     {
@@ -41,9 +41,9 @@
               "Automação de processos de venda e pós-venda"
             ],
             "builtinIcon": "WhatsApp",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/a02b16d2-6015-475b-aad6-f2147400b977/whatsapp.png",
+            "interfacePreview": "https://decoims.com/carcaralanding/a02b16d2-6015-475b-aad6-f2147400b977/whatsapp.png",
             "accentColor": "bg-verde",
-            "icon": "https://assets.decocache.com/carcaralanding/0f8100b6-3905-45c6-8095-2b47cfb0dcf6/whatsapp.svg"
+            "icon": "https://decoims.com/carcaralanding/0f8100b6-3905-45c6-8095-2b47cfb0dcf6/whatsapp.svg"
           },
           {
             "name": "Slack",
@@ -54,9 +54,9 @@
               "Integração com outras ferramentas da empresa"
             ],
             "customIcon": "slack",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/52611d4d-e7ff-40d3-9a27-328b12c1efa0/slack.png",
+            "interfacePreview": "https://decoims.com/carcaralanding/52611d4d-e7ff-40d3-9a27-328b12c1efa0/slack.png",
             "accentColor": "bg-azul",
-            "icon": "https://assets.decocache.com/carcaralanding/6f5fd620-e236-466d-bfb7-b51719463425/slack.svg"
+            "icon": "https://decoims.com/carcaralanding/6f5fd620-e236-466d-bfb7-b51719463425/slack.svg"
           },
           {
             "name": "Microsoft Teams",
@@ -67,9 +67,9 @@
               "Pesquisa de dados e documentos corporativos"
             ],
             "customIcon": "teams",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/385a6f03-fc3e-4f8f-b118-25acfe31e410/teams.png",
+            "interfacePreview": "https://decoims.com/carcaralanding/385a6f03-fc3e-4f8f-b118-25acfe31e410/teams.png",
             "accentColor": "bg-vermelho",
-            "icon": "https://assets.decocache.com/carcaralanding/8dd18346-b98a-42ec-bb61-619bb3c79486/teams.svg"
+            "icon": "https://decoims.com/carcaralanding/8dd18346-b98a-42ec-bb61-619bb3c79486/teams.svg"
           },
           {
             "name": "Admin deco.cx",
@@ -80,9 +80,9 @@
               "Sugestões de melhorias baseadas em dados"
             ],
             "customIcon": "deco",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/9922c0b4-c76f-42b3-a703-181cfaf52bd9/deco.png",
+            "interfacePreview": "https://decoims.com/carcaralanding/9922c0b4-c76f-42b3-a703-181cfaf52bd9/deco.png",
             "accentColor": "bg-amarelo",
-            "icon": "https://assets.decocache.com/carcaralanding/d14e4282-f516-4d05-8821-e5410cb9d10a/deco.svg"
+            "icon": "https://decoims.com/carcaralanding/d14e4282-f516-4d05-8821-e5410cb9d10a/deco.svg"
           }
         ],
         "backgroundElement": {
@@ -147,7 +147,7 @@
             "icon": "people"
           }
         ],
-        "budgetBackgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg"
+        "budgetBackgroundImage": "https://decoims.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg"
       }
     },
     {
@@ -214,7 +214,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/CTASection.tsx",
-        "backgroundImage": "https://assets.decocache.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
+        "backgroundImage": "https://decoims.com/carcaralanding/22b1cbb0-d23f-477e-9769-147101117551/cta.svg",
         "buttonUrl": "https://calendar.app.google/VvgENxewXsBNjXPF7",
         "title": "Pronto para evoluir sua empresa?",
         "subtitle": "Entre em contato para conquistar seu AI Agent personalizado"
@@ -224,7 +224,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/FooterSection.tsx",
-        "rightDecoration": "https://assets.decocache.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
+        "rightDecoration": "https://decoims.com/carcaralanding/763313fd-824b-47c1-96a9-a3bdc3979f10/carc-mob.svg",
         "transformationStoriesColumn": {
           "posts": {
             "__resolveType": "blog/loaders/BlogpostList.ts",
