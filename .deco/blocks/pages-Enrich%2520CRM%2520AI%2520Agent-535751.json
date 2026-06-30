@@ -13,10 +13,10 @@
       "section": {
         "__resolveType": "site/sections/AgentHero.tsx",
         "backgroundElement1": {
-          "image": "https://assets.decocache.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
+          "image": "https://decoims.com/carcaralanding/a8151278-2db9-4cc2-9fdc-59298e2a3387/red-bg-hero.svg"
         },
         "backgroundElement2": {
-          "image": "https://assets.decocache.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
+          "image": "https://decoims.com/carcaralanding/f56e7a4b-da65-4591-8487-cfda4c53a60f/gray-bg-hero.svg"
         },
         "conversation": [
           {
@@ -63,8 +63,8 @@
             "accentColor": "bg-verde",
             "name": "Whatsapp",
             "description": "Atendimento automatizado 24/7 com respostas personalizadas para seus clientes via WhatsApp.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/84928d22-8b9b-4fd0-a598-f5054fe724f2/whatsapp-crm.png",
-            "icon": "https://assets.decocache.com/carcaralanding/fe7af92a-45f7-4eeb-9b31-0267c54a0c52/whatsapp.svg"
+            "interfacePreview": "https://decoims.com/carcaralanding/84928d22-8b9b-4fd0-a598-f5054fe724f2/whatsapp-crm.png",
+            "icon": "https://decoims.com/carcaralanding/fe7af92a-45f7-4eeb-9b31-0267c54a0c52/whatsapp.svg"
           },
           {
             "benefits": [
@@ -76,8 +76,8 @@
             "accentColor": "bg-azul",
             "name": "Slack",
             "description": "Respostas instantâneas e automação de fluxos de trabalho para sua equipe direto no Slack.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/7d5b0046-9704-476d-8bd1-5ad9037e72a1/slack-crm.png",
-            "icon": "https://assets.decocache.com/carcaralanding/94cb3c75-917d-4182-bbbe-46c45de1bb54/slack.svg"
+            "interfacePreview": "https://decoims.com/carcaralanding/7d5b0046-9704-476d-8bd1-5ad9037e72a1/slack-crm.png",
+            "icon": "https://decoims.com/carcaralanding/94cb3c75-917d-4182-bbbe-46c45de1bb54/slack.svg"
           },
           {
             "benefits": [
@@ -89,8 +89,8 @@
             "accentColor": "bg-vermelho",
             "name": "Microsoft Teams",
             "description": "Integração perfeita com Teams para colaboração e suporte à tomada de decisões empresariais.",
-            "interfacePreview": "https://assets.decocache.com/carcaralanding/c53535ca-d038-47d4-a8a9-76a606ccfd94/teams-crm.png",
-            "icon": "https://assets.decocache.com/carcaralanding/1f32749d-89b2-4623-8a89-ff0a2e66d6b0/teams.svg"
+            "interfacePreview": "https://decoims.com/carcaralanding/c53535ca-d038-47d4-a8a9-76a606ccfd94/teams-crm.png",
+            "icon": "https://decoims.com/carcaralanding/1f32749d-89b2-4623-8a89-ff0a2e66d6b0/teams.svg"
           }
         ]
       }
@@ -106,7 +106,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/ImageTextSection.tsx",
-        "image": "https://assets.decocache.com/carcaralanding/6944984a-2d47-4ca9-9ad7-5c266d25f22e/context-crm.png",
+        "image": "https://decoims.com/carcaralanding/6944984a-2d47-4ca9-9ad7-5c266d25f22e/context-crm.png",
         "badgeText": "Integrações MCP",
         "title": "<p>Agente Sempre <span style=\"color: #b13431\">Contextualizado</span></p>",
         "description": "Conecte-se facilmente via API REST ou GraphQL — ou escolha entre mais de 100 integrações prontas. Compartilhe recursos e consultas com segurança entre equipes, de forma simples e eficiente"
